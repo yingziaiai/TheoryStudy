@@ -1,0 +1,151 @@
+http://www.cnblogs.com/dkblog/archive/2010/12/20/1980677.html
+JAX-RPC 2.0 开发工作的主要目标是对各项标准进行更新，
+以支持 JAX-RPC fr1.X 的强制要求（基于 Java 5 特性，如 Annotation 和泛型），
+改进消息传递支持（包括除 HTTP 外的异步操作和传输），
+并通过使用 JAXB 2.0 绑定替代 JAX-RPC 1.X 的简单（但局限性很强）内置绑定来改进模式支持。出于对更改范围的强调和其他原因，
+这个后续标准的名称更改成了 JAX-WS 2.0。JAX-WS 2.0 现在已经提供了预发布版本，
+
+http://www.360doc.com/content/12/1013/15/820209_241230938.shtml
+http://www.360doc.com/content/12/1013/15/820209_241230791.shtml
+
+
+JAX-WS和JAX-RS
+JAX-WS规范是一组XML web services的JAVA API,java平台里边的API，这个API是用来实现不同风格的JWS的
+http://blog.csdn.net/bapinggaitianli/article/details/46518705
+
+
+http://chxiaowu.iteye.com/blog/1287745
+Java 5
+
+Java语言有很大的变化。JAX-WS依赖于：annotations，generics, 和 executors
+
+总结
+
+JAX-WS2.0是JAX-RPC 1.1的后续版本。有一些东西没有变化，但是在某种程度上这两种编程模型是不同的。总的看来，对于你为什么将要或者是将不会从JAX-RPC转移　到JAX-WS有一些原因。
+
+想继续使用JAX-RPC 1.1的原因：
+
+l         If you want to stay with something that's been around a while, JAX-RPC will continue to be supported for some time to come.
+
+l         If you don't want to step up to Java 5.
+
+l         If you want to send SOAP encoded messages or create RPC/encoded style WSDL.
+
+   从JAX-RPC走进JAX-WS的原因：
+
+l         If you want to use the new message-oriented APIs.
+
+l         If you want to use MTOM to send attachment data.
+
+l         If you want better support for XML schema through JAXB.
+
+l         If you want to use an asynchronous programming model in your Web service clients.
+
+l         If you need to have clients or services that can handle SOAP 1.2 messages.
+
+l         If you want to eliminate the need for SOAP in your Web services and just use the XML/HTTP binding.
+
+l         If you like playing with leading edge technology
+
+
+RPC:
+http://blog.csdn.net/l0605020112/article/details/16114237
+RPC的结构原理及其调用机制
+
+如前所述RPC其实也是种C/S的编程模式，有点类似C/S Socket 编程模式，但要比它更高一层。当我们在建立RPC服务以后，客户端的调用参数通过底层的RPC传输通道，可以是UDP，也可以是TCP（也即TI-RPC—无关性传输），并根据传输前所提供的目的地址及RPC上层应用程序号转至相应的RPC应用程序服务端，且此时的客户端处于等待状态，直至收到应答或Time Out超时信号。当服务器端获得请求消息，则会根据注册RPC时告诉RPC系统的例程入口地址，执行相应的操作，并将结果返回至客户端。
+
+当一次RPC调用结束后，相应线程发送相应的信号，客户端程序才会继续运行。
+
+在这个过程中，一个远程过程是有三个要素来唯一确定的：程序号、版本号和过程号。
+
+程序号是用来区别一组相关的并且具有唯一过程好的远程过程。一个程序可以有一个或几个不同的版本，而每个版本的程序都包含一系列能被远程调用的过程，通过版本的引入，使得不同版本下的RPC能同时提供服务。每个版本都包含有许多可供远程调用的过程，每个过程则有其唯一标示的过程号。
+
+传统过程调用模式无法充分利用网络上其他主机的资源（如CPU、Memory等），也无法提高代码在实体间的共享程度，使得主机资源大量浪费。
+
+
+
+http://www.cnblogs.com/LBSer/p/4853234.html
+如何发布自己的服务?--Dubbo
+应该知道的RPC原理
+1.1 怎么做到透明化远程服务调用？
+
+　　怎么封装通信细节才能让用户像以本地调用方式调用远程服务呢？对java来说就是使用代理！java代理有两种方式：1） jdk 动态代理；2）字节码生成。尽管字节码生成方式实现的代理更为强大和高效，但代码维护不易，大部分公司实现RPC框架时还是选择动态代理方式。
+
+接口测试：http://www.cnblogs.com/dayaodao/p/5127677.html
+JAX-WS与JAX-RPC之间的关系
+　　Sun最开始的web services的实现是JAX-RPC 1.1 (JSR 101)。这个实现是基于Java的RPC,并不完全支持schema规范，同时没有对Binding和Parsing定义标准的实现。
+　　JAX-WS2.0 (JSR 224)是Sun新的web services协议栈，是一个完全基于标准的实现。在binding层，使用的是the Java Architecture for XML Binding (JAXB, JSR 222)，在parsing层，使用的是the Streaming API for XML (StAX, JSR 173)，同时它还完全支持schema规范。
+
+
+二进制， 消息，序列化，通信，---hessian, SOA, 
+
+
+JAX-WS：背后的技术JAXB及传递Map 
+http://elicer.iteye.com/blog/528516
+首先我来讲一下它的原理，大家不要以为在异步的调用下，从client到server 之间的soap message 流也是异步的，其实不是，Soap/Http 协议在同步跟异步的调用下是一样的，都是客户端的service在运行时打开一个connectin,发送请求，然后接收返回，这些都在同一个connection中。这种方式对我们有什么影响呢？ 从客户端程序的角度来讲，没有影响，客户端的编程模型是由WSDL中的messages跟port types 来定义的，只要这些东西没有改变，request 跟response是不是在同一个Tcp/ip 的session 中来发送对与我们来说没由影响，然后从架构跟资源的角度来讲，对我们的影响就大了，把连接层的资源跟应用层的程序运行状态绑定起来是由许多弊端的，假如在异步调用时，程序运行出现了异常，将会导致连接层的资源被一直占用，这样会极大的影响我们程序的，稳定性，可靠性，资源的使用跟性能。
+http://blog.csdn.net/zgmzyr/article/details/8674533
+1、客户端开发者通过URL得到WSDL文件。(通过HTTP访问可以得到,http://<endpoint-address>?wsdl) 
+ 2、客户端根据WSDL的描述,通过HTTP POST发送SOAP消息给服务器端。 
+3、服务器端Listener接受到SOAP请求消息,对JAVA来说,通常是一个servlet或者EJB。Listener把消息转发给 Dispatcher,有时候listener和Dispatcher也可能是同一个类。Dispatcher会把请求消息交给WebService的运行终端。 
+4、这时候,服务器端会将HTTP request转成服务器端的消息类型,形成javax.xml.ws.handler.MessageContext,并处理SOAP消息的头信息,如mustUnderstand。 
+5、如果在服务器端配置了handler,会调用handler的handleMessage方法,通常用handler来保存消息,解密或者保证消息到达的顺序。handler通过在@HandlerChain标注配置handlers.xml文件内容为： 
+
+
+
+
+
+
+二：webservice的调用原理
+
+WebService使用SOAP协议实现跨编程语言和跨操作系统平台
+
+WebService采用HTTP协议传输数据，采用XML格式封装数据（即XML中说明调用远程服务对象的哪个方法，传递的参数是什么，以及服务对象的返回结果是什么）。WebService通过HTTP协议发送请求和接收结果时，发送的请求内容和结果内容都采用XML格式封装，并增加了一些特定的HTTP消息头，以说明HTTP消息的内容格式，这些特定的HTTP消息头和XML内容格式就是SOAP协议(simple object access protocol,简单对象访问协议) 。
+
+SOAP协议 = HTTP协议 + XML数据格式 
+
+SOAP协议是基于HTTP协议的，两者的关系就好比高速公路是基于普通公路改造的，在一条公路上加上隔离栏后就成了高速公路。
+
+ 
+
+商店的服务员只要收到了钱就给客户提供货物，商店服务员不用关心客户是什么性质的人，客户也不用关心商店服务员是什么性质的人。同样， WebService客户端只要能使用HTTP协议把遵循某种格式的XML请求数据发送给WebService服务器， WebService服务器再通过HTTP协议返回遵循某种格式的XML结果数据就可以了，WebService客户端与服务器端不用关心对方使用的是什么编程语言。
+
+HTTP协议和XML是被广泛使用的通用技术，各种编程语言对HTTP协议和XML这两种技术都提供了很好的支持，WebService客户端与服务器端使用什么编程语言都可以完成SOAP的功能，所以，WebService很容易实现跨编程语言，跨编程语言自然也就跨了操作系统平台。
+
+ 
+ WebService简单了解 
+ http://blog.csdn.net/u011075267/article/details/41522643
+ 三：WebService调用之前的工作
+
+1.WSDL文件
+
+好比我们去商店买东西，首先要知道商店里有什么东西可买，然后再来购买，商家的做法就是张贴广告海报。 WebService客户端要调用一个WebService服务，首先要有知道这个服务的地址在哪，以及这个服务里有什么方法可以调用，所以，WebService服务器端首先要通过一个WSDL文件来说明自己家里有啥服务可以对外调用，服务是什么（服务中有哪些方法，方法接受的参数是什么，返回值是什么），服务的网络地址用哪个url地址表示，服务通过什么方式来调用。
+
+WSDL（webservice description language）是基于XML格式的，它是WebService客户端和服务器端都能理解的标准格式，其中描述的信息可以分为what,where,how等部分!
+
+WSDL文件保存在Web服务器上，通过一个url地址就可以访问到它。客户端要调用一个WebService服务之前，要知道该服务的WSDL文件的地址。WebService服务提供商可以通过两种方式来暴露它的WSDL文件地址：
+
+注册到UDDI服务器，以便被人查找
+
+直接告诉给客户端调用者，例如，在自己网站给出信息或邮件告诉。
+
+
+SOA:
+http://blog.csdn.net/zhuizhuziwo/article/details/8153327
+先给出一个概念 SOA ，即Service Oriented Architecture ，中文一般理解为面向服务的架构，
+
+既然说是一种架构的话，所以一般认为 SOA 是包含了运行环境，编程模型，
+
+架构风格和相关方法论等在内的一整套新的分布式软件系统构造方法和环境，
+
+涵盖服务的整个生命周期。而在 SOA 的架构风格中，服务是最核心的抽象手段。
+
+SOA 中的服务是构建在一些列基于开放标准的基础之上的，
+
+
+
+materials:
+http://www.tutorialspoint.com/webservices/what_are_web_services.htm
+http://cxf.apache.org/docs/how-do-i-integrate-my-application-with-cxf.html
+http://javapapers.com/web-service/web-service-introduction-tutorial/
+http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html
+
