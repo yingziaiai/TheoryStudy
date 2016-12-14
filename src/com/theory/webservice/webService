@@ -149,3 +149,26 @@ http://cxf.apache.org/docs/how-do-i-integrate-my-application-with-cxf.html
 http://javapapers.com/web-service/web-service-introduction-tutorial/
 http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html
 
+
+其实依据目前案例，可以理解jax-ws是一种规范，至于其多种实现方式如axis, cxf,flex等只要符合其规范即可，
+其规范是使用jaxb, xml, soap等的组合即可，根据具体情况性能对比选择；
+
+而rpc的思想则是底层的socket，IO流， 动态代理；
+RMI则是注册
+
+http://www.tuicool.com/articles/INFfUbJ
+RPC 之 通信
+
+直接用Socket走TCP/IP 或者是UDP协议， 例如RMI
+
+走HTTP协议，  Hessian。 好处不用防火墙再开端口了
+
+在下面的例子中，使用java socket。这样可以看到更基础的内容。
+http://www.cnblogs.com/wscit/p/6040823.html
+
+http://blog.csdn.net/benluobobo/article/details/52232179
+
+
+http://www.cnblogs.com/codingexperience/p/5930752.html 很好
+http://blog.csdn.net/z69183787/article/details/39228005?locationNum=3
+

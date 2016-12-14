@@ -1,0 +1,43 @@
+http://www.tuicool.com/articles/mUR3Er:
+Volatile fields are special fields which are used for communicating state between threads. Each read of a volatile will see the last write to that volatile by any thread; in effect, they are designated by the programmer as fields for which it is never acceptable to see a "stale" value as a result of caching or reordering. The compiler and runtime are prohibited from allocating them in registers. They must also ensure that after they are written, they are flushed out of the cache to main memory, so they can immediately become visible to other threads. Similarly, before a volatile field is read, the cache must be invalidated so that the value in main memory, not the local processor cache, is the one seen.
+这段话清楚地说明了被volatile修饰的变量不能被分配到寄存器中去，在写之后必须写回内存，读值的时候要直接从内存中去读而不是缓存。好了，现在我们知道了test1和test2方法的不同之处在于：test2需要频繁地读写内存，而test1可以直接读写缓存。
+
+所以缓存和内存的延迟时间造成了两者运行时间的差异。下图给出了缓存和内存的延迟时间：
+
+cache结构与性能-cache line
+http://www.cnblogs.com/xkfz007/archive/2012/10/08/2715163.html
+http://www.cnblogs.com/xkfz007/archive/2012/10/08/2715163.html----超级清晰
+
+结合下面这个关于虚拟化：
+http://www.jifang360.com/news/2016114/n224477021.html
+虚拟化对硬件进行了抽象化，将便携性、可扩展性、灵活性变成了现实；
+尽管每个应用的配置都是独特的，但它们往往共享四个常见的关键指标：网络、I/O、CPU以及内存。
+使用虚拟化，你能够控制甚至限制上述所有指标因为hypervisor实现了硬件抽象化
+
+http://www.cnblogs.com/songyuejie/p/5267935.html
+CPU指令：单个CPU操作，来源于它的指令集。指令用于算术操作、内存I/O，以及逻辑控制
+
+内存
+
+系统主存存储应用程序和内核指令，包括它们的工作数据，以及文件系统缓存。
+许多系统中，存放这些数据的二级存储是主要的存储设备—磁盘—它的处理速度比内存低几个数量级。
+一旦主存存满，系统可能会在主存和这些存储设备间交换数据。这是一个缓存的过程，
+它常常成为系统瓶颈，严重影响性能。
+系统也有可能终止内存占用最多的进程。
+其它影响系统性能的因素包括分配和释放内存、复制内存，以及管理内存地址空间映射的CPU开销。
+对多处理器架构的系统，由于连接到本地CPU的内存相对远程CPU访问延时更低，内存本地性也是一个影响因素。
+
+
+
+JVM 内存的结构模型、堆与堆栈原理、对象在内存中的结构
+http://younglibin.iteye.com/blog/1987422
+http://blog.csdn.net/kobejayandy/article/details/8496651----极清晰
+http://younglibin.iteye.com/blog/1987422
+
+JVM的内存和电脑的内存区别
+本质上没区别,只是在在电脑上开一个进程,这个进程有自己管理的内存。
+
+http://blog.csdn.net/zhoutao198712/article/details/7783070
+一步步优化JVM四：决定Java堆的大小以及内存占用
+
+

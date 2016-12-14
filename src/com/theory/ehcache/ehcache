@@ -1,0 +1,30 @@
+http://www.jianshu.com/p/5a0669d6305e
+是什么，有什么特性，流程，架构原理；应用场景选型依据
+
+http://www.ehcache.org/documentation/3.2/getting-started.html
+The example above allocates a very small amount of off-heap. Remember that data stored off-heap will have to be serialized and deserialized - and is thus slower than heap
+
+
+ehcache usermanagedcache 相比cachemanager：
+7.1 什么是UserManagerCache，它能做什么？
+UserManagerCache这是在Ehcache3.0中引入的新的概念，它将直接创建缓存而不需要使用CacheManager来进行管理。所以这也就是UserManagerCache名称的由来。
+由于没有CacheManager的管理，用户就必须要手动配置所需要的服务，当然如果你发现要使用大量的服务，那么CacheManager则是更好的选择。
+
+文／小程故事多（简书作者）
+原文链接：http://www.jianshu.com/p/5a0669d6305e
+著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
+
+Ehcache与terracotta集群配置
+http://bluewind1521.iteye.com/blog/1636283
+http://blog.csdn.net/ever_legend_/article/details/49781871
+
+ehcache 集群方案选择：
+10.1 Ehcache集群简介
+从Ehcache1.2版本开始，Ehcache就可以使用分布式的缓存了，从 1.7版本开始，开始支持共五种集群方案，分别是：
+
+Terracotta
+RMI
+JMS
+JGroups
+EhCache Server
+其中有三种上最为常用集群方式，分别是 RMI、JGroups 以及 EhCache Server 。

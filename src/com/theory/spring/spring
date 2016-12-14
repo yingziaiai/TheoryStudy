@@ -1,0 +1,28 @@
+http://www.infoq.com/cn/news/2013/01/spring-subprojects/
+Spring子项目:--spring projects--http://projects.spring.io/spring-data/#quick-start
+日益流行起来的Spring Batch、Spring Integration和Spring Data:
+Spring Data
+
+Spring Framework中的数据访问模块对JDBC及ORM提供了很好的支持，随着NoSQL和BigData的兴起，出现了越来越多的新技术，比如非关系型数据库、MapReduce框架，Spring Data正是为了让Spring开发者能更方便地使用这些新技术而诞生的“大”项目——它由一系列小的项目组成，分别为不同的技术提供支持，例如Spring Data JPA、Sprng Data Hadoop、Spring Data MongoDB、Spring Data Redis等等。通过Spring Data，开发者可以用Spring提供的相对一致的方式来访问位于不同类型的数据存储中的数据。
+
+除了新技术，Spring Data还为传统的关系型数据库提供了很多额外的支持，让开发者能够更好地利用关系型数据库，比如对Oracle RAC的支持。
+
+Spring Batch
+
+Spring Batch是一款专门针对企业级系统中的日常批处理任务的轻量级框架，能够帮助开发者方便地开发出强壮、高效的批处理应用程序。瑞友科技IT应用研究院副院长池建强是这样介绍Spring Batch的：
+
+Spring Batch是一款优秀的、开源的大数据量并行处理框架。通过Spring Batch可以构建出轻量级的、健壮的并⾏处理应用,支 持事务、并发、流程、监控、纵向和横向扩展，提供统⼀的接口管理和任务管理。
+
+Spring Batch对批处理任务进行了一定的抽象，它的架构可以大致分为三层，自上而下分别是业务逻辑层、批处理执行环境层和基础设施层。构建于Spring Framework之上，Spring Batch可以很好地利用Spring带来的各种便利，同时也为开发者提供了相对熟悉的开发体验。
+
+很多人在了解了Spring Batch的流程控制和定义部分时，都会将其和工作流引擎混淆在一起。针对这个问题，Spring Batch的开发者Josh Long（他同时也是开源工作流引擎Activiti的贡献者）做出了这样的解释：
+
+Spring Batch更多地关注于大规模的批处理任务，例如，它提供了很多方法来读取大型的文件（比如1GB的CSV、XML文件），在数据库中加载或更新几万甚至几十万条记录。试想，一个对大规模批处理并不熟悉的开发者很可能会直接select出所有记录，以至于拖垮整个系统，而使用了Spring Batch，框架会帮助他每次捞取一部分记录进行分页，在更新时分批进行提交……
+
+在处理大任务时，还可以根据需要，将任务拆成多个部分分配到不同的服务器上进行处理，随后再整合结果。其可扩展性和灵活性由此就已可见一斑了。
+
+Spring Integration
+
+在企业软件开发过程中，经常会遇到需要与外部系统集成的情况，这时可能会使用EJB、RMI、JMS等各种技术，也许你会引入ESB。如果你在开发时用了Spring Framework，那么不妨考虑Spring Integration——它为Spring编程模型提供了一个支持企业集成模式（Enterprise Integration Patterns）的扩展，在应用程序中提供轻量级的消息机制，可以通过声明式的适配器与外部系统进行集成。
+
+Spring Integraton中有几个基本的概念——Message（带有元数据的Java对象）、Channel（传递消息的管道）和Message Endpoint（消息的处理端）。在处理端可以对消息进行转换、路由、过滤、拆分、聚合等操作；更重要的是可以使用Channel Adapter，这是应用程序与外界交互的地方，输入是Inbound、输出则是Outbound，可选的连接类型有很多，比如AMQP、JDBC、Web Services、FTP、JMS、XMPP、多种NoSQL数据库等等。只需通过简单的配置文件就能将所有这些东西串联在一起，实现复杂的集成工作。

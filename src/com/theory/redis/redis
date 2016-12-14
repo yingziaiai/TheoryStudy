@@ -1,0 +1,47 @@
+https://redis.io/documentation/
+
+http://www.tutorialspoint.com/redis/index.htm
+
+http://projects.spring.io/spring-data-redis/
+
+spring+redis demo
+http://blog.csdn.net/sunny243788557/article/details/34431357
+
+redis集群解决方案 codis
+http://www.oschina.net/p/codis
+http://www.kokojia.com/article/9496.html
+
+Redis高可用分布式内部交流(九)
+http://www.cnblogs.com/mushroom/archive/2015/08/25/4752962.html
+
+redis单主机多实例
+http://www.cnblogs.com/super-d2/p/3855229.html
+
+Redis的11种Web应用场景
+http://database.51cto.com/art/201504/471158.htm
+
+使用Redis之前5个必须了解的事情
+http://www.csdn.net/article/2014-09-29/2821930-5-key-takeaways-for-developing-with-redis
+redis数据类型操作与应用 ：http://blog.csdn.net/zq9017197/article/details/17305749
+1、显示最新的项目列表
+2、删除与过滤
+3、排行榜相关
+
+缓存：
+那些年我们一起追过的缓存写法
+http://www.cnblogs.com/mushroom/p/4278275.html
+
+网站缓存技术总结（ ehcache、memcache、redis对比）
+http://www.tuicool.com/articles/R7NZbmb
+
+ 基于redis分布式缓存实现
+ http://blog.csdn.net/pi9nc/article/details/17719737
+ 
+ Redis实战之Redis + Jedis
+ http://blog.csdn.net/it_man/article/details/9730605
+ 
+ 
+ Hadoop、Spark、HBase与Redis的适用性见解
+ http://www.aboutyun.com/thread-8701-1-1.html
+ 
+ 
