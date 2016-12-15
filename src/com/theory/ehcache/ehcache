@@ -28,3 +28,10 @@ JMS
 JGroups
 EhCache Server
 其中有三种上最为常用集群方式，分别是 RMI、JGroups 以及 EhCache Server 。
+
+
+ehcache 集群使用 rmi方式 有图有真想
+http://www.tuicool.com/articles/MJzYZbR
+
+terracotta+EhCache配置分布式集群经验总结
+http://blog.csdn.net/ever_legend_/article/details/49781871

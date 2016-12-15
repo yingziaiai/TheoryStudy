@@ -1,11 +1,14 @@
 https://redis.io/documentation/
-
+http://www.yiibai.com/redis/redis_quick_guide.html
 http://www.tutorialspoint.com/redis/index.htm
 
 http://projects.spring.io/spring-data-redis/
 
 spring+redis demo
 http://blog.csdn.net/sunny243788557/article/details/34431357
+
+比较：
+http://www.tuicool.com/articles/R7NZbmb
 
 redis集群解决方案 codis
 http://www.oschina.net/p/codis
@@ -44,4 +47,46 @@ http://www.tuicool.com/articles/R7NZbmb
  Hadoop、Spark、HBase与Redis的适用性见解
  http://www.aboutyun.com/thread-8701-1-1.html
  
+ 从Redis分区的优缺点来看适合的应用场景
+ http://blog.csdn.net/lsy0903/article/details/52512795
+ 
+ 
+ Redis几个认识误区
+ https://timyang.net/data/redis-misunderstanding/
+ http://www.iigrowing.cn/redis-huan-cun-ji-shu-xue-xi.html
+ 
+ windows:
+ http://blog.csdn.net/renfufei/article/details/38474435/
+ window下安装redis报错：
+creating server tcp listening socket 127.0.0.1:6379: bind No error
+
+的解决方案如下按顺序输入如下命令就可以连接成功-http://blog.csdn.net/n_fly/article/details/52692480
+
+1. Redis-cli.exe
+2. shutdown
+3. exit
+4. redis-server.exe redis.windows.conf
+
+
+redis管道：
+http://blog.csdn.net/why_2012_gogo/article/details/51260264
+
+
+
+
+MongoDB分片（sharding）/分区（partitioning）介绍
+http://blog.csdn.net/tanga842428/article/details/52584770
+
+
+从百万级别数据的分析角度，Mysql，Mongodb，Hbase如何选择？
+https://www.zhihu.com/question/26518864
+
+
+http://xuyunti.iteye.com/blog/2222497
+Mongodb和Hbase的对比
+http://blog.csdn.net/enweitech/article/details/44995167
+ 
+ 
+ 
+ redis 缓存 实例
  

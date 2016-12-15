@@ -1,0 +1,36 @@
+http://www.cnblogs.com/lxboy2009/p/5943759.html
+会话管理---Cookie与Session
+
+session cookie example:
+http://blog.csdn.net/xj626852095/article/details/16825659
+
+
+http://www.open-open.com/lib/view/open1405483246415.html
+
+
+jsp ${pageContext.request.requestURI} 取不到值 
+
+JSP中pageContext、request、session、application域中存取值
+http://blog.csdn.net/mr_mhl/article/details/41008333
+
+
+理解session实例：
+http://www.cnblogs.com/linguoguo/p/5106618.html
+
+
+java层面的理解：
+SessionUtil Tomcat 生成 session id 的算法
+http://blog.csdn.net/liang0000zai/article/details/51493744
+
+纯理论：
+http://blog.csdn.net/canot/article/details/50667793
+http://blog.csdn.net/frankaqi/article/details/49535207
+
+分析查看会话 请求 工具
+http://www.docin.com/p-1151167860.html
+http://blog.csdn.net/hbzh2008/article/details/9057785
+
+相对路径，绝对路径：
+http://www.cnblogs.com/langtianya/archive/2013/03/04/2942515.html
+
+application/x-www-form-urlencoded
