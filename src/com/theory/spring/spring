@@ -26,3 +26,30 @@ Spring Integration
 在企业软件开发过程中，经常会遇到需要与外部系统集成的情况，这时可能会使用EJB、RMI、JMS等各种技术，也许你会引入ESB。如果你在开发时用了Spring Framework，那么不妨考虑Spring Integration——它为Spring编程模型提供了一个支持企业集成模式（Enterprise Integration Patterns）的扩展，在应用程序中提供轻量级的消息机制，可以通过声明式的适配器与外部系统进行集成。
 
 Spring Integraton中有几个基本的概念——Message（带有元数据的Java对象）、Channel（传递消息的管道）和Message Endpoint（消息的处理端）。在处理端可以对消息进行转换、路由、过滤、拆分、聚合等操作；更重要的是可以使用Channel Adapter，这是应用程序与外界交互的地方，输入是Inbound、输出则是Outbound，可选的连接类型有很多，比如AMQP、JDBC、Web Services、FTP、JMS、XMPP、多种NoSQL数据库等等。只需通过简单的配置文件就能将所有这些东西串联在一起，实现复杂的集成工作。
+
+
+
+
+
+
+
+
+
+
+
+spring sca hibernater:
+几种注解的区别
+http://blog.csdn.net/zhang854429783/article/details/6785574 
+
+spring, SCA案例：
+http://www.th7.cn/db/mysql/201512/164818.shtml
+
+http://www.blogjava.net/reloadcn/archive/2006/09/11/66543.html
+
+http://www.ibm.com/developerworks/cn/websphere/library/techarticles/0606_lijiatao/
+
+http://blog.csdn.net/chengziq/article/details/5690309
+
+http://www.oschina.net/question/12_7625
+
+http://www.ibm.com/developerworks/cn/webservices/ws-sca/
