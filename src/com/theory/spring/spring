@@ -30,7 +30,10 @@ Spring Integraton中有几个基本的概念——Message（带有元数据的Ja
 
 
 
+spring注解：
+http://www.iteye.com/topic/295348
 
+http://blog.sina.com.cn/s/blog_872758480100wtfh.html
 
 
 
@@ -53,3 +56,18 @@ http://blog.csdn.net/chengziq/article/details/5690309
 http://www.oschina.net/question/12_7625
 
 http://www.ibm.com/developerworks/cn/webservices/ws-sca/
+
+
+http://www.ibm.com/support/knowledgecenter/en/SSRTLW_7.5.5/com.ibm.sca.tools.doc/topics/spring/sca_spring3.html
+
+http://tuscany.apache.org/sca-java-implementationspring.html
+
+http://www.blogjava.net/cpegtop/articles/371475.html
+
+http://wiki.eclipse.org/SCA/SCA_Component/SCA_First_Steps_With_Composite_Designer
+
+http://tuscany.apache.org/getting-started-with-tuscany.html
+
+http://www.xuebuyuan.com/800328.html
+
+http://www.360doc.com/content/10/0305/18/939230_17692237.shtml
