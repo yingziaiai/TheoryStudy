@@ -1,3 +1,10 @@
 http://www.journaldev.com/2090/jstl-tutorial-jstl-example-jstl-core-tags
 
 参考项目framewortTest->com.jstl.elTest;
+
+
+前端的各种规范：
+http://blog.csdn.net/hongshan50/article/details/21538639
+
+EL表达式怎么获取Map的动态key？
+http://www.cnblogs.com/ginponson/p/5058935.html
