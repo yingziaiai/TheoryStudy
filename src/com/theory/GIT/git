@@ -6,7 +6,7 @@ http://backlogtool.com/git-guide/cn/stepup/stepup2_7.html
 http://blog.csdn.net/rosten/article/details/17068285
 
 
-本地的  两个git   
+本地两个git   
 C:\Users\fionalyn.ping.fu\git
 C:\workSpace\forIBE
 
@@ -21,6 +21,9 @@ $git config --unset --global user.email
 
 Git忽略文件配置
 http://blog.csdn.net/lanbing510/article/details/40588323
+
+冲突处理
+http://www.cnblogs.com/shortboy/p/4429368.html
 git checkout filename
 http://www.tuicool.com/articles/A3Mn6f
 
