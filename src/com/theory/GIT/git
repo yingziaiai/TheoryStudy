@@ -4,3 +4,31 @@ http://blog.csdn.net/liuchunming033/article/details/43274733
 http://backlogtool.com/git-guide/cn/stepup/stepup2_7.html
 
 http://blog.csdn.net/rosten/article/details/17068285
+
+
+本地的  两个git   
+C:\Users\fionalyn.ping.fu\git
+C:\workSpace\forIBE
+
+git设置 git config -l
+http://blog.csdn.net/renfufei/article/details/41647875
+
+删除配置http://blog.csdn.net/n289950578/article/details/24245223
+http://blog.csdn.net/zxncvb/article/details/22153019
+$git config --unset --global user.name  
+$git config --unset --global user.email  
+
+
+Git忽略文件配置
+http://blog.csdn.net/lanbing510/article/details/40588323
+git checkout filename
+http://www.tuicool.com/articles/A3Mn6f
+
+
+
+git查看本地的修改
+http://www.jianshu.com/p/297f5715004f
+
+git diff
+git log 
+git show
