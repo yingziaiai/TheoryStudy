@@ -1,0 +1,17 @@
+http://blog.csdn.net/xiamizy/article/details/39178679
+
+http://blog.csdn.net/paincupid/article/details/43902437
+
+step1:download gradle3.2.1 from http://www.gradle.org/downloads
+环境变量配置：http://blog.csdn.net/lw_power/article/details/51241187
+
+step2: clone github spring framework
+for git console:
+git clone https://github.com/spring-projects/spring-framework.git
+
+for ideal git:
+http://www.tuicool.com/articles/I7BRVr
+
+
+阅读：
+http://blog.csdn.net/xiamizy/article/details/39178679

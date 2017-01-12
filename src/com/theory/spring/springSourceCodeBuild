@@ -1,0 +1,50 @@
+step1: gradlew build
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Script 'C:\springFrameworkGit\spring-framework\spring-aspects\aspects.gradle' line: 31
+
+* What went wrong:
+Execution failed for task ':spring-aspects:compileJava'.
+> Could not resolve all dependencies for configuration ':spring-aspects:ajc'.
+   > Could not resolve org.aspectj:aspectjtools:1.9.0.BETA-5.
+     Required by:
+         project :spring-aspects
+      > Could not resolve org.aspectj:aspectjtools:1.9.0.BETA-5.
+         > Could not get resource 'https://repo.spring.io/libs-release/org/aspectj/aspectjtools/1.9.0.BETA-5/aspectjtools-1.9.0.BETA-5.pom'.
+            > Could not GET 'https://repo.spring.io/libs-release/org/aspectj/aspectjtools/1.9.0.BETA-5/aspectjtools-1.9.0.BETA-5.pom'.
+               > repo.spring.io
+      > Could not resolve org.aspectj:aspectjtools:1.9.0.BETA-5.
+         > Could not get resource 'https://repo.spring.io/milestone/org/aspectj/aspectjtools/1.9.0.BETA-5/aspectjtools-1.9.0.BETA-5.pom'.
+            > Could not GET 'https://repo.spring.io/milestone/org/aspectj/aspectjtools/1.9.0.BETA-5/aspectjtools-1.9.0.BETA-5.pom'.
+               > repo.spring.io
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 1 mins 1.925 secs
+
+
+http://blog.csdn.net/xiaofan012/article/details/40476083
+
+
+
+方法二：导入到STS:
+https://segmentfault.com/a/1190000004658029
+http://blog.csdn.net/paincupid/article/details/43902437
+http://blog.csdn.net/pansanday/article/details/42296579
+
+法三：eclipse中加入STS
+http://jingyan.baidu.com/article/1612d5005fd087e20f1eee10.html
+
+
+方四：intellij idea中阅读
+http://bsr1983.iteye.com/blog/2234984
+http://blog.csdn.net/sw277378347/article/details/44978493
+http://blog.csdn.net/MOTUI/article/details/52810967
+
+阅读方法：
+http://blog.csdn.net/lqleo323/article/details/50340187

@@ -1,0 +1,46 @@
+step1:download source code and import to intellij idea
+http://spark.apache.org/downloads.html
+
+window下scala环境配置
+http://download.csdn.net/download/c836721/9327665
+http://blog.csdn.net/high2011/article/details/51728936?locationNum=14
+
+http://www.cnblogs.com/zlslch/p/5865707.html
+
+新手入门：Spark 部署实战入门
+https://www.oschina.net/news/74939/spark-deploy-combat
+
+
+spark源码导入idea:
+http://blog.csdn.net/pcno1/article/details/53433740
+
+idea下开发spark
+http://sanwen8.cn/p/257BID4.html
+
+http://blog.csdn.net/javastart/article/details/43372977
+
+http://blog.csdn.net/ssrc0604hx/article/details/51848646
+
+http://www.cnblogs.com/isenhome/p/5083181.html－－－比较完整
+
+http://blog.csdn.net/ssrc0604hx/article/details/51848646
+
+http://developer.51cto.com/art/201409/451295.htm
+
+http://wenku.baidu.com/link?url=nk6Aa4eNuysh39W9jd7NsxyR3c-5pWhZZVm0vRpZ_29aICzJk6fo8qEHS78gJ_kz4Wl-lmO0d4bMTJiTlvdYEbMkpIST9gRbcYwd4lvHynu
+
+spark1.6.0搭建（基于hadoop2.6.0分布式）
+http://kevin12.iteye.com/blog/2273556
+
+
+Apache Spark探秘：三种分布式部署方式比较
+http://dongxicheng.org/framework-on-yarn/apache-spark-comparing-three-deploying-ways/
+
+
+http://www.360doc.com/content/15/0320/13/22473147_456674382.shtml
+
+http://www.ctiforum.com/news/guandian/411045.html
+
+http://blog.csdn.net/yangbutao/article/details/12242441/
+
+http://blog.csdn.net/joshua1830/article/details/52288164

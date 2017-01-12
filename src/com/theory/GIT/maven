@@ -1,0 +1,29 @@
+Maven可以从一个中心资料片管理项目构建，报告和文件。
+http://www.yiibai.com/maven/
+Maven提供了开发人员构建一个完整的生命周期框架
+Maven使用标准的目录结构和默认构建生命周期。
+Maven项目的结构和内容在一个XML文件中声明，pom.xml 项目对象模型（POM），这是整个Maven系统的基本单元
+
+http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+validate - validate the project is correct and all necessary information is available
+compile - compile the source code of the project
+test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+package - take the compiled code and package it in its distributable format, such as a JAR.
+verify - run any checks on results of integration tests to ensure quality criteria are met
+install - install the package into the local repository, for use as a dependency in other projects locally
+deploy - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
+
+
+maven module, project
+http://www.tuicool.com/articles/RzyuAj
+
+http://www.jianshu.com/p/89b5aa82ce77--run configuration
+
+
+http://www.tuicool.com/articles/ArE3iaA
+
+jar包中的配置文件读取
+
+http://www.cnblogs.com/GarfieldTom/p/3723915.html
+http://www.cnblogs.com/GarfieldTom/p/3723915.html

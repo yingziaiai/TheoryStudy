@@ -1,0 +1,66 @@
+setup:
+http://blog.csdn.net/yown/article/details/51525035
+
+http://www.centoscn.com/image-text/install/2016/0402/6983.html
+
+常遇到的错误：
+
+常见使用命令：
+http://blog.csdn.net/lk10207160511/article/details/51108784
+service docker start 
+
+http://blog.csdn.net/yown/article/details/51525035
+
+原理架构：
+http://www.infoq.com/cn/articles/docker-source-code-analysis-part3/
+
+
+http://www.infoq.com/cn/articles/deploy-your-application-like-google
+
+视频教程：
+http://study.163.com/category/cloud-computing?utm_source=baidu&utm_medium=cpc&utm_campaign=affiliate&utm_term=PZPC19335&utm_content=SEM
+
+
+http://www.open-open.com/lib/view/open1423703640748.html
+
+http://www.docker.org.cn/book/docker/what-is-docker-16.html
+
+http://www.docker.org.cn/book/docker/docker-getting-started-14.html
+
+http://blog.csdn.net/opensure/article/details/46490749 －－docker运用场景
+
+http://www.open-open.com/lib/view/open1423703640748.html
+
+Docker从入门到实践PDF完整版 度网盘下载：http://pan.baidu.com/s/1biITZK
+http://www.linuxidc.com/Linux/2016-02/128290.htm
+
+http://www.tuicool.com/articles/Qvqeu2E
+
+发布自己image 
+http://www.jianshu.com/p/1685c09d5f13
+http://blog.csdn.net/hanruikai/article/details/42872049
+
+docker hello-world:
+http://www.linuxidc.com/Linux/2015-04/116554.htm
+http://www.tuicool.com/articles/Qvqeu2E
+
+
+MAC上的DOCKER：
+http://www.oschina.net/news/71885/docker-to-mac-windows
+
+http://www.apple.com/cn/macos/how-to-upgrade/
+
+http://eric-gao.iteye.com/blog/2315094
+
+https://docs.docker.com/docker-for-mac/
+
+
+docker目录结构：
+docker images -a 显示所有图像（默认隐藏中间图像）
+
+Docker 容器文件系统详细介绍（图文）
+http://www.jb51.net/article/98914.htm
+
+http://blog.csdn.net/ztguang/article/details/51016495
+
+因为好奇搭建了hadoop的集群之后，那里启动三个容器时，是在每一个容器中占用了一套文件，那样和搭建普通的方式哪里可以节省资源了呢？
