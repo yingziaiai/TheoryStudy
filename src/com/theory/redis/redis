@@ -90,3 +90,47 @@ http://blog.csdn.net/enweitech/article/details/44995167
  
  redis 缓存 实例
  
+ 
+ http://www.epubit.com.cn/article/200
+ Redis与其他软件的相同之处和不同之处
+Redis的用法
+使用Python示例代码与Redis进行简单的互动
+使用Redis解决实际问题
+
+http://www.iigrowing.cn/redis-huan-cun-ji-shu-xue-xi.html
+
+http://projects.spring.io/spring-data-redis/
+
+错误：
+Could not get a resource from the pool
+http://blog.csdn.net/freebird_lb/article/details/7460328
+
+tions.JedisConnectionException: Could not get a resource from the pool
+确保开启redis，并且要特别注意redis.properties文件内容空格
+
+Cannot convert value of type [com.springRedis.cache.MethodCacheInterceptor] to required type [org.aopalliance.aop.Advice] for property 'advice': no matching editors or conversion strategy found
+要保证这个类com.springRedis.cache.MethodCacheInterceptor继承于org.aopalliance.intercept.MethodInterceptor;
+
+
+redis常见使用场景
+https://my.oschina.net/lnmpstudy/blog/266541
+
+http://blog.csdn.net/hguisu/article/details/8836819
+
+http://blog.jobbole.com/88383/
+
+redis总功能阐述：
+http://doc.redisfans.com/
+
+redis做缓存的总结：
+http://www.tuicool.com/articles/zayY7v
+
+http://www.iigrowing.cn/redis-huan-cun-ji-shu-xue-xi.html
+
+
+http://blog.sina.com.cn/s/blog_5a15b7d10101gizu.html
+
+http://blog.csdn.net/a600423444/article/details/8944601
+
+redis架构设计：
+http://blog.csdn.net/a600423444/article/details/8944601

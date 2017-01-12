@@ -4,7 +4,7 @@ http://www.open-open.com/lib/view/open1438773232270.html
 比如：如何组织容器？是否应该使用路由或服务？如何处理数据（一致性，复制， 备份）？ 如何管理多重租用？如何集成开发和软件工厂布署？
 
 
-https://access.redhat.com/videos/2480801
+https://access.redhat.com/videos/2480801---视频
 
 https://blog.openshift.com/whats-new-openshift-3-3-web-console/
 
@@ -13,6 +13,9 @@ http://blog.csdn.net/garfielder007/article/details/50188025
 
 
 http://www.chinaz.com/web/2015/1019/458725.shtml
+
+tutorial:
+https://partnercenter.force.com/apex/LMSLogin
 
 安装：
 http://blog.csdn.net/fulinkster/article/details/6692595
@@ -30,3 +33,14 @@ new features in openshift
 https://blog.openshift.com/whats-new-openshift-3-3-web-console/
 
 
+openshift生态，作用，如何使用，
+RHEL 6.3旗舰
+使开发人员可以构建、测试、运行和管理他们的应用
+
+openshift online :
+https://console.preview.openshift.com/console/
+
+
+
+openshift3:
+http://www.infoq.com/cn/news/2016/08/Openshift-Container-platform
