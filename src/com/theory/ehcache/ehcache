@@ -35,3 +35,14 @@ http://www.tuicool.com/articles/MJzYZbR
 
 terracotta+EhCache配置分布式集群经验总结
 http://blog.csdn.net/ever_legend_/article/details/49781871
+
+
+
+http://www.ehcache.org/documentation/
+Ehcache详细解读
+http://raychase.iteye.com/blog/1545906
+
+spring cache
+http://docs.spring.io/spring/docs/current/spring-framework-reference/html/cache.html
+http://www.cnblogs.com/rollenholt/p/4202631.html
+http://www.ibm.com/developerworks/cn/opensource/os-cn-spring-cache/

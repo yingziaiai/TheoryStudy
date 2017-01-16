@@ -1,0 +1,14 @@
+EL表达式之sessionScope
+http://kaminlee.iteye.com/blog/1654449
+
+http://blog.csdn.net/u012246342/article/details/52620788
+今天在看项目时，看到这个。
+var ticket = '${sessionScope.ticket}';
+项目中没有找到sessionScope，便百度 其用法。
+类似 session.getAttribute("ticket");
+只不过，如果在js中使用，就是    用el表达式，直接获取了。
+
+EL入门:pageScope、requestScope、sessionScope 和applicationScope
+EL表达式之sessionScope
+
+http://blog.csdn.net/seeds_home/article/details/7861427

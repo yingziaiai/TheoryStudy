@@ -9,3 +9,12 @@ http://www.oschina.net/question/1182150_166252?sort=time
 http://www.myhack58.com/Article/60/61/2016/81545.htm
 
 http://blog.csdn.net/cendy_69576750/article/details/7974026
+
+
+session, cookie:
+同域名
+http://www.cnblogs.com/nicholas_f/archive/2010/11/05/1869811.html
+
+使用Spring Session做分布式会话管理
+http://dorole.com/1422/
+－－SessionRepositoryFilter

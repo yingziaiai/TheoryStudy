@@ -44,3 +44,22 @@ http://www.ctiforum.com/news/guandian/411045.html
 http://blog.csdn.net/yangbutao/article/details/12242441/
 
 http://blog.csdn.net/joshua1830/article/details/52288164
+
+
+windows下搭建spark环境
+http://www.jianshu.com/p/7b325155edab
+http://blog.csdn.net/u011513853/article/details/52865076
+https://my.oschina.net/itnms/blog/476192
+
+http://ju.outofmemory.cn/entry/94851
+
+
+【Spark】Spark的Shuffle机制
+http://www.jianshu.com/p/60bab35bc01e
+http://spark.apache.org/docs/1.6.1/programming-guide.html#initializing-spark
+
+ 那些年我们对Spark RDD的理解
+  RDD的依赖关系？
+  http://www.cnblogs.com/zlslch/p/5723403.html
+  
+  http://blog.csdn.net/lanchunhui/article/details/51213429

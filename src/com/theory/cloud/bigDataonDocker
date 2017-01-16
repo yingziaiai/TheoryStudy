@@ -3,6 +3,7 @@ http://www.infoq.com/cn/presentations/yarn-on-docker-with-big-data?utm_campaign=
 hadoop on docker setup
 http://blog.csdn.net/xu470438000/article/details/50512442
 service docker start 
+docker exec -it hadoop0 /bin/bash
 
 百度云产品
 https://cloud.baidu.com/product/bmr.html?t=cp:nsem|pf:pc|pp:ge-bmr|pu:aboutbmr|ci:|kw:24052
