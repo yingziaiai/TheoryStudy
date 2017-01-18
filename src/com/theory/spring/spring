@@ -81,3 +81,14 @@ bindingAwareModelMap
 spring学习之数据绑定
 
 Initializing Spring root WebApplicationContext
+
+
+使用Spring Session做分布式会话管理
+http://dorole.com/1422/
+
+
+ spring学习之数据绑定
+ http://blog.csdn.net/li_xiao_ming/article/details/8365013
+ 
+ http://www.tuicool.com/articles/EJf2Qbn
+ 深入探索spring技术内幕(四): 剖析@Resource注解实现原理与注解装配

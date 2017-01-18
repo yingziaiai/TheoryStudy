@@ -64,3 +64,50 @@ http://www.jb51.net/article/98914.htm
 http://blog.csdn.net/ztguang/article/details/51016495
 
 因为好奇搭建了hadoop的集群之后，那里启动三个容器时，是在每一个容器中占用了一套文件，那样和搭建普通的方式哪里可以节省资源了呢？
+
+docker rm命令-删除一个或多个容器－－http://www.simapple.com/340.html
+
+
+容器文件拷贝：
+http://www.cnblogs.com/lemonbar/p/4060136.html
+
+[Docker]——container和主机(host)之间的文件拷贝
+1. 从 container 到 主机（host）
+
+使用 docker cp 命令
+
+　　docker cp <containerId>:/file/path/within/container /host/path/target
+
+ 
+
+2. 从 主机（host） 到 container
+
+Get container name or short container id :
+
+docker ps
+
+Get full container id
+
+docker inspect -f '{{.Id}}' SHORT_CONTAINER_ID-or-CONTAINER_NAME
+
+copy file :
+
+sudo cp path-file-host /var/lib/docker/aufs/mnt/FULL_CONTAINER_ID/PATH-NEW-FILE
+
+EXAMPLE :
+
+$docker ps
+
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+
+d8e703d7e303 solidleon/ssh:latest /usr/sbin/sshd -D cranky_pare
+
+$docker inspect -f '{{.Id}}' cranky_pare
+
+or
+
+$docker inspect -f '{{.Id}}' d8e703d7e303
+
+d8e703d7e3039a6df6d01bd7fb58d1882e592a85059eb16c4b83cf91847f88e5
+
+$sudo cp file.txt /var/lib/docker/aufs/mnt/d8e703d7e3039a6df6d01bd7fb58d1882e592a85059eb16c4b83cf91847f88e5/root/file.txt

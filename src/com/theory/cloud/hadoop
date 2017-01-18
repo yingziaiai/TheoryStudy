@@ -22,3 +22,15 @@ http://www.aboutyun.com/thread-12183-1-1.html
 
 IDE中的hadoop
 http://www.cnblogs.com/bookwed/p/4816521.html
+
+手动离开安全模式
+http://www.waitig.com/hadoop-name-node-is-in-safe-mode.html
+bin/hadoop dfsadmin -safemode leave
+
+
+防火墙：
+windows:
+http://jingyan.baidu.com/article/d5a880eb96996613f147ccba.html
+
+ping图
+http://bbs.csdn.net/topics/391978405

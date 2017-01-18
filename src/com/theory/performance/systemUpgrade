@@ -1,0 +1,32 @@
+系统变更与升级过程中：
+1. 安全证书问题，比如IBM WAS作为容器+ ibm java jdk时，转化到以tomcat+sun java jdk时的
+java.security.NoSuchAlgorithmException: AES SecretKeyFactory not available 	at javax.crypto.SecretKeyFactory.<init>(SecretKeyFactory.java:122)
+http://ewf-momo.iteye.com/blog/1776593
+
+2. unknown source :
+http://blog.csdn.net/jubincn/article/details/7789590
+
+java.security.NoSuchAlgorithmException: AES KeyGenerator not available
+http://ewf-momo.iteye.com/blog/1776593
+https://community.oracle.com/thread/1528132 ---this make sense for updating code
+
+ibmjcefips.jar
+ibmjceprovider.jar
+ibmjsseprovider2.jar
+
+http://www.ibm.com/developerworks/cn/websphere/library/techarticles/0306_yu/yu.html
+
+
+   现在需要java实现使用.pfx证书对字符串进行加密，最后用base64编码形成密文。
+    在Sun-Jdk下即使用SUN提供的jsse.jar包，已经实现此功能。
+    http://bbs.csdn.net/topics/320219670
+    
+    
+    https://community.oracle.com/thread/1528132---seems good
+    
+    http://www.cnblogs.com/langtianya/p/3715975.html
+    
+    Access restriction: 
+    http://jingyan.baidu.com/article/e73e26c0a2617a24adb6a7d4.html
+
+2. 数据迁移方案
