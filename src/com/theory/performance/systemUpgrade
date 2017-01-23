@@ -10,9 +10,17 @@ java.security.NoSuchAlgorithmException: AES KeyGenerator not available
 http://ewf-momo.iteye.com/blog/1776593
 https://community.oracle.com/thread/1528132 ---this make sense for updating code
 
+http://bugs.java.com/bugdatabase/view_bug.do?bug_id=7022467
+
+for (Object obj : java.security.Security.getAlgorithms("Cipher")) {
+  System.out.println(obj);
+}
+
 ibmjcefips.jar
 ibmjceprovider.jar
 ibmjsseprovider2.jar
+http://blog.sina.com.cn/s/blog_9b9a08c70101eb3x.html
+
 
 http://www.ibm.com/developerworks/cn/websphere/library/techarticles/0306_yu/yu.html
 
