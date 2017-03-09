@@ -1,7 +1,13 @@
-setup:
+setup:－－win10已经成功
+https://docs.docker.com/toolbox/toolbox_install_windows/
+
+
 http://blog.csdn.net/yown/article/details/51525035
 
 http://www.centoscn.com/image-text/install/2016/0402/6983.html
+
+user guide:
+https://docs.docker.com/docker-for-windows/#explore-the-application-and-run-examples
 
 常遇到的错误：
 
@@ -111,3 +117,19 @@ $docker inspect -f '{{.Id}}' d8e703d7e303
 d8e703d7e3039a6df6d01bd7fb58d1882e592a85059eb16c4b83cf91847f88e5
 
 $sudo cp file.txt /var/lib/docker/aufs/mnt/d8e703d7e3039a6df6d01bd7fb58d1882e592a85059eb16c4b83cf91847f88e5/root/file.txt
+
+
+docker与jenkins集成：
+http://blog.csdn.net/u012562943/article/details/52437878
+http://www.cnblogs.com/guilty/p/4760301.html
+http://www.tuicool.com/articles/6FBfamA----*****
+
+生成线上镜像：
+https://segmentfault.com/a/1190000003732967
+
+jenkins openshift
+
+openshift build模块
+http://www.shellsec.com/news/4229.html
+
+jenkins github dockerfile registry

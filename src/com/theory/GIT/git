@@ -37,3 +37,6 @@ http://www.jianshu.com/p/297f5715004f
 git diff
 git log 
 git show
+
+
+git log >>显示每条分支的合并历史

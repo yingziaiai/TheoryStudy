@@ -1,0 +1,35 @@
+Hibernate 入门---**************
+http://www.cnblogs.com/hellokitty1/p/5040539.html
+http://hibernate.org/orm/documentation/5.2/
+http://blog.didispace.com/springbootdata2/
+http://hibernate.org/orm/documentation/5.2/
+http://www.cnblogs.com/liuzhen1995/p/5771178.html
+http://www.jianshu.com/p/3cb8d80f3892
+
+http://www.jianshu.com/p/cb0f96958919
+Spring Boot学习笔记2---基本使用之最佳实践
+
+http://docs.spring.io/spring-boot/docs/current/reference/html/howto-data-access.html
+
+hibernate API
+http://docs.jboss.org/hibernate/orm/current/javadocs/
+
+ hibernate5(2)初入门配置实例 
+ http://blog.csdn.net/qwe6112071/article/details/51010652
+ 
+ 
+ spring boot jpa data:
+ http://stackoverflow.com/questions/17121620/spring-data-jpa-update-query-not-updating
+
+The EntityManager doesn't flush change automatically by default. You should use the following option with your statement of query:
+
+@Modifying(clearAutomatically = true)
+@Query("update RssFeedEntry feedEntry set feedEntry.read =:isRead where feedEntry.id =:entryId")
+void markEntryAsRead(@Param("entryId") Long rssFeedEntryId, @Param("isRead") boolean isRead)
+
+
+ 如何关闭hibernate产生的大量日志 
+ http://blog.csdn.net/gaoligaoli/article/details/500501
+ 
+ 在Hibernate中开启日志
+ http://blog.csdn.net/chszs/article/details/46482297

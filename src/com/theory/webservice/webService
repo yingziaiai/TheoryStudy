@@ -97,7 +97,9 @@ http://blog.csdn.net/zgmzyr/article/details/8674533
 5、如果在服务器端配置了handler,会调用handler的handleMessage方法,通常用handler来保存消息,解密或者保证消息到达的顺序。handler通过在@HandlerChain标注配置handlers.xml文件内容为： 
 
 
-
+webservice工作原理
+http://www.cnblogs.com/Jessy/p/3528341.html
+代理
 
 
 
@@ -177,4 +179,9 @@ http://blog.csdn.net/benluobobo/article/details/52232179
 
 http://www.cnblogs.com/codingexperience/p/5930752.html 很好
 http://blog.csdn.net/z69183787/article/details/39228005?locationNum=3
+
+
+
+http://www.cnblogs.com/Gyoung/p/6132710.html
+axis2 调用webservice
 

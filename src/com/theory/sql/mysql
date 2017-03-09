@@ -1,0 +1,17 @@
+<<深入浅出MySQL数据库开发、优化与管理维护>>
+https://book.douban.com/subject/3012338/
+基础篇主要适合于MySQL的初学者，内容包括MySQL的安装与配置、SQL基础、MySQL支持的数据类型、MySQL中的运算符、常用函数、图形化工具的使用等。开发篇主要适合于MySQL的设计和开发人员，内容包括表类型(存储引擎)的选择、选择合适的数据类型、字符集、索引的设计和使用、视图、存储过程和函数、触发器、事务控制和锁定语句、SQL中的安全问题、SQL Mode及相关问题等。优化篇主要适合于开发人员和数据库管理员，内容包括常用SQL技巧和常见问题、SQL优化、优化数据库对象、锁问题、优化 MySQL Server、磁盘I/O问题、应用优化等。管理维护篇主要适合于数据库管理员，内容包括MySQL高级安装和升级、MySQL中的常用工具、MySQL 日志、备份与恢复、MySQL权限与安全、MySQL复制、MySQL Cluster、MySQL常见问题和应用技巧等。
+
+本书的作者都是MySQL方面的资深DBA。本书不但融入了他们丰富的工作经验和多年的使用心得，还提供了大量来自工作现场的实例，具有很强的实战性和可操作性。
+
+本书适用于数据库管理人员、数据库开发人员、系统维护人员、数据库初学者及其他数据库从业人员，也可以作为大中专院校相关专业师生的参考用书和相关培训机构的培训教材。
+
+ 精通mysql之精通EXPLAIN 
+ http://blog.csdn.net/hjm4702192/article/details/21890157
+ 
+ mysql从入门到精通（连载）
+ http://www.iteye.com/topic/1128256
+ 
+ 如何能够精通MySQL kernel?
+ https://www.zhihu.com/question/31884958/answer/53706400
+搞了快5年coding了，对写代码这个事情已经逐渐看明白，发现其中万变中的不变就是数据管理，自己也深入的研究过MySQL的query parser， transaction management，发现原理很简单，实现很复杂，请问如何能够彻底搞明白Mysql的kernel运行机制？或者如何成为@何登成那样的MySQL高手？

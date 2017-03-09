@@ -12,3 +12,17 @@ EL入门:pageScope、requestScope、sessionScope 和applicationScope
 EL表达式之sessionScope
 
 http://blog.csdn.net/seeds_home/article/details/7861427
+
+
+EL表达式获取对象属性的原理
+http://blog.csdn.net/wodet_t/article/details/47042435
+EL表达式获取对象属性的原理是这样的：
+以表达式${user.name}为例
+EL表达式会根据name去User类里寻找这个name的get方法，此时会自动把name首字母大写并加上get前缀，一旦找到与之匹配的方法，El表达式就会认为这就是要访问的属性，并返回属性的值。
+所以，想要通过EL表达式获取对象属性的值，那么这个属性就必须有与之对应的get方法。
+
+其实你要了解EL表达式的运行原理，它其实后台也对应的java代码，
+它会先将你EL表达式中的对象属性的首字符大写，拼成getXX()方法，
+然后利用反射将对象构建出来，然后再执行getXX()方法，
+所以这中间不关私有属性的事，调用的是私有属性的get/set方法。
+如果你不写get/set方法，那EL表达式就拿不到值了。set方法是给你后台设置值用的。

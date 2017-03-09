@@ -1,0 +1,48 @@
+Get the POST request body from HttpServletRequest
+http://stackoverflow.com/questions/8100634/get-the-post-request-body-from-httpservletrequest
+
+ java如何得到GET和POST请求URL和参数列表
+ http://blog.csdn.net/yaerfeng/article/details/18942739
+ 
+  request请求获取参数(post和get两种方式)
+  http://blog.csdn.net/u012110719/article/details/44672111
+  
+  
+  spring MVC 获取request中的body体
+  http://blog.csdn.net/tianhongqiang/article/details/51636413-----分析源码过程解析问题
+  
+  
+if ( request.getMethod().equals("POST") )
+{
+    StringBuffer sb = new StringBuffer();
+    BufferedReader bufferedReader = null;
+    String content = "";
+
+    try {
+        //InputStream inputStream = request.getInputStream();
+        //inputStream.available();
+        //if (inputStream != null) {
+        bufferedReader =  request.getReader() ; //new BufferedReader(new InputStreamReader(inputStream));
+        char[] charBuffer = new char[128];
+        int bytesRead;
+        while ( (bytesRead = bufferedReader.read(charBuffer)) != -1 ) {
+            sb.append(charBuffer, 0, bytesRead);
+        }
+        //} else {
+        //        sb.append("");
+        //}
+
+    } catch (IOException ex) {
+        throw ex;
+    } finally {
+        if (bufferedReader != null) {
+            try {
+                bufferedReader.close();
+            } catch (IOException ex) {
+                throw ex;
+            }
+        }
+    }
+
+    test = sb.toString();
+}

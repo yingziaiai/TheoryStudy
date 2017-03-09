@@ -1,0 +1,112 @@
+restful 设计方法
+http://www.ruanyifeng.com/blog/2011/09/restful
+
+RESTful API的十个最佳实践----考虑全面
+http://www.open-open.com/lib/view/open1435735457357.html
+http://www.cnblogs.com/yuzhongwusan/p/3152526.html
+
+RESTful 接口规范
+http://www.cnblogs.com/tommyli/p/3913018.html
+
+http://restcookbook.com/Basics/versioning/
+
+ RESTful之API版本控制
+ http://blog.csdn.net/ruilyzhu/article/details/50905798
+ http://ningandjiao.iteye.com/blog/1990004
+  做RESTful开放平台，一方面其API变动越少， 对API调用者越有利；另一方面，没有人可以预测未来，系统在发展的过程中，不可避免的需要添加新的资源，或者修改现有资源。因此，改动升级必不可少，但是，作为平台开发者，你必须有觉悟：一旦你的API开放出去，有人开始用了，你就不能只管自己Happy了，你对平台的任何改动都需要考虑对当前用户的影响。因此，做开放平台，你从第一个API的设计就需要开始API的版本控制策略问题，API的版本控制策略就像是开放平台和平台用户之间的长期协议，其设计的好坏将直接决定用户是否使用该平台，或者说用户在使用之后是否会因为某次版本升级直接弃用该平台。
+
+https://segmentfault.com/q/1010000008125544/a-1020000008125793－－－别人的版本控制
+ [twitter
+https://stream.twitter.com/1.1/statuses/sample.json
+
+google
+https://accounts.google.com/o/oauth2/v2/auth
+
+facebook
+https://graph.facebook.com/v2.8/oauth/access_token
+
+在URL中添加版本参数，twitter/google/facebook...都是这样来做的。这不够优雅吗？
+增加版本号就是为了接口能自然过度升级，这必然是需要冗余历史版本的代码。不过做法也有很多种。如果你是在一个应用中实现多版本的支持，那可以直接通过DispatchServlet来做servlet-mapping中即可增加版本号path。
+你也可以在后端部署多套不同版本的应用，根据请求地址将接口转发至不同版本的应用处理。
+]
+
+
+
+ 如何设计好的RESTful API之安全性
+ http://blog.csdn.net/u014386474/article/details/51728009
+ 
+ RESTful Api 身份认证中的安全性设计探讨
+ http://www.jianshu.com/p/000c0b8628b9
+ http://www.tuicool.com/articles/Zb6j6rR
+ 
+https://www.zhihu.com/question/29654503
+ 怎样保证到服务器的 REST 请求是由自己的 APP 发起的？
+出现这样的问题，自己写的接口被别人盗用，一开始他模拟了和我的APP一样格式的请求给服务器。后来我想到类似于Oauth一样，给APP加上了一个签名，就是把关键字段的值和写死在客户端的一个key联合起来做一个sha1，作为签名，服务器去验证签名。但是这又来了一个问题，如果他反编译我的客户端，这个值岂不是很容易被看到啊。除了自己发明一个保证别人看不懂的哈希算法来替代sha1以外，有没有什么办法能够防止API被盗用这样的事情发生呢？
+如果可以，请教一下用纯软件的方法怎么实现。。。
+
+
+http://blog.csdn.net/pcceo1/article/details/51245249
+ SOA，Webservice，SOAP，REST，RPC，RMI，JMS的区别与联系 
+ 
+ 
+ 
+  4、Webservice与JMS
+
+ 
+
+Webservice专注于远程服务调用，jms专注于信息交换。
+
+ 
+
+大多数情况下Webservice是两系统间的直接交互（Consumer <--> Producer），而大多数情况下jms是三方系统交互（Consumer <- Broker -> Producer）。当然，JMS也可以实现request-response模式的通信，只要Consumer或Producer其中一方兼任broker即可。
+
+ 
+
+JMS可以做到异步调用完全隔离了客户端和服务提供者，能够抵御流量洪峰； WebService服务通常为同步调用，需要有复杂的对象转换，相比SOAP，现在JSON，rest都是很好的http架构方案；（举一个例子，电子商务的分布式系统中，有支付系统和业务系统，支付系统负责用户付款，在用户在银行付款后需要通知各个业务系统，那么这个时候，既可以用同步也可以用异步，使用异步的好处就能抵御网站暂时的流量高峰，或者能应对慢消费者。）
+
+ 
+
+JMS是java平台上的消息规范。一般jms消息不是一个xml，而是一个java对象，很明显，jms没考虑异构系统，说白了，JMS就没考虑非java的东西。但是好在现在大多数的jms provider（就是JMS的各种实现产品）都解决了异构问题。相比WebService的跨平台各有千秋吧。
+
+
+5.REST与SOAP
+
+REST(Representational State Transfer)一种轻量级的Web Service架构，可以完全通过HTTP协议实现。其实现和操作比SOAP和XML-RPC更为简洁，还可以利用缓存Cache来提高响应速度，性能、效率和易用性上都优于SOAP协议。
+REST架构对资源的操作包括获取、创建、修改和删除资源的操作正好对应HTTP协议提供的GET、POST、PUT和DELETE方法(Verb)
+
+
+
+https://www.zhihu.com/question/29654503
+作者：白伯纯
+链接：https://www.zhihu.com/question/29654503/answer/45126552
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+
+简单而直接的答案是：不可能杜绝，尽量减小影响。
+Report: Bot traffic is up to 61.5% of all website traffic
+2014 Bot Traffic Report: Just the Droids You were Looking for
+根据这两篇报道，2013年全球Web流量61.5%是机器人，2014年是56%。
+
+这是一个很有普遍意义的反机器人设计，虽然结果令人失望，但是我们可以从技术角度做一些事情：
+0 反作弊策略
+最最最重要的！要有反作弊策略，不能只依靠技术手段。这是一个与人斗的过程。
+至少你要定义出什么样的行为是机器人，比如每秒30个请求显然不是个真实用户。
+1 SSL
+先从最简单的入手。用SSL可以杜绝最简单的抓包探测。
+2 双向加密
+题目中的非对称加密方法。当然别人可以反编译你的客户端，但是要学会反编译，战胜那些混淆代码的工具，需要比较高的专业技能。
+3 第三方认证
+目前手机是没有，但是XBOX和PS都有。只要这些第三方平台没有被破解，你就可以通过服务器间通讯获得可靠的用户信息。
+其实苹果的DeviceToken就是这个东西，但是它没有提供接口让你验证合法性，就等于没有了。
+
+除了技术手段以外，更重要的是运营策略：
+1 利益是源头
+别人调你的API一定是有用，如果是游戏一般都是刷金币对吧。你控制不要刷出来，自然就没有人刷了。
+2 关闭交易通道
+攻击你的人一定要有经济利益才会持续的投入，否则就是玩玩。不要让他们赚到钱，就像魔兽世界一样把刷金币和买金币的账号都封掉。这是从制度上消灭它的利益。
+3 提高成本
+再严密都会有疏漏，比如你的反作弊策略只能覆盖70％的BOT，另外30%的收益依然可能大于成本。这时候可以提高创建新用户的成本，比如第三方硬件平台其实就是一种，你也可以对每个新建的账号收费，收到超过它的平衡点就自然会退出了。
+
+
+
+spring 元数据

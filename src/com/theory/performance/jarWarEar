@@ -1,0 +1,4 @@
+http://www.itpub.net/forum.php?mod=viewthread&tid=1286989&highlight=
+jar：      是java Achieve--按java格式压缩的类包，包含内容 class、properties文件，    是文件封装的最小单元 级别：小
+war：     是file web Achieve--包含Servlet、JSP页面、JSP标记库、JAR库文件HTML/XML文档和其他公用资源文件，如图片、音频文件等 级别：中
+ear：    是 file Enterprise Achieve--除了包含JAR、WAR以外，还包括EJB组件   部署文件 application-client.xml web.xml application.xml    级别：大

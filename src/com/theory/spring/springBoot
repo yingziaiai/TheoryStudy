@@ -1,0 +1,380 @@
+ Spring Boot项目部署到 IBM WebSphere 8.5.5需要注意的地方 
+ http://blog.csdn.net/xwm111/article/details/51330051
+ 
+ spingAPI:
+ http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/remoting/rmi/package-tree.html
+ 
+ 
+ spring tutorial:
+ Spring Boot Tutorial
+ http://www.journaldev.com/7969/spring-boot-tutorial
+ 
+ 利用Spring Boot 在 Docker 中运行 Hadoop - OPEN 开发经验库
+
+主题:46. Spring Boot中使用AOP统一处理Web请求日志
+
+
+https://yq.aliyun.com/articles/6056
+spring boot应用启动原理分析 
+
+
+springBoot-maven3.0.5+
+As far as I know, Spring-Boot requires Maven3 in order to work, so an upgrade should fix the problem.
+
+Spring Boot——2分钟构建spring web mvc REST风格HelloWorld
+http://jinnianshilongnian.iteye.com/blog/1997192
+
+springBoot实战系列：
+http://blog.csdn.net/liaokailin/article/details/48948093
+
+ Spring Boot应用服务部署——使用内嵌的tomcat容器 
+ http://blog.csdn.net/wang_peng_/article/details/51248962
+ 
+ 
+  IntelliJ IDEA Tomcat配置 详解 
+  http://blog.csdn.net/chenshun123/article/details/51285890
+  
+  
+  springboot:
+http://docs.spring.io/spring-boot/docs/1.1.0.BUILD-SNAPSHOT/reference/htmlsingle/
+https://www.gitbook.com/book/hstonel/getting-started-with-react-native/details
+springBoot+下载的文档
+https://github.com/qibaoguang/Spring-Boot-Reference-Guide
+http://357029540.iteye.com/blog/2313837---下载中文
+http://www.java1234.com/a/javabook/javaweb/2016/0214/5671.html－－下载英文
+
+https://www.gitbook.com/book/qbgbook/spring-boot-reference-guide-zh/details
+sprigboot git: project
+https://www.gitbook.com/book/qbgbook/spring-boot-reference-guide-zh/details
+http://git.oschina.net/didispace/SpringBoot-Learning
+
+Spring Boot多数据源【从零开始学Spring Boot】
+http://412887952-qq-com.iteye.com/blog/2302997
+
+55. spring boot 服务配置和部署【从零开始学Spring Boot】
+http://412887952-qq-com.iteye.com/blog/2307389
+
+
+这样启动项目后在浏览器中输入地址：端口/druid，就可以看到druid的监控web页面了
+http://blog.csdn.net/javahighness/article/details/53055149
+
+SpringBoot初始教程之Tomcat、Jetty优化以及Https配置(九)
+http://blog.csdn.net/king_is_everyone/article/details/53257815
+
+spring boot 部署到线上tomcat修改流程
+https://segmentfault.com/a/1190000007462819
+
+springboot实现带页面的整个项目 
+http://blog.csdn.net/supervictim/article/details/54582083
+
+spring boot的简单restful api:(@PathVariable String username, @RequestParam String pwd){
+http://blog.csdn.net/yzllz001/article/details/53504860
+
+spring JPA hibernate实例：
+http://chentian114.iteye.com/blog/2295338
+
+springboot项目集锦
+http://git.oschina.net/didispace/SpringBoot-Learning
+http://412887952-qq-com.iteye.com/blog/2307389
+http://412887952-qq-com.iteye.com/blog/2307389
+https://github.com/spring-projects/spring-data-examples/tree/master/jpa/example/src/main/java/example/springdata/jpa
+http://412887952-qq-com.iteye.com/blog/2291542
+
+spring restful api异常 处理
+https://segmentfault.com/q/1010000002625944
+
+spring boot进行外部配置 －－－－动态切换生产环境：
+spring boot 使用application.properties 进行外部配置 
+http://blog.csdn.net/yingxiake/article/details/51260302
+
+
+RESTful API 设计指南
+http://www.ruanyifeng.com/blog/2014/05/restful_api.html
+
+ 如何POST一个JSON格式的数据给Restful服务 
+http://blog.csdn.net/iefreer/article/details/8280345
+ Spring RESTful服务接收和返回JSON最佳实践 
+https://my.oschina.net/u/2273085/blog/481085
+http://blog.csdn.net/kangkanglou/article/details/44022429
+RESTful API：对象存储敲门砖 
+http://www.searchcloudcomputing.com.cn/showcontent_79353.htm
+
+Restful 和 Jersey介绍（Web Service ）
+http://www.tuicool.com/articles/fUjAZv
+
+
+Restful Spring MVC应用的Request验证
+http://ningandjiao.iteye.com/blog/1995747
+
+
+
+@RequestMapping(method = RequestMethod.GET)
+@PreAuthorize("hasRole('TRAVEL_MANAGER')")
+public ResponseEntity getProfile(@AuthenticationPrincipal TmUserDetails user) {
+   log.debug("tmId:" + user.getId());
+   Long tmId = user.getId();
+   if (tmId == null) {
+      throw new TravelManagerServiceException("User id is missing! id:" + tmId);
+   }
+
+   TravelManagerDTO tmProfile = profileUpdateService.getTravelManagerProfile(tmId);
+   if (tmProfile == null) {
+      log.info("Unable to find travel manager with ID: " + tmId);
+      return entityCodeNotFound(TRAVELMANAGER_NOTFOUND_CODE, TRAVELMANAGER_NOTFOUND);
+   }
+   long eaId = tmProfile.getId();
+   EnterpriseAccountDTO eaProfile = profileUpdateService.getEnterpriseAccountProfile(eaId);
+   if (eaProfile == null) {
+      log.info("Unable to find enterprise account with ID: " + eaId);
+      return entityCodeNotFound(ENTERPRISE_NOTFOUND_CODE, ENTERPRISE_NOTFOUND);
+   }
+
+   ProfileUpdateResponse response = new ProfileUpdateResponse(eaProfile, tmProfile);
+   ResponseWrapper<ProfileUpdateResponse> responseWrapper = new ResponseWrapper<>();
+   responseWrapper.setData(response);
+   return ResponseEntity.ok(responseWrapper);
+
+}
+
+
+@RequestMapping(method = RequestMethod.PUT)
+@PreAuthorize("hasRole('TRAVEL_MANAGER')")
+public ResponseEntity updateProfile(@AuthenticationPrincipal TmUserDetails user,
+      @RequestBody RequestWrapper<ProfileUpdateRequest> requestDTO) {
+
+   log.debug("tmId:" + user.getId());
+   Long tmId = user.getId();
+   if (tmId == null) {
+      throw new TravelManagerServiceException("User id is missing! id:" + tmId);
+   }
+   ProfileUpdateRequest profileUpdateRequest = requestDTO.getData();
+   if (profileUpdateRequest == null) {
+      log.info("profileUpdateRequest is null");
+      throw new FormValidationException(MISSINGDATAINREQUEST);
+   }
+   EnterpriseAccountForm enterpriseAccount = profileUpdateRequest.getEnterpriseAccount();
+   if (enterpriseAccount == null) {
+      log.info("enterpriseAccount is null");
+      throw new FormValidationException(MISSINGDATAINREQUEST);
+   }
+   TravelManagerForm travelManager = profileUpdateRequest.getTravelManager();
+   if (travelManager == null) {
+      log.info("travelManager is null");
+      throw new FormValidationException(MISSINGDATAINREQUEST);
+   }
+   if(!tmId.equals(travelManager.getId())){
+      log.info("Illegal attempt to update travelManager:"+travelManager.getId());
+      return entityCodeForbidden(TRAVELMANAGER_FORBIDDEN_CODE, TRAVELMANAGER_FORBIDDEN);
+   }
+   TravelManagerDTO travelManagerDto=profileUpdateService.getTravelManagerProfile(tmId);
+   if(!travelManagerDto.getEnterpriseAccountDTO().getId().equals(enterpriseAccount.getId())){
+      log.info("Illegal attempt to update enterpriseAccount:"+enterpriseAccount.getId());
+      return entityCodeForbidden(ENTERPRISE_FORBIDDEN_CODE, ENTERPRISE_FORBIDDEN);
+   }
+   // Use fake password to bypass the validation logic
+   requestDTO.getData().getTravelManager().setPassword(DUMMY_PAZZWORD);
+   requestDTO.getData().getTravelManager().setConfirmPassword(DUMMY_PAZZWORD);
+   log.debug("Validation for profileUpdate starts");
+   // Validation
+   BindException errors = new BindException(requestDTO.getData(), "requestDTO");
+   validator.validate(requestDTO.getData(), errors);
+   // Additional validation for country as can't set it to NotEmpty in Form
+   errors=profileUpdateService.verifyAddressCountryCode(enterpriseAccount, errors);
+
+   log.debug("Validation for profileUpdate ends");
+
+   if (errors.getAllErrors().isEmpty()) {
+      // Normal Output:
+      log.info("Validation for profileUpdate passed save to DB");
+      // Save to DB
+      profileUpdateService.submitProfileUpdate(profileUpdateRequest);
+
+      return ResponseEntity.ok(new ResponseWrapper<Object>(""));
+   } else {
+      log.info("Validation for profileUpdate failed with " + errors.getAllErrors().size() + " errors ");
+      throw new FormValidationException("Form validation error.", errors.getBindingResult());
+   }
+
+} 
+
+
+
+public class JsonTextMesConverter4KeepAliveQTest {
+
+    KeepAliveQueue queue;
+    ObjectMapper objectMapper;
+
+    @Before
+    public void setUp() {
+        queue = new KeepAliveQueue("https://book.cathaypacific.com/pl/CathayPacificAwardV2/wds/OverrideServlet;jsessionid=BNRZK6vVw5za9giWKpsB8UvFYlFLWirs9pzXk-6tH7hV_9CyTVso!675941333!-1921543862?EMBEDDED_TRANSACTION=DisplayViewServlet&SITE=CBESCBES&LANGUAGE=GB&SKIN=CX&JSP_NAME_KEY=SITE_JSP_KEEPALIVE&SO_SITE_JSP_KEEPALIVE=AWRR.jsp", new Date());
+        objectMapper = new ObjectMapper();
+    }
+
+    @Test
+    public void testConvert() throws Exception {
+        StringWriter writer = new StringWriter();
+        this.objectMapper.writeValue(writer, queue);
+        KeepAliveQueue queue2 = objectMapper.readValue(writer.toString(), KeepAliveQueue.class);
+        assertEquals(queue2.toString(), queue.toString());
+    }
+} 
+
+
+
+
+
+不生效的写法
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@PropertySource("classpath:application.properties")
+//指定我们SpringBoot工程的Application启动类
+
+httpclient模拟post请求json封装表单数据
+http://www.cnblogs.com/Vdiao/p/5339487.html
+
+ spring boot 实现Restful API 及错误码
+http://blog.csdn.net/clementad/article/details/51777387
+
+spring boot exception 处理
+http://www.cnblogs.com/Zombie-Xian/p/6251189.html
+
+spring hibernate validation
+
+spring environment
+Spring Boot使用自定义的properties
+http://wiselyman.iteye.com/blog/2184586
+
+
+spring boot application properties配置详解
+http://blog.csdn.net/xiaoyu411502/article/details/48049099
+
+
+第十四章 springboot + profile（不同环境读取不同配置）
+http://www.cnblogs.com/java-zhao/p/5469183.html
+
+
+Spring Boot 环境变量读取 和 属性对象的绑定
+http://blog.csdn.net/catoop/article/details/50548009
+
+spring boot on openshift:
+https://blog.openshift.com/using-spring-boot-on-openshift/
+
+http://www.iteye.com/topic/1144685
+51. spring boot属性文件之多环境配置【从零开始学Spring Boot】
+
+spring boot注释大全
+http://blog.csdn.net/sbuiwqvb123/article/details/52946039
+
+spring·@component @Bean区别
+http://blog.csdn.net/hotdust/article/details/51477849
+@Component被用在要被自动扫描和装配的类上。
+
+@Bean主要被用在方法上，来显式声明要用生成的类。
+
+spring boot 性能监控
+
+spring boot 性能优化
+http://412887952-qq-com.iteye.com/blog/2307104
+
+
+
+
+
+
+
+
+
+
+[‎2/‎27/‎2017 4:04 PM] Chen, Hao E.: 
+@RequestMapping(method = RequestMethod.POST)
+public ResponseEntity<ResponseWrapper<RegistrationResponse>> registration(
+      @RequestBody RequestWrapper<RegistrationRequest> requestDTO) { 
+
+
+
+
+
+
+
+if (registrationRequest == null) {
+   log.info("registrationRequest is null");
+   throw new FormValidationException(MISSINGDATAINREQUEST);
+}
+// READ FORM:
+EnterpriseAccountForm enterpriseAccountForm = registrationRequest.getEnterpriseAccount();
+if (enterpriseAccountForm == null) {
+   log.info("enterpriseAccountForm is null");
+   throw new FormValidationException(MISSINGDATAINREQUEST);
+}
+// READ FORM:
+TravelManagerForm travelManagerForm = registrationRequest.getTravelManager();
+if (travelManagerForm == null) {
+   log.info("travelManagerForm is null");
+   throw new FormValidationException(MISSINGDATAINREQUEST);
+}
+log.debug("Validation starts");
+// Validation
+BindException errors = new BindException(requestDTO.getData(), "requestDTO");
+validator.validate(requestDTO.getData(), errors);
+// Verify EA BR number/ TM user name
+registrationService.verifyRegistrationForm(requestDTO.getData(), errors);
+log.debug("Validation ends");
+if (errors.getAllErrors().isEmpty()) {
+   // Normal Output:
+   log.info("Validation passed save to DB");
+   RegistrationResponse response = registrationService.submitRegistrationForm(registrationRequest);
+   ResponseWrapper<RegistrationResponse> responseWrapper = new ResponseWrapper<>();
+   responseWrapper.setData(response);
+   return ResponseEntity.ok(responseWrapper);
+} else {
+   log.info("Validation failed with " + errors.getAllErrors().size() + " errors ");
+   throw new FormValidationException("Form validation error.", errors.getBindingResult());
+} 
+
+    error.setErrors(errorFields);
+
+   return new ResponseEntity<>(new ErrorResponseWrapper(error), HttpStatus.BAD_REQUEST);
+}
+responseWrapper.setData(response);
+return ResponseEntity.ok(responseWrapper); 
+
+
+
+
+
+
+
+
+spring data jpa复杂操作
+http://blog.csdn.net/liuchuanhong1/article/details/52042477
+http://blog.csdn.net/liuchuanhong1/article/details/53491218
+
+Spring Boot / Java 8 / Tomcat 8 on Openshift with DIY
+http://www.tuicool.com/articles/jYrIr2
+
+
+SpringBoot配置属性------汇总的述
+https://segmentfault.com/a/1190000004315890
+
+
+SpringBoot初始教程之统一异常处理(三) 
+http://blog.csdn.net/king_is_everyone/article/details/53080851
+
+Spring Boot异常处理详解
+http://www.cnblogs.com/xinzhao/p/4934247.html
+
+5. spring-boot REST 全局异常处理
+http://www.jianshu.com/p/75211a5cec79
+http://blog.didispace.com/springbootexception/
+
+spring 中的 model, modelandview
+
+
+spring boot 对于json的处理
+http://www.cnblogs.com/qinshou/p/5917341.html
+http://blog.csdn.net/petercnmei/article/details/25685925
+http://blog.csdn.net/chenyongtu110/article/details/46346073
+http://blog.csdn.net/prince_hua/article/details/12103501
+
+
+ spring boot 学习笔记（005）提交json对象 
+ http://blog.csdn.net/yihui823/article/details/51779959

@@ -1,0 +1,50 @@
+环境搭建：
+http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html
+http://www.cnblogs.com/sunseine/p/5630213.html－－安装教程
+http://jingyan.baidu.com/article/4d58d5411241c29dd4e9c03f.html
+
+http://wenku.baidu.com/link?url=TEh-bGU_zw3H868DX5UJBWQpm-fOauO-zQLIT8FfQjV_cP_H5ti-6IkYMjyXiUQADOtz7pyVcxNadF2GtoRWIkCB1bY_gM1b-ih5CgA8Z6K
+
+oracle IDE:
+http://www.lenosoft.net/down/6069.htm--下载
+http://yeahsj.iteye.com/blog/2226906
+http://jingyan.baidu.com/article/6b182309b6d9a2ba59e1597e.html
+　【破解说明】
+　　1、解压安装文件后，选择适合自己电脑的位数进行安装。
+　　2、安装完毕后，桌面会自动生成快捷方式，双击打开。
+　　3、选择评估，可以获得14天的试用时间。
+　　4、找到解压文件中“datestopper2.4”文件夹下的“SETUP.exe”应用程序，双击打开。
+　　5、通过浏览位置或者活动进程找到“F:\Program Files\Aqua Data Studio 16.0 - 64bit\datastudio.exe”,并设置当日安装日期后,点击加入或修改即可。 
+
+oracle usage in aqua data studio:
+http://www.cnblogs.com/XLay/articles/1921243.html
+
+java.sql.SQLException: ORA-01501: CREATE DATABASE failed ORA-01100: database already mounted
+http://stackoverflow.com/questions/11837609/java-sql-sqlexception-ora-01501-create-database-failed-ora-01100-database-alr
+   SQL>shutdown immediate;
+     SQL>startup nomount;
+     SQL>CREATE ........ 
+     
+     
+     ORA-01031: insufficient privileges
+     
+ http://www.cnblogs.com/huangjian20112939/p/3416818.html
+ 用Sqlplus手动创建Oracle11g数据库
+ 
+ Oracle ORA-01033: ORACLE initialization or shutdown in progress 错误解决办法
+ http://www.cnblogs.com/wangsaiming/p/3688141.html  
+ 
+ 
+ oracle 如何增大连接池最大连接数
+ 
+ java配置数据库连接池的方法步骤
+ http://www.cnblogs.com/limeiky/p/5714209.html
+ 
+ 
+ oracle-JDBC连接池设置
+ http://www.cnblogs.com/twyth/articles/1895043.html
+ 
+ springboot数据库连接池使用策略
+ http://blog.csdn.net/sichenglain/article/details/51469811
+  Spring Boot下Druid连接池的使用配置分析  
+  http://blog.csdn.net/blueheart20/article/details/52384032

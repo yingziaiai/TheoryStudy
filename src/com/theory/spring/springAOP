@@ -3,3 +3,60 @@ http://samter.iteye.com/blog/410618
 
 spring常见使用错误
 http://blog.csdn.net/sgx425021234/article/details/8979445
+
+
+http://blog.csdn.net/sinat_25398439/article/details/53185905
+http://blog.csdn.net/hla199106/article/details/47727871
+AOP是Aspect Oriented Programing的简称，面向切面编程。AOP适合于那些具有横切逻辑的应用：
+如性能监测，访问控制，事务管理、缓存、对象池管理以及日志记录。
+AOP将这些分散在各个业务逻辑中的代码通过横向切割的方式抽取到一个独立的模块中。
+AOP 实现的关键就在于 AOP 框架自动创建的 AOP 代理，AOP 代理则可分为静态代理和动态代理两大类，
+其中静态代理是指使用 AOP 框架提供的命令进行编译，从而在编译阶段就可生成 AOP 代理类，
+因此也称为编译时增强；而动态代理则在运行时借助于 JDK 动态代理、CGLIB 等在内存中“临时”生成 AOP 动态代理类，因此也被称为运行时增强。
+
+http://blog.csdn.net/hla199106/article/details/47727871
+AOP有些特有的概念，如：advisor、advice和pointcut等等，使用或配置起来有点绕，让人感觉有些距离感，
+其实它的实现就是一组标准的设计模式的组合使用：Factory、Proxy、Chain of Responsibility，
+只要搞清楚这几个设计模式，读AOP的源码是比较容易的。
+
+
+http://blog.csdn.net/moreevan/article/details/11977115/
+AOP技术则恰恰相反，它利用一种称为“横切”的技术，剖解开封装的对象内部，并将那些影响了多个类的公共行为封装到一个可重用模块，并将其名为“Aspect”，即方面。所谓“方面”，简单地说，就是将那些与业务无关，却为业务模块所共同调用的逻辑或责任封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可操作性和可维护性。AOP代表的是一个横向的关系，如果说“对象”是一个空心的圆柱体，其中封装的是对象的属性和行为；那么面向方面编程的方法，就仿佛一把利刃，将这些空心圆柱体剖开，以获得其内部的消息。而剖开的切面，也就是所谓的“方面”了。然后它又以巧夺天功的妙手将这些剖开的切面复原，不留痕迹。
+AOP相关概念
+方面（Aspect）：一个关注点的模块化，这个关注点实现可能另外横切多个对象。事务管理是J2EE应用中一个很好的横切关注点例子。方面用spring的 Advisor或拦截器实现。
+ 
+连接点（Joinpoint）: 程序执行过程中明确的点，如方法的调用或特定的异常被抛出。
+ 
+通知（Advice）: 在特定的连接点，AOP框架执行的动作。各种类型的通知包括“around”、“before”和“throws”通知。通知类型将在下面讨论。许多AOP框架包括Spring都是以拦截器做通知模型，维护一个“围绕”连接点的拦截器链。Spring中定义了四个advice: BeforeAdvice, AfterAdvice, ThrowAdvice和DynamicIntroductionAdvice
+ 
+切入点（Pointcut）: 指定一个通知将被引发的一系列连接点的集合。AOP框架必须允许开发者指定切入点：例如，使用正则表达式。 Spring定义了Pointcut接口，用来组合MethodMatcher和ClassFilter，可以通过名字很清楚的理解， MethodMatcher是用来检查目标类的方法是否可以被应用此通知，而ClassFilter是用来检查Pointcut是否应该应用到目标类上
+ 
+引入（Introduction）: 添加方法或字段到被通知的类。 Spring允许引入新的接口到任何被通知的对象。例如，你可以使用一个引入使任何对象实现 IsModified接口，来简化缓存。Spring中要使用Introduction, 可有通过DelegatingIntroductionInterceptor来实现通知，通过DefaultIntroductionAdvisor来配置Advice和代理类要实现的接口
+ 
+目标对象（Target Object）: 包含连接点的对象。也被称作被通知或被代理对象。POJO
+ 
+AOP代理（AOP Proxy）: AOP框架创建的对象，包含通知。 在Spring中，AOP代理可以是JDK动态代理或者CGLIB代理。
+ 
+织入（Weaving）: 组装方面来创建一个被通知对象。这可以在编译时完成（例如使用AspectJ编译器），也可以在运行时完成。Spring和其他纯Java AOP框架一样，在运行时完成织入。
+
+
+http://www.uml.org.cn/j2ee/201301102.asp－－－－－－－－－最好的一文
+Spring AOP介绍及源码分析
+
+代理模式与装饰模式的区别
+http://blog.csdn.net/hitprince/article/details/6794748
+
+
+Spring AOP动态代理原理与实现方式
+http://blog.csdn.net/lirui0822/article/details/8555691－－－最好的讲动态代理的例子
+java框架篇---spring AOP 实现原理
+http://www.cnblogs.com/oumyye/p/4467276.html
+
+http://yunshen0909.iteye.com/blog/829173----此文后发现抓住核心类图
+
+Spring AOP 之编译期织入、装载期织入、运行时织入
+http://www.ithao123.cn/content-999946.html
+
+
+[Spring]AOP拦截-三种方式实现自动代理 
+http://blog.csdn.net/qq_26525215/article/details/52412901

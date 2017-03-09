@@ -1,9 +1,122 @@
 新版本对docker的支持功能：
 http://www.oschina.net/news/60893/intellij-idea-14-1
 
+官网
+https://www.jetbrains.com/help/idea/2016.3/creating-a-java-module.html
+
+
+IntelliJ IDEA 快捷键和设置
+http://www.cnblogs.com/bluestorm/archive/2013/05/20/3087889.html
+http://blog.csdn.net/dc_726/article/details/42784275----**
+
+intellij IDEA设置 注释
+位置:
+File -> Other Settings -> Default Settings (command + “,”)
+File and Code Templates -> Includes -> File Header -> 编辑
+
+
+编码格式修改：
+
+    File->Settings->Editor->File Encodings 这种方式修改的文件编码方式只对当前 project 起作用，每次新建了一个工程后还需要重新设置编码方式。
+    File->Other Settings->Default Settings->Editor->File Encodings ，这儿设置的是默认的文件编码方式，所有新建的工程使用的都是默认的文件编码方式。
+
+
+使用IntelliJ IDEA开发SpringMVC网站---tomcat
+http://www.cnblogs.com/Leo_wl/p/4459274.html
+
+intellij转化项目结构：
+http://www.tuicool.com/articles/ZNNbQj
+
+
+
+
+eclipse与intellij idea区别用法：
+http://www.ituring.com.cn/article/37792
 
 IntelliJ IDEA 14.1中的Docker支持
 http://www.tuicool.com/articles/mUnam2A
 
 IDEA使用docker进行调试
 http://www.cnblogs.com/xiaohunshi/p/5892067.html
+
+intellij Ideal安装下载
+http://www.jetbrains.com/idea/download/#section=windows
+注册：
+[对于Intellij IDEA 2016.3.4  可以填写注册server
+http://jetbrains.tech
+来激活。
+参考：https://www.haxotron.com/jetbrains-intellij-idea-crack-123/
+]
+
+intellij idea 高级用法之：集成JIRA、UML类图插件、集成SSH、集成FTP、Database管理
+http://www.cnblogs.com/yjmyzz/p/4588386.html
+
+show outlines like eclipse:
+view->Structure
+
+intellij Idea debug:
+eclipse进入Debug模式把手标放到对应的代码上就会自动显示结果
+
+Idea则是把手标放到你想显示结果的代码上，按Ctrl+F1就显示结果。
+
+如果你想跳到下一个断点直接按F9，如果想下一步F8。
+ctrl+shift+f8: breakpoints
+
+Ctrl + Alt + H shows the call hierarchy in the tool window
+Ctrl + N: 查找类
+Ctrl + alt +B： 实现类
+Ctrl + Shift + F: 查找
+
+ctrl + alt + L: 代码格式化
+
+intellij idea进行spring 单元测试
+http://blog.csdn.net/xcwll_sina/article/details/49277645
+
+
+intellij ideal查找：
+ctrl+shift+f
+
+call hi
+
+intellij idea配置不用每次自动编译
+http://www.mincoder.com/article/2365.shtml
+ 1：开启自动测试
+File->setting->compiler 
+
+2修改run/debug配置
+Run->Edit Configurations
+
+3. 看图 在Before Launch下面的make去掉了。到了这里还要做一件事情，执行File->Invalidate Caches /Restart
+
+到这里IDEA配置好了 
+
+
+
+将eclipse的maven项目导入到intellij idea中
+http://www.cnblogs.com/Java-dzz/p/6140089.html
+http://www.tuicool.com/articles/zYrAfiE
+
+
+ideal Analyze | Data Flow  from Here
+http://www.cnblogs.com/ghj1976/p/5382455.html
+
+
+IntelliJ IDEA如何进行单元测试和代码覆盖率
+http://jingyan.baidu.com/article/9faa72315be0ef473d28cb64.html
+
+http://www.ithao123.cn/content-8232620.html
+intellij idea 高级用法之：集成JIRA、UML类图插件、集成SSH、集成FTP、Database管理
+
+
+ “Error:java: invalid source release: 7” in IntelliJ
+ http://talk.elementsofprogramminginterviews.com/t/bug-fixed-error-java-invalid-source-release-7-in-intellij/198
+ 
+ The problem can be fixed in this way: In IntelliJ 13.1.4 I had to change Java and SDK version on the following place:
+
+File -> Project Structure -> Module Settings -> Tab: Sources: Language Level -> 7
+
+
+
+导入项目中报异常 ：
+ intellij IDEA--- 报inspects a maven model for resolution problems 
+ http://blog.csdn.net/lishaoran369/article/details/53994601

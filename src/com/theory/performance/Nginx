@@ -1,0 +1,3 @@
+Nginx是一个高性能HTTP和反向代理服务器，单台NGINX服务器最多能支持高达50000的并发请求，所以一般情况下，会将NGINX作为静态资源的访问服务器或者作为访问流量分流的服务器
+http://nginx.org
+http:/tengine.taobao.org

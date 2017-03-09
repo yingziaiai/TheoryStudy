@@ -1,0 +1,16 @@
+ JVM调优：PermSpace溢出 
+ http://blog.csdn.net/blueheart20/article/details/39859733
+ JVM 参数：　-Xmx128m -Xms64m -XX:PermSize=5m -XX:MaxPermSize=10M
+ 
+ 
+ https://www.zhihu.com/question/30391220
+ JVM服务器虚拟机内存一直增长，重启后五六天就涨到接近100%，如何解决？
+ 
+ 
+ http://blog.csdn.net/ning109314/article/details/10411495
+ JVM原理和优化 
+ http://developer.51cto.com/art/201001/176550.htm
+ JVM详解，java虚拟机原理与优化
+ 
+ jvm间歇性崩溃分析
+ http://www.cnblogs.com/LBSer/p/4417148.html

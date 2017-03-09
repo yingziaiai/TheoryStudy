@@ -1,0 +1,24 @@
+error1:
+javax.crypto.BadPaddingException: Given final block not properly padded;
+
+public static byte[] encryptRes(byte[] data, byte[] desKey) { try { IvParameterSpec spec = new IvParameterSpec(desKey); DESKeySpec dks = new DESKeySpec(desKey); SecretKeyFactory keyFactory = SecretKeyFactory...
+可能是你的加密和解密使用的填充算法不一致导致的。
+1、要确认下是否加密和解密都是使用相同的填充算法（也就是说，是否都是使用PKCS5Padding）
+2、确认下你要解密的字节数组是否正确。
+
+
+Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
+
+
+com.ibm.crypto.provider.DESKey
+
+DES:
+http://www.cnblogs.com/langtianya/p/3715975.html
+DES加密介绍
+DES是一种对称加密算法，所谓对称加密算法即：加密和解密使用相同密钥的算法。DES加密算法出自IBM的研究，
+后来被美国政府正式采用，之后开始广泛流传，但是近些年使用越来越少，因为DES使用56位密钥，以现代计算能力，
+24小时内即可被破解。虽然如此，在某些简单应用中，我们还是可以使用DES加密算法，本文简单讲解DES的JAVA实现
+
+
+IBM API:
+https://www.ibm.com/support/knowledgecenter/SSYKE2_6.0.0/com.ibm.java.zsecurity.api.60.doc/com.ibm.crypto.hdwrCCA/index.html

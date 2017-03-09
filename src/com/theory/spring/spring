@@ -1,3 +1,19 @@
+spring history:---new features
+http://www.infoq.com/cn/articles/spring-2-intro
+
+spring-framework-4-reference
+https://www.gitbook.com/book/waylau/spring-framework-4-reference/details
+https://www.gitbook.com/book/waylau/spring-framework-4-reference/details
+https://waylau.gitbooks.io/spring-framework-4-reference/
+
+http://javabeat.net/tutorials/spring-framework/------很好的教程
+
+
+
+
+spring元数据
+http://www.educity.cn/java/508948.html
+
 http://www.infoq.com/cn/news/2013/01/spring-subprojects/
 Spring子项目:--spring projects--http://projects.spring.io/spring-data/#quick-start
 日益流行起来的Spring Batch、Spring Integration和Spring Data:
@@ -89,6 +105,76 @@ http://dorole.com/1422/
 
  spring学习之数据绑定
  http://blog.csdn.net/li_xiao_ming/article/details/8365013
+ @RequestParam @RequestBody @PathVariable 等参数绑定注解详解(转)
+ http://www.cnblogs.com/qq78292959/p/3760702.html
+ 
+对象传递 ：
+记录下restful客户端调用服务端传递对象的方式 
+http://blog.sina.com.cn/s/blog_544a7be40100yu7b.html
+
+
+
  
  http://www.tuicool.com/articles/EJf2Qbn
  深入探索spring技术内幕(四): 剖析@Resource注解实现原理与注解装配
+ 
+ 
+ 
+ Spring3系列6-Spring 表达式语言(Spring EL)
+ http://www.cnblogs.com/leiOOlei/p/3543222.html
+ 
+ SpringMVC关于json、xml自动转换的原理研究[附带源码分析]
+ http://blog.csdn.net/qq_34120041/article/details/53606198
+ 
+ spring 框架的xml文件如何读取properties文件数据
+   在spring的配置文件中通过EL表达式的形式调用 
+   http://blog.sina.com.cn/s/blog_72cbf92301010c13.html
+   
+   JSP隐含变量和Spring中Model在EL表达式中的读取顺序
+   http://www.cnblogs.com/rocky-AGE-24/p/5816193.html
+   
+   强大的Spring的EL表达式
+   http://www.2cto.com/kf/201507/415694.html
+   
+   jsp和EL表达式--------------****************************
+   http://blog.csdn.net/earbao/article/details/36417165
+   http://www.jb51.net/article/20042.htm
+   
+   
+   过滤器原理及el表达式 
+   el表达式 底层原理
+   http://blog.sina.com.cn/s/blog_bd338b2101017mg2.html
+ 
+ Spring 在 xml配置文件 或 annotation 注解中 运用Spring EL
+ http://blog.csdn.net/topwqp/article/details/8688011  
+   
+   <constructor-arg
+   http://blog.sina.com.cn/s/blog_bd338b2101017mg2.html
+   
+   
+   [Spring MVC] - SpringMVC的各种参数绑定方式
+   http://www.cnblogs.com/HD/p/4107674.html
+   http://jinnianshilongnian.iteye.com/blog/1698916
+   spring @RequestBody @ResponseBody使用及原理
+   http://m.blog.csdn.net/article/details?id=52487233
+   
+spring aop 日志管理   
+    Spring AOP使用@AspectJ实现日志管理 
+    http://blog.csdn.net/czmchen/article/details/42392985
+    http://blog.csdn.net/czmchen/article/details/42392985
+    http://blog.csdn.net/u012554102/article/details/50443780
+    项目要加一个日志记录功能，需要对一些敏感信息进行一个日志记录，以前做过登陆的日志记录，做法很简单，就是在登陆方法后头加上日志的数据库插入，这样做一处还好，现在需要跟多操作都加上日志记录，如果每个地方都加上日志的数据库日志插入，即繁琐，代码的重复度也很大。Spring AOP的面向切入编程很好的解决了这个问题，通过在切入点（方法前，方法后，方法异常）植入通知（日志记录，事务管理...），这样就可以很灵活方便的在一些方法上加上一些跟业务逻辑无关的操作，可见AOP是对OOP的一个很好的补充。
+下面就直接说说日记功能的实现步骤：
+http://blog.csdn.net/sd0902/article/details/8393770-----very good**************
+
+
+ Java过滤器与SpringMVC拦截器之间的关系与区别 －－－－－－－－－－－结合视频
+ http://blog.csdn.net/chenleixing/article/details/44573495
+ 
+ 
+ http://sishuok.com/forum/blogPost/list/5934.html－－处理器拦截器
+ 第五章 处理器拦截器详解——跟着开涛学SpringMVC 
+ 
+ 
+ SpringMVC：前后端传值总结---@pathvarible, @pathparam
+ https://segmentfault.com/a/1190000005918116

@@ -1,0 +1,69 @@
+比较文件内容是否相同
+https://zhidao.baidu.com/question/2009570412210782308.html
+在一些网盘和邮箱中,上传文件时,会检查服务器是否已经有了,如果已经有了则无需上传.
+这是如何实现的,我觉得要比较完全相同,必然一个个字节比较,这样的速度和直接上传是一样的啊.
+那些网盘用的什么算法?有公开代码么
+不是java实现的也可以(有些是JS?)
+
+计算MD5或SHA-1，一样的就是同一个文件
+
+下面的代码，不需要额外使用第三方组件，且支持超大文件
+// 计算文件的 MD5 值
+publicstatic String getFileMD5(File file) {
+    if (!file.isFile()) {
+        return null;
+    }
+    MessageDigest digest = null;
+    FileInputStream in = null;
+    byte buffer[] = newbyte[8192];
+    int len;
+    try {
+        digest =MessageDigest.getInstance("MD5");
+        in = new FileInputStream(file);
+        while ((len = in.read(buffer)) != -1) {
+            digest.update(buffer, 0, len);
+        }
+        BigInteger bigInt = new BigInteger(1, digest.digest());
+        return bigInt.toString(16);
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
+    } finally {
+        try {
+            in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+  
+}
+
+
+// 计算文件的 SHA-1 值
+publicstatic String getFileSha1(File file) {
+    if (!file.isFile()) {
+        return null;
+    }
+    MessageDigest digest = null;
+    FileInputStream in = null;
+    byte buffer[] = newbyte[8192];
+    int len;
+    try {
+        digest =MessageDigest.getInstance("SHA-1");
+        in = new FileInputStream(file);
+        while ((len = in.read(buffer)) != -1) {
+            digest.update(buffer, 0, len);
+        }
+        BigInteger bigInt = new BigInteger(1, digest.digest());
+        return bigInt.toString(16);
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
+    } finally {
+        try {
+            in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

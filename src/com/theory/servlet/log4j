@@ -1,6 +1,10 @@
 http://www.codeceo.com/article/log4j-usage.html
 最详细的Log4j使用教程
 
+W3C log4j教程
+http://www.w3cschool.cn/java/log4j-log-format.html
+
+
 http://blog.sina.com.cn/s/blog_8f99a1640102v3eo.html
 
 http://blog.csdn.net/whiteotiger/article/details/6522236
@@ -8,3 +12,51 @@ http://blog.csdn.net/whiteotiger/article/details/6522236
  log4j.xml isInfoEnabled
  
  http://blog.csdn.net/kiterunner/article/details/51926992
+ 
+ 
+ http://blog.csdn.net/u010648555/article/details/51655135
+ 日志记录—项目日志处理方案 
+ 二、考虑日志方案
+
+1、日志类别定义
+
+2 用户层级日志：用户登陆、退出、注册和绑定手机邮箱验证码
+2 业务层级日志：购物车、订单、支付、退款和中台接口调用
+2 系统层级日志：指代码中未捕获而由spring框架抛出的异常日志（controller）,用spring3以上版本提供的@ControllerAdvice进行拦截以及异常捕获处理。
+2 框架层级日志：SpringMVC框架日志以及hibernate日志（包括查询sql、ddl、hql参数以及异常捕获）
+
+
+http://blog.csdn.net/ws15286832380/article/details/48250007
+ log4j配置文件加载方式 ---源码分析
+ 
+ log4j，如何“自动加载”？
+ http://www.cnblogs.com/alipayhutu/archive/2013/04/18/3028249.html
+ 
+ 最详细的Log4j使用教程
+ http://www.codeceo.com/article/log4j-usage.html－－－－－－－－－－－*******
+ 
+Log4j2 简明教程
+http://www.cnblogs.com/lzb1096101803/p/5796849.html
+http://412887952-qq-com.iteye.com/blog/2306974－－－－数据库
+
+Java 写 Log
+http://www.cnblogs.com/mingforyou/p/4246298.html
+
+http://www.cnblogs.com/byron0918/p/5769646.html------***流程实例
+
+ 自定义装载：
+ http://blog.csdn.net/kevin_luan/article/details/36943435
+ public static final void loadLog4jConfig(){  
+    Properties prop = new Properties();  
+    try {  
+        FileInputStream stream=new FileInputStream("/var/conf/bin/log4j.properties");  
+        prop.load(stream);  
+        stream.close();//这样log4j对配置文件可以放置在任何位置  
+        PropertyConfigurator.configure(prop);//装入log4j配置信息  
+    } catch (FileNotFoundException e) {  
+        e.printStackTrace();  
+    } catch (IOException e) {  
+        e.printStackTrace();  
+    }  
+} 
+

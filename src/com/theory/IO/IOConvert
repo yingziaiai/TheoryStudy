@@ -1,0 +1,100 @@
+(-)InputStream,String,File相互转化
+http://www.cnblogs.com/cpcpc/archive/2011/07/08/2122996.html
+
+(二）byte[]、File、InputStream互转
+http://gqsunrise.iteye.com/blog/1995151
+
+（三）byte[] Array to Hex String
+
+ 
+
+1. String --> InputStream
+InputStream String2InputStream(String str){
+   ByteArrayInputStream stream = new ByteArrayInputStream(str.getBytes());
+   return stream;
+}
+
+2. InputStream --> String
+String inputStream2String(InputStream is){
+   BufferedReader in = new BufferedReader(new InputStreamReader(is));
+   StringBuffer buffer = new StringBuffer();
+   String line = "";
+   while ((line = in.readLine()) != null){
+     buffer.append(line);
+   }
+   return buffer.toString();
+}
+
+今天从网上看到了另一种方法，特拿来分享
+
+String all_content=null;
+        try {
+        all_content =new String();
+
+         InputStream ins = 获取的输入流;
+
+          ByteArrayOutputStream outputstream = new ByteArrayOutputStream();
+        byte[] str_b = new byte[1024];
+        int i = -1;
+        while ((i=ins.read(str_b)) > 0) {
+           outputstream.write(str_b,0,i);
+        }
+        all_content = outputstream.toString();
+   } catch (Exception e) {
+
+e.printStackTrace();
+      }
+
+此两种方法上面一种更快，但是比较耗内存，后者速度慢，耗资源少
+
+3、File --> InputStream
+InputStream in = new InputStream(new FileInputStream(File));
+
+4、InputStream --> File
+public void inputstreamtofile(InputStream ins,File file){
+OutputStream os = new FileOutputStream(file);
+int bytesRead = 0;
+byte[] buffer = new byte[8192];
+while ((bytesRead = ins.read(buffer, 0, 8192)) != -1) {
+os.write(buffer, 0, bytesRead);
+}
+os.close();
+ins.close();
+}
+
+
+（二）
+1、将File、FileInputStream 转换为byte数组：  
+  
+    File file = new File("file.txt");  
+  
+    InputStream input = new FileInputStream(file);  
+  
+    byte[] byt = new byte[input.available()];  
+  
+    input.read(byt);  
+  
+   
+  
+2、将byte数组转换为InputStream：  
+  
+    byte[] byt = new byte[1024];  
+  
+    InputStream input = new ByteArrayInputStream(byt);  
+  
+   
+  
+3、将byte数组转换为File：  
+  
+    File file = new File('');  
+  
+    OutputStream output = new FileOutputStream(file);  
+  
+    BufferedOutputStream bufferedOutput = new BufferedOutputStream(output);  
+  
+    bufferedOutput.write(byt); 
+    
+    
+    
+     读取Java文件到byte数组的三种方式
+     http://blog.csdn.net/z69183787/article/details/16883243

@@ -1,3 +1,7 @@
+http://maven.apache.org/plugins/maven-ear-plugin/modules.html#
+tag
+http://blog.csdn.net/taiyangdao/article/details/52374125
+
 Maven可以从一个中心资料片管理项目构建，报告和文件。
 http://www.yiibai.com/maven/
 Maven提供了开发人员构建一个完整的生命周期框架
@@ -33,3 +37,105 @@ java读取jar包中配置文件
 http://ydlmlh.iteye.com/blog/1264742
 http://www.cnblogs.com/GarfieldTom/p/3723915.html
 
+
+EAR项目构建的几种方式 －－project打包成war并加载到现有的ear中
+http://blog.csdn.net/shangyue1110/article/details/45506829
+http://www.cnblogs.com/wayhow/p/5439618.html
+http://uule.iteye.com/blog/2078925?utm_source=tuicool
+在eclipse中，右键new > project > Dynamic web project ，
+
+在弹出的对话框中输入项目名称testWeb，注意，在EAR membership中勾选上“Add project to an EAR”，并输入准备创建的EAR的名称，例如TestEAR，
+
+再创建几个Web project，此时可以选择需要加入的EAR的名称，这里，我们都选择TestEAR，
+
+
+maven多module
+maven多模块项目，多web合并项目使用心得
+http://www.tuicool.com/articles/ArE3iaA
+
+
+
+Maven中指定Java的编译版本和源文件编码方式 
+http://blog.csdn.net/fw0124/article/details/49779121
+http://songjianyong.iteye.com/blog/1910143
+如果要指定Java编译版本有两种方式
+
+1）在settings.xml中指定
+2）在pom.xml中指定，例如
+
+
+maven build Build配置build 
+http://blog.csdn.net/taiyangdao/article/details/52374125 	
+
+
+maven解决依赖冲突：
+http://stamen.iteye.com/blog/2030552
+omitted for conflict with 3.2
+http://stamen.iteye.com/blog/1554987
+
+maven:
+http://jinnianshilongnian.iteye.com/blog/1997192
+<repositories>  
+    <repository>  
+        <id>spring-snapshots</id>  
+        <url>http://repo.spring.io/snapshot</url>  
+        <snapshots><enabled>true</enabled></snapshots>  
+    </repository>  
+    <repository>  
+        <id>spring-milestones</id>  
+        <url>http://repo.spring.io/milestone</url>  
+        <snapshots><enabled>true</enabled></snapshots>  
+    </repository>  
+</repositories>  
+
+
+
+
+maven scope 标签用法
+http://www.xuebuyuan.com/1581741.html
+
+在一个maven项目中，如果存在编译需要而发布不需要的jar包，可以用scope标签，值设为provided。如下：
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+            <classifier />
+        </dependency>
+
+scope的其他参数如下：
+
+    compile
+    默认的scope，表示 dependency 都可以在生命周期中使用。而且，这些dependencies 会传递到依赖的项目中。适用于所有阶段，会随着项目一起发布
+    provided
+    跟compile相似，但是表明了dependency 由JDK或者容器提供，例如Servlet AP和一些Java EE APIs。这个scope 只能作用在编译和测试时，同时没有传递性。????????
+    runtime
+    表示dependency不作用在编译时，但会作用在运行和测试时，如JDBC驱动，适用运行和测试阶段。
+    test
+    表示dependency作用在测试时，不作用在运行时。 只在测试时使用，用于编译和运行测试代码。不会随项目发布。
+    system
+    跟provided 相似，但是在系统中要以外部JAR包的形式提供，maven不会在repository查找它。
+    
+Maven项目中使用本地JAR包 
+http://blog.csdn.net/hhb200766/article/details/42168819    
+在maven中添加本地jar包     
+        <!--<dependency>-->
+            <!--<groupId>com.ibm.was</groupId>-->
+            <!--<artifactId>ibmjceprovider</artifactId>-->
+            <!--<version>6.0</version>-->
+            <!--<scope>system</scope>-->
+            <!--<systemPath>${project.basedir}/lib/ibmjceprovider.jar</systemPath>-->
+        <!--</dependency>-->    
+
+在maven中设置编码：
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>

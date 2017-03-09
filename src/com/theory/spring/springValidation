@@ -1,0 +1,13 @@
+SpringMVC 使用验证框架 Bean Validation（上） 
+http://blog.csdn.net/catoop/article/details/51278675
+
+@NotBlank 	CharSequence子类型 	验证注解的元素值不为空（不为null、去除首位空格后长度为0），不同于@NotEmpty，@NotBlank只应用于字符串且在比较时会去除字符串的首位空格
+@NotEmpty 	CharSequence子类型、Collection、Map、数组 	验证注解的元素值不为null且不为空（字符串长度不为0、集合大小不为0）
+
+
+spring boot 1.4默认使用 hibernate validator----里面有一张图
+http://www.07net01.com/2017/01/1765899.html
+
+
+59. Spring Boot Validator校验 －－－－一点没用过的使用场景，比如国际化，在代码中添加错误信息
+http://blog.csdn.net/linxingliang/article/details/52350246
