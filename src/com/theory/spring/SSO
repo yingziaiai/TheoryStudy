@@ -1,0 +1,13 @@
+http://blog.csdn.net/clh604/article/details/20365967/
+京东SSO案例
+
+http://blog.csdn.net/gg_gogoing/article/details/47446441
+session, cookie, token
+
+
+http://www.admin10000.com/document/8168.html
+SSO单点登录三种情况的实现方式详解 
+
+
+response.isCommitted()可检查看服务端是否已将数据输出到客户端.如果返回值是TRUE则已将数据输出到客户端,是FALSE则还没有
+http://www.xuebuyuan.com/762368.html
