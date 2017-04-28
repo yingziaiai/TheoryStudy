@@ -48,7 +48,8 @@ https://www.zhihu.com/question/29654503
 http://blog.csdn.net/pcceo1/article/details/51245249
  SOA，Webservice，SOAP，REST，RPC，RMI，JMS的区别与联系 
  
- 
+ Restful Api的访问控制方法 
+ http://blog.csdn.net/linlzk/article/details/50748580
  
   4、Webservice与JMS
 
@@ -110,3 +111,10 @@ Report: Bot traffic is up to 61.5% of all website traffic
 
 
 spring 元数据
+
+
+
+让SpringMVC支持可版本管理的Restful接口
+http://www.cnblogs.com/jcli/p/springmvc_restful_version.html-------------------good
+ spring mvc 针对不同请求头返回不同的视图 
+ http://blog.csdn.net/yiluoak_47/article/details/43149203

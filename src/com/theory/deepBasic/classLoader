@@ -1,2 +1,10 @@
 深入理解Java类加载器(1)：Java类加载原理解析 
 http://blog.csdn.net/zhoudaxia/article/details/35824249
+
+classpath:
+java项目中Classpath路径到底指的是哪里？ 
+http://blog.csdn.net/cheney521/article/details/8672066
+http://blog.csdn.net/javaloveiphone/article/details/51994268
+
+web.xml 配置中classpath: 与classpath*:的区别
+http://perfy315.iteye.com/blog/2009258

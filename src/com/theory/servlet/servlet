@@ -72,3 +72,37 @@ http://www.cnblogs.com/jichunhu/archive/2013/01/31/2887042.html
 set context path for tomcat
 http://www.mamicode.com/info-detail-505235.html
 
+
+Servlet中isCommitted含义及发生的条件
+http://www.xuebuyuan.com/762368.html
+
+
+ 理解Servlet过滤器(javax.servlet.Filter)
+ http://blog.csdn.net/microtong/article/details/5007170
+ 过滤器（Filter）的概念
+过滤器位于客户端和web应用程序之间，用于检查和修改两者之间流过的请求和响应。
+在请求到达Servlet/JSP之前，过滤器截获请求。
+在响应送给客户端之前，过滤器截获响应。
+多个过滤器形成一个过滤器链，过滤器链中不同过滤器的先后顺序由部署文件web.xml中过滤器映射<filter-mapping>的顺序决定。
+最先截获客户端请求的过滤器将最后截获Servlet/JSP的响应信息
+
+过滤器应当设计为在部署时很容易配置的形式。通过认真计划和使用初始化参数，可以得到复用性很高的过滤器。 过滤器逻辑与Servlet逻辑不同，它不依赖于任何用户状态信息，因为一个过滤器实例可能同时处理多个完全不同的请求。
+
+
+ spring DelegatingFilterProxy 过滤器 的原理及运用
+ http://blog.csdn.net/z69183787/article/details/23173093
+ 
+ springSecurity源码分析——DelegatingFilterProxy类的作用
+ http://www.cnblogs.com/hzhuxin/archive/2011/12/19/2293730.html
+ 
+ Web.xml中Filter过滤器标签几个说明
+ http://www.cnblogs.com/edwardlauxh/archive/2010/03/11/1918618.html
+ 在Servlet2.4中filter-mapping中加入了新的标签<dispatcher> ,里面有4个值即REQUEST, FORWARD,INCLUDE和ERROR,默认不写这个标签的时候是REQUEST,该标签是根据客户端传过来的地址进行过滤,FORWARD方法传过来的request方法可以拦截,<ERROR-PAGE>错误页面传过来的拦截,INCLUDE包含过来的过滤,一般REQUEST传过来的拦截.该标签可以加入多个.
+ 
+ 
+  Spring Boot 之FilterRegistrationBean --支持web Filter 排序的使用
+  http://blog.csdn.net/doctor_who2004/article/details/56055505
+  利用这种方式，我们可以对filter排序，可自行测试，源码:
+https://github.com/sdcuike/spring-boot-practice/tree/master/src/main/java/com/sdcuike/practice/web2
+  
+

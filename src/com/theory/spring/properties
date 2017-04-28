@@ -1,0 +1,75 @@
+springboot  interceptor 读取不到值
+https://segmentfault.com/q/1010000004844376/a-1020000005741448
+
+http://blog.csdn.net/mjlfto/article/details/65635135----解决方法
+http://stackoverflow.com/questions/23349180/java-config-for-spring-interceptor-where-interceptor-is-using-autowired-spring-b
+
+
+ spring boot 自定义PropertyPlaceholderConfigurer
+ http://blog.csdn.net/yyhjava/article/details/53308491
+ spring boot启动会自动生成一个PropertyPlaceholderConfigurer，该自定义的PropertyPlaceholderConfigurer回覆盖springboot自动生成的PropertyPlaceholderConfigurer 
+ 
+ 
+ 重写Spring的PropertyPlaceholderConfigurer，从数据库加载配置数据
+ http://m.blog.csdn.net/article/details?id=52537132
+ 
+ 
+ Spring Boot 使用Java代码创建Bean并注册到Spring中
+ http://www.open-open.com/lib/view/open1453426569511.html
+ 
+ Spring Boot干货系列：（二）配置文件解析－－－－－－－－－－－－－－－－很不错
+ https://baijiahao.baidu.com/po/feed/share?wfr=spider&for=pc&context=%7B%22sourceFrom%22%3A%22bjh%22%2C%22nid%22%3A%22news_2965204947517158458%22%7D
+ 
+  xml零配置之WebMvcConfigurationSupport
+  http://blog.csdn.net/u013571243/article/details/44565623
+  
+   Spring PropertyPlaceholderConfigurer 自定义扩展
+   http://blog.csdn.net/feiyu8607/article/details/8282893－－－－－－－－－－－－不错
+   其中classpath是引用src目录下的文件写法。
+
+当存在多个Properties文件时，配置就需使用locations了
+https://my.oschina.net/ikkyuuC/blog/91247
+
+
+
+SpringBoot获取properties配置
+https://my.oschina.net/wangnian/blog/758009
+
+spring-boot 如何加载rsources下面的自定义配置文件
+https://segmentfault.com/q/1010000006828771?_ea=1144561－－－－－－－－－－－－－－－－－－－－－－－－－
+有两种方式，一种是通过@PropertySource注解，然后使用@Value逐个注入配置。
+另外一种方式是通过@ConfigurationProperties注解，通过getter、setter方法注入及获取配置。
+
+深入SpringBoot:自定义PropertySourceLoader---------------------------------试试
+http://www.cnblogs.com/zhao1949/p/6226288.html
+
+
+Spring Boot 配置优先级顺序
+http://www.cnblogs.com/softidea/p/5759180.html
+
+Spring Boot自动配置 
+http://www.cnblogs.com/wangdaijun/p/5333065.html
+
+
+ Spring中Configuration的理解
+ http://blog.csdn.net/koflance/article/details/59304090
+ 
+ http://docs.spring.io/spring-boot/docs/1.5.2.RELEASE/reference/htmlsingle/
+   @ConfigurationProperties  
+    24.7.1 Third-party configuration
+As well as using @ConfigurationProperties to annotate a class, you can also use it on public @Bean methods. This can be particularly useful when you want to bind properties to third-party components that are outside of your control.
+
+To configure a bean from the Environment properties, add @ConfigurationProperties to its bean registration:
+
+@ConfigurationProperties(prefix = "bar")
+@Bean
+public BarComponent barComponent() {
+    ...
+}
+
+ Springboot 之 自定义配置文件及读取配置文件
+ http://blog.csdn.net/zsl129/article/details/52880798
+
+
+Spring Boot 实践折腾记（五）：自定义配置，扩展Spring MVC配置
+http://www.68idc.cn/help/mobilesys/other/20160621621152.html

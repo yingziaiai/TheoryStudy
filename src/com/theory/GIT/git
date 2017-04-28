@@ -40,3 +40,8 @@ git show
 
 
 git log >>显示每条分支的合并历史
+
+
+git冲突：
+Git错误non-fast-forward后的冲突解决 
+http://blog.csdn.net/chain2012/article/details/7476493

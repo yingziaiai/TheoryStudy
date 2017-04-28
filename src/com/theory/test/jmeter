@@ -1,0 +1,69 @@
+http://www.cnblogs.com/chongyou/p/5355832.html
+jmeter接口测试之登录测试
+
+使用 Jmeter 做 Web 接口测试 
+https://testerhome.com/topics/4059
+
+图文入门
+http://www.51testing.com/html/48/n-3710548-2.html
+http://www.cnblogs.com/dinghanhua/p/5646278.html
+
+jmeter随笔（4）--中文url编码问题
+http://www.cnblogs.com/heiyexiaoguai/p/5881206.html
+
+${__urlencode
+
+Jmeter正则表达式参数提取 
+http://www.cnblogs.com/haining1993/p/5819148.html---正则入门
+http://blog.csdn.net/wanglha/article/details/50781503
+https://www.blazemeter.com/blog/using-regular-expressions-jmeter
+
+http://blog.csdn.net/jiehash/article/details/53067270
+http://blog.csdn.net/fanjeff/article/details/46873289
+http://www.cnblogs.com/tester-l/p/6017594.html
+http://blog.sina.com.cn/s/blog_6090a6ba01012g3e.html
+Jmeter组件4. Regular Expression Extractor
+http://www.cnblogs.com/ryansunyu/p/5792919.html
+
+JMeter学习（二十五）HTTP属性管理器HTTP Cookie Manager、HTTP Request Defaults
+http://www.cnblogs.com/yangxia-test/p/4123155.html
+
+jmeter的http cookies管理器使用 
+http://blog.csdn.net/g695144224/article/details/51802862
+
+
+JMeter后置处理器XPath Extractor的使用  
+http://blog.163.com/yhd_test/blog/static/245300015201552114447655/
+
+
+原 jmeter性能测试---登录百度进行搜索 
+http://blog.csdn.net/n8765/article/details/47784559
+JMeter 测试Web登录
+http://www.tuicool.com/articles/B7BZfe
+https://testerhome.com/topics/4059
+
+
+Jmeter性能测试
+http://www.jsjtt.com/java/javaceshi/124.html
+
+Jmeter压力测试
+http://blog.csdn.net/qq_16272049/article/details/70251980－－－Beanshell
+
+Jmeter中的几个重要测试指标释义
+http://www.51testing.com/html/28/116228-238479.html
+
+性能测试Jmeter的使用
+http://blog.csdn.net/wangqi880/article/details/62955315--------主要实例参考
+http://www.ltesting.net/ceshi/open/kyxncsgj/jmeter/2013/0812/206566.html
+https://blog.linuxeye.cn/335.html－－－－使用函数与参数
+
+
+压力测试（性能测试）和性能调优实战---jmeter、jamon、jconsole
+http://sunqi.iteye.com/blog/807475
+
+jMeter正则表达式
+http://www.yiibai.com/jmeter/jmeter_regular_expressions.html
+
+
+JMeter使用plugins插件进行服务器性能监控
+http://www.cnblogs.com/amyguoo/p/5750468.html

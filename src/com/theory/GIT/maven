@@ -1,3 +1,9 @@
+http://blog.csdn.net/jiangkai528/article/details/24798943
+Maven最佳实践 划分模块 配置多模块项目 pom modules 
+http://blog.csdn.net/u013378306/article/details/50805529
+<!-- Maven的生命周期是抽象的，实际需要插件来完成任务，这一过程是通过将插件的目标（goal）绑定到生命周期的具体阶段（phase）来完成的。  
+        如：将maven-compiler-plugin插件的compile目标绑定到default生命周期的compile阶段，完成项目的源代码编译： -->  
+
 http://maven.apache.org/plugins/maven-ear-plugin/modules.html#
 tag
 http://blog.csdn.net/taiyangdao/article/details/52374125
@@ -139,3 +145,58 @@ http://blog.csdn.net/hhb200766/article/details/42168819
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+			
+			
+<plugin>
+	<groupId>org.codehaus.mojo</groupId>
+					<artifactId>tomcat-maven-plugin</artifactId>
+					<version>1.1</version>
+					<configuration>
+						<path>/app_cx</path>
+						<warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+					</configuration>
+				</plugin>			
+
+				
+				
+war编码
+http://songjianyong.iteye.com/blog/1910143
+http://www.tuicool.com/articles/JfaA7r
+    <properties>  
+            <!-- 文件拷贝时的编码 -->  
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+            <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
+            <!-- 编译时的编码 -->  
+            <maven.compiler.encoding>UTF-8</maven.compiler.encoding>  
+     </properties> 
+     
+     
+     
+ 关于maven的依赖分析
+ http://blog.csdn.net/psy1100/article/details/51200354
+ mvn dependency:analyze
+ 第一类：Used undeclared dependencies found
+这个是指，某些依赖的包在代码中有用到它的代码，但是它并不是直接的依赖，也没有在pom中声明，是通过传递引入的一类包。
+
+这里重点我们关注第二类：
+Unused declared dependencies found
+这个就是我们在pom中声明依赖了，但是在实际代码中并没有用到的包！也就是多余的包。
+注意：这里说的实际代码没有用到，指的是在main/Java和test里没有用的，但是并不是意味着别的地方没有用到，所以在删除依赖的时候，我们要小心，最好备份，例如我们在web.xml里面用到某些类，这个类依赖包A，这个maven是分析不出来的。还有运行时需要用到的也分析不出来！！！    
+  
+  
+  Maven依赖版本冲突的分析及解决小结-----------------------***************************************
+  http://www.cnblogs.com/godtrue/p/6220512.html
+  分析过程   
+  
+  
+  Maven实战（六）--- dependencies与dependencyManagement的区别-----------------------------********
+  http://blog.csdn.net/liutengteng130/article/details/46991829
+  
+  
+  http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-packaging
+  67.7.2 Available layouts--------------------------****************
+  WAR
+	
+
+Executable WAR layout. provided dependencies are placed in WEB-INF/lib-provided to avoid any clash when the war is deployed in a servlet container.
+      

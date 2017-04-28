@@ -1,3 +1,5 @@
+http://api.jquery.com/jQuery.ajax/
+
 AJAX请求 $.post方法的使用
 http://www.cnblogs.com/Johnny_Z/archive/2012/06/17/2552597.html
 
@@ -9,3 +11,99 @@ http://www.php100.com/html/program/jquery/2013/0905/5918.html
  jsp ajax实例讲解 
  http://blog.csdn.net/rushkid02/article/details/7515058
  http://www.108js.com/article/article10/a0046.html?id=2446
+ 
+ 
+ HTML中使用Ajax进行局部刷新页面，使用JS将数据发送到后台
+ http://blog.csdn.net/u013360850/article/details/52770038
+ 
+ Ajax中Put和Delete请求传递参数无效的解决方法（Restful风格） 
+ http://blog.csdn.net/lixhongwu/article/details/9229267
+ 
+  success : function(data) {
+                $(showDiv).append("<p>修改处理结果：" + data.flag + "</p>") ;
+            } ,
+            error : function(data) {
+                $(showDiv).append("<p>对不起，出错啦！</p>") ;
+            } 
+ success:function(data) {    
+        if(data.msg =="true" ){    
+            // view("修改成功！");    
+            alert("修改成功！");    
+            window.location.reload();    
+        }else{    
+            view(data.msg);    
+        }    
+     },    
+     error : function() {    
+          // view("异常！");    
+          alert("异常！");    
+     }   
+     
+  ajax获取input value
+  not var = document.getElementByID().value;
+  but as below:
+  <html>
+  <body>
+  <input type="test" id="name" value="">
+  <input type="submit" onclick="">
+  
+     $("#button").click(function(){
+        var value1 = $("#name").val();
+        alert(value1);
+        $("#name").val("修改了值")
+        var value2 = $("#name").val();
+        alert(value2);
+    });   
+    
+   ajax的data传参的两种方式 
+     http://blog.csdn.net/coffeesmile/article/details/20992829  
+     
+     
+   jquery Ajax 方法返回数据的获取，包括JSON,XML,TXT
+   http://www.cnblogs.com/zgqys1980/archive/2011/10/28/2227974.html
+   http://www.w3school.com.cn/jquery/ajax_ajax.asp  
+   
+    json对象与json字符串互转，ajax各常见函数 
+    http://blog.csdn.net/yaozhiwei1019/article/details/53462618
+    jquery操作字符串常用方法总结及工作代码 
+    http://blog.csdn.net/woshifeixingzhuiyue/article/details/11969805
+    
+    
+    AJAX运行过程中5种状态 
+    http://blog.csdn.net/zzxian/article/details/17073951
+    http://www.cnblogs.com/fanshaokun/p/6272816.html
+    Ajax工作原理
+    http://www.cnblogs.com/mingmingruyuedlut/archive/2011/10/18/2216553.html
+    
+    
+    ajax 跨域 headers JavaScript ajax 跨域请求 +设置headers 实践
+    $.ajax({
+    type: "GET",
+    url: "test.php",
+    success: function(data) {
+        console.log(data);
+    },
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader("User-Agent", "headertest");
+    }
+});
+    http://www.cnblogs.com/cdemo/p/5158663.html
+    
+    
+    Ajax同步发送、字符串按步长截断
+    http://www.cnblogs.com/lilyimage/archive/2012/09/04/2670640.html
+    
+    AJAX中的dataType(数据格式)-text、json
+    http://www.cnblogs.com/nuanai/p/6264872.html
+    
+    AJAX 学习笔记[四] AJAX 对服务器返回的XML 的处理
+    http://www.cnblogs.com/xugang/archive/2010/08/07/1794750.html
+    
+    
+    jquery Ajax 方法返回数据的获取，包括JSON,XML,TXT
+    http://www.cnblogs.com/zgqys1980/archive/2011/10/28/2227974.html
+    
+    
+    关于firefox(火狐)浏览器中ajax请求返回data时出现[object XMLDocument]的情况的分析 
+    http://blog.csdn.net/chinaonlyqiu/article/details/8882532?utm_source=tuicool
+         

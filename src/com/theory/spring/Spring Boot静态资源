@@ -1,3 +1,43 @@
 http://blog.csdn.net/catoop/article/details/50501706
 Spring Boot 静态资源处理 
 http://www.cnblogs.com/chry/p/5877979.html
+
+通过Ajax和SpringBoot交互的示例
+http://blog.csdn.net/oppo5630/article/details/52093898
+
+
+http://spring.io/blog/2014/01/03/utilizing-webjars-in-spring-boot
+Utilizing WebJars in Spring Boot 
+
+http://blog.csdn.net/songhaifengshuaige/article/details/54137330---good
+springboot下静态资源的处理
+
+使用Spring Boot开发WEB页面
+http://www.jianshu.com/p/23bea93e34c7
+
+ spring boot 静态页面展示 
+ https://github.com/xujijun/my-spring-boot
+ 
+ 
+ spring boot multiple module 和静态资源－－－－mlcCloud
+ http://www.07net01.com/2016/12/1738093.html
+ http://blog.csdn.net/message_lx/article/details/54632947
+ http://blog.csdn.net/luenxin/article/details/50068985
+ http://spring.io/blog/2013/12/19/serving-static-web-content-with-spring-boot
+ 
+ 
+ @EnableWebMvc
+ Spring Boot 设置静态资源访问
+ http://m.blog.csdn.net/article/details?id=44937763
+ 
+
+http://blog.csdn.net/z69183787/article/details/46502673 
+ @RequestMapping(value="example")
+
+public ModelAndView example(HttpServletRequest request) {
+
+return new ModelAndView("index.jsp");
+
+}
+
+}

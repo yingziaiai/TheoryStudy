@@ -1,0 +1,15 @@
+member/login in MLC configuration to set the login url;
+
+createSessionAndRedirect in SecurityFramework:
+then search in IBE:
+com.cathaypacific.framework.security
+
+get the 
+  <bean name="/login/*"
+            class="com.cathaypacific.framework.security.controller.LoginController">
+            <property name="securityManager" ref="securityManager4" />
+            <property name="exceptionHandler" ref="exceptionHandler4" />
+            <property name="validationHelper" ref="validationHelperSecurity4" />
+      </bean>
+Spring学习笔记之整合struts
+http://codecloud.net/83485.html

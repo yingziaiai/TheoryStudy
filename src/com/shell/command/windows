@@ -1,1 +1,8 @@
 netstat -ano|findstr "8080"
+
+keytool import:
+https://zhidao.baidu.com/question/1111658204644178019.html
+keytool -import -alias cacerts -keystore cacerts -file d:\software\AKAZAM-Mail.cer -trustcacerts
+
+netstat -ano
+http://yuhuiyy2011.iteye.com/blog/1526815

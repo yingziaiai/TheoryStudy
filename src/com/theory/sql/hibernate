@@ -33,3 +33,8 @@ void markEntryAsRead(@Param("entryId") Long rssFeedEntryId, @Param("isRead") boo
  
  在Hibernate中开启日志
  http://blog.csdn.net/chszs/article/details/46482297
+ 
+  Hibernate中连接数据库的方法概述及DataSource方法 
+  Hibernate整合C3P0实现连接池
+  http://blog.csdn.net/mercenarylin/article/details/21605223
+ http://blog.csdn.net/taiyangdao/article/details/51733868

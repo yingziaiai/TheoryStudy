@@ -1,9 +1,21 @@
  Spring Boot项目部署到 IBM WebSphere 8.5.5需要注意的地方 
  http://blog.csdn.net/xwm111/article/details/51330051
  
+ spring boot应用启动原理分析
+ www.importnew.com/19149.html
+ http://itindex.net/detail/55462-spring-boot-%E5%BA%94%E7%94%A8
+ 
  spingAPI:
  http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/remoting/rmi/package-tree.html
  
+ 
+ spring boot example:
+ https://github.com/leelance/spring-boot-all/blob/master/spring-boot-samples/src/main/java/com/lance/application/WebAppConfig.java
+ 
+ 
+ 
+ springboot注解
+ http://www.cnblogs.com/woms/p/5754200.html
  
  spring tutorial:
  Spring Boot Tutorial
@@ -379,3 +391,237 @@ http://blog.csdn.net/prince_hua/article/details/12103501
 
  spring boot 学习笔记（005）提交json对象 
  http://blog.csdn.net/yihui823/article/details/51779959
+ 
+ 
+ 
+ ngBoot health Check
+
+@Componentpublic class HealthCheck implements HealthIndicator { Logger logger = LoggerFactory.getLogger(HealthCheck.class); @Override public Health health() { logger.info("Start health check at: [{}]", new Date()); //TODO:implement health check steps for this web service //eg. check the Q see if it is active or not and then return the status //return Health.down().withDetail("Testing Failed.","abc123").build(); return Health.up().build(); }} 
+
+endpoints.health.path=_health 
+
+#endpoints.health.path=_health
+#endpoints.health.sensitive=false
+#endpoints.health.enabled=true
+#endpoints.health.time-to-live=10000
+
+
+
+
+#endpoints.enabled=false
+#endpoints.health.enabled=true
+#endpoints.health.sensitive=false
+#endpoints.health.time-to-live=10000
+#endpoints.health.path=_health
+
+
+Build a Spring-Boot REST service with Basic Authentication for several users
+https://www.sothawo.com/2015/07/build-a-spring-boot-rest-service-with-basic-authentication-for-several-users/
+ 
+ 
+自定义Indicator 扩展 HealthEndPoint
+http://www.cnblogs.com/javanoob/p/springboot_healthcheck.html
+http://www.jianshu.com/p/9fab4e81d7bb
+
+
+http://blog.csdn.net/eacter/article/details/60957206
+Spring Boot提供以下系统指标：
+
+    系统内存总量（mem），单位:Kb
+    空闲内存数量（mem.free），单位:Kb
+    处理器数量（processors）
+    系统正常运行时间（uptime），单位:毫秒
+    应用上下文（就是一个应用实例）正常运行时间（instance.uptime），单位:毫秒
+    系统平均负载（systemload.average）
+    堆信息（heap，heap.committed，heap.init，heap.used），单位:Kb
+    线程信息（threads，thread.peak，thead.daemon）
+    类加载信息（classes，classes.loaded，classes.unloaded）
+    垃圾收集信息（gc.xxx.count, gc.xxx.time）
+    
+  如何做实时监控？—— 参考 Spring Boot 实现   
+    http://blog.csdn.net/xiaoyu411502/article/details/48129057
+    
+    
+    使用Spring Boot开发Web项目 
+    http://blog.csdn.net/u012702547/article/details/53784992
+    http://www.jianshu.com/p/969c11fdf8b3
+    
+    基于SpringBoot + Mybatis实现SpringMVC Web项目【原创】--------------very good
+    http://7player.cn/2015/08/30/%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%9F%BA%E4%BA%8Espringboot-mybatis%E5%AE%9E%E7%8E%B0springmvc-web%E9%A1%B9%E7%9B%AE/
+
+    
+    Spring Boot Controller ----------jsp + Thymeleaf 
+    http://blog.csdn.net/catoop/article/details/50501676---------------很综合
+  
+  
+  Spring Boot开发Web应用
+  http://www.jianshu.com/p/969c11fdf8b3
+  http://blog.csdn.net/u012702547/article/details/53784992
+    
+    
+    让你的Spring Boot工程支持HTTP和HTTPS
+    http://www.jianshu.com/p/c3879add87ec
+    
+    
+    spring boot application properties配置详解 
+    http://blog.csdn.net/xiaoyu411502/article/details/48049099
+    http://www.tuicool.com/articles/veUjQba
+    
+    
+    Spring处理表单提交
+    https://www.tianmaying.com/tutorial/spring-form-submission
+    
+    
+     SpringBoot读取application.properties文件 
+     http://blog.csdn.net/jixuju/article/details/52205500
+     
+     
+     基于Spring Boot与Spring Data JPA的多数据源配置 
+     http://blog.csdn.net/gabriel_2/article/details/46329461
+     springboot配置属性之datasource
+     http://www.itnose.net/detail/6438773.html
+     
+     SpringBoot配置数据源  
+     http://blog.csdn.net/long270022471/article/details/59482556
+     
+     Spring Boot 修改数据库连接池
+     http://www.jianshu.com/p/7188ea82f4ca
+     http://blog.csdn.net/javahighness/article/details/53055149
+     
+     
+	
+http://stackoverflow.com/questions/25063995/spring-boot-handle-to-hibernate-sessionfactory
+http://stackoverflow.com/questions/25063995/spring-boot-handle-to-hibernate-sessionfactory
+
+The simplest and least verbose way to autowire your Hibernate SessionFactory is:
+
+In application.properties:
+
+spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate4.SpringSessionContext
+
+And in your configuration class:
+
+@Bean
+public HibernateJpaSessionFactoryBean sessionFactory() {
+    return new HibernateJpaSessionFactoryBean();
+}
+
+Then you can autowire the SessionFactory in your services as usual:
+
+@Autowired
+private SessionFactory sessionFactory;
+
+
+
+spring boot性能优化：
+spring boot启动优化
+109. Spring Boot性能优化之加速启动【从零开始学Spring Boot】
+http://412887952-qq-com.iteye.com/blog/2361583
+
+
+Spring Boot 负载均衡之外置session状态保存
+http://wiselyman.iteye.com/blog/2164638
+http://www.tuicool.com/articles/BV7rEbq
+Spring Security + session
+http://www.cnblogs.com/csonezp/p/6102924.html
+http://blog.csdn.net/xiaoyu411502/article/details/48603597
+
+
+
+请问spring-boot如何实现一个简单的session认证跳转?
+https://segmentfault.com/q/1010000007850153
+使用spring的拦截器吧，我这使用是否有session判断
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(securityInterceptor).addPathPatterns("/admin/**");//配置登录拦截器拦截路径
+    }
+    
+
+spring boot + redis 实现session共享
+http://www.cnblogs.com/mengmeng89012/p/5519698.html    
+
+
+
+spring boot 
+http://www.cnblogs.com/softidea/p/5759180.html
+命令行参数。
+通过 System.getProperties() 获取的 Java 系统参数。
+操作系统环境变量。
+从 java:comp/env 得到的 JNDI 属性。
+通过 RandomValuePropertySource 生成的“random.*”属性。
+应用 Jar 文件之外的属性文件。(通过spring.config.location参数)
+应用 Jar 文件内部的属性文件。
+在应用配置 Java 类（包含“@Configuration”注解的 Java 类）中通过“@PropertySource”注解声明的属性文件。
+通过“SpringApplication.setDefaultProperties”声明的默认属性。
+
+
+spring boot应用启动原理分析 
+http://blog.csdn.net/hengyunabc/article/details/50120001
+
+
+ Spring Boot 拦截器
+ http://blog.csdn.net/catoop/article/details/50501696
+ 实现 UserRoleAuthorizationInterceptor 的拦截器有： 
+ConversionServiceExposingInterceptor 
+CorsInterceptor 
+LocaleChangeInterceptor 
+PathExposingHandlerInterceptor 
+ResourceUrlProviderExposingInterceptor 
+ThemeChangeInterceptor 
+UriTemplateVariablesHandlerInterceptor 
+UserRoleAuthorizationInterceptor
+
+其中 LocaleChangeInterceptor 和 ThemeChangeInterceptor 比较常用。
+
+配置拦截器也很简单，Spring 为什么提供了基础类WebMvcConfigurerAdapter ，我们只需要重写 addInterceptors 方法添加注册拦截器。
+
+实现自定义拦截器只需要3步： 
+1、创建我们自己的拦截器类并实现 HandlerInterceptor 接口。 
+2、创建一个Java类继承WebMvcConfigurerAdapter，并重写 addInterceptors 方法。 
+2、实例化我们自定义的拦截器，然后将对像手动添加到拦截器链中（在addInterceptors方法中添加）。 
+PS：本文重点在如何在Spring-Boot中使用拦截器，关于拦截器的原理请大家查阅资料了解。
+
+http://www.cnblogs.com/woshimrf/p/5734956.html
+发现如果继承了WebMvcConfigurationSupport，则在yml中配置的相关内容会失效。WebMvcConfigurerAdapter
+，上述resources的配置失效，还原默认配置。那么我们需要在这个类中再次指定静态资源位置：
+@Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/").addResourceLocations("/**");
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+    }
+
+ 
+ 
+ Spring Boot 实践折腾记（三）：三板斧，Spring Boot下使用Mybatis
+ http://m.blog.csdn.net/article/details?id=51646658
+ 
+ 
+ 
+ spring boot修改时间区域：
+ http://stackoverflow.com/questions/4416955/initialize-default-locale-and-timezone-with-spring-configuration
+ 注解@PostConstruct与@PreDestroy讲解及实例
+     @PostConstruct
+    public void started() {
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT+8"));
+    }
+    
+    http://blog.csdn.net/kinglearnjava/article/details/43020553
+   
+   http://blog.csdn.net/wangpeng047/article/details/8560690 
+    说起Java中的时间，大家或许都很熟悉，朗朗上口的Date、Calendar、SimpleDateFormat等。但是大家对他们的认识真的很深刻吗？今天我要想大家说的是TimeZone，即时区。    
+    
+  @ConfigurationProperties  
+    24.7.1 Third-party configuration
+As well as using @ConfigurationProperties to annotate a class, you can also use it on public @Bean methods. This can be particularly useful when you want to bind properties to third-party components that are outside of your control.
+
+To configure a bean from the Environment properties, add @ConfigurationProperties to its bean registration:
+
+@ConfigurationProperties(prefix = "bar")
+@Bean
+public BarComponent barComponent() {
+    ...
+}
+
+
+springBoot加https
+http://www.cnblogs.com/badboyf/p/6145642.html

@@ -1,0 +1,38 @@
+http://blog.csdn.net/xyr05288/article/details/49021341
+spring-boot 加入拦截器Interceptor
+https://github.com/leelance/spring-boot-all/tree/master/spring-boot-samples
+
+spring boot拦截器默认有 
+HandlerInterceptorAdapter
+AbstractHandlerMapping
+UserRoleAuthorizationInterceptor
+LocaleChangeInterceptor
+ThemeChangeInterceptor
+
+
+SpringBoot中实现拦截器， 并实现对404和500等错误的拦截。
+http://blog.csdn.net/linzhiqiang0316/article/details/52600839
+
+ xml零配置之WebMvcConfigurationSupport
+ http://blog.csdn.net/u013571243/article/details/44565623
+ 
+ 解析@EnableWebMvc 、WebMvcConfigurationSupport和WebMvcConfigurationAdapter
+ http://blog.csdn.net/pinebud55/article/details/53420481
+ @EnableWebMvc+extends WebMvcConfigurationAdapter，在扩展的类中重写父类的方法即可，这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置
+extends WebMvcConfigurationSupport，在扩展的类中重写父类的方法即可，这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置
+extends WebMvcConfigurationAdapter，在扩展的类中重写父类的方法即可，这种方式依旧使用springboot的@EnableAutoConfiguration中的设置
+
+
+http://www.cnblogs.com/softidea/p/6064064.html--------------对比清晰
+SpringMVC 中的Interceptor 拦截器
+http://www.iteye.com/problems/70404
+
+
+http://www.tuicool.com/articles/ZvABBzj
+在preHandle中，可以进行编码、安全控制等处理；
+
+在postHandle中，有机会修改ModelAndView；
+
+在afterCompletion中，可以根据ex是否为null判断是否发生了异常，进行日志记录。
+
+参数中的Object handler是下一个拦截器。

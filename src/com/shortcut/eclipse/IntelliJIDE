@@ -4,6 +4,10 @@ http://www.oschina.net/news/60893/intellij-idea-14-1
 官网
 https://www.jetbrains.com/help/idea/2016.3/creating-a-java-module.html
 
+激活方法：
+https://www.haxotron.com/jetbrains-intellij-idea-crack-123/
+
+
 
 IntelliJ IDEA 快捷键和设置
 http://www.cnblogs.com/bluestorm/archive/2013/05/20/3087889.html
@@ -66,6 +70,7 @@ Ctrl + Alt + H shows the call hierarchy in the tool window
 Ctrl + N: 查找类
 Ctrl + alt +B： 实现类
 Ctrl + Shift + F: 查找
+ctrl + shift + R: 替换
 
 ctrl + alt + L: 代码格式化
 
@@ -77,6 +82,11 @@ intellij ideal查找：
 ctrl+shift+f
 
 call hi
+
+ 恢复IDEA中误删的文件 
+ http://blog.csdn.net/boomhankers/article/details/53997083
+ 
+ 
 
 intellij idea配置不用每次自动编译
 http://www.mincoder.com/article/2365.shtml
@@ -120,3 +130,16 @@ File -> Project Structure -> Module Settings -> Tab: Sources: Language Level -> 
 导入项目中报异常 ：
  intellij IDEA--- 报inspects a maven model for resolution problems 
  http://blog.csdn.net/lishaoran369/article/details/53994601
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

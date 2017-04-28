@@ -1,5 +1,9 @@
 http://www.cnblogs.com/God-/p/5857428.html
 http://blog.csdn.net/liuchuanhong1/article/details/53495004----博文不错
+http://www.2cto.com/kf/201607/528417.html
+
+http://baidutech.blog.51cto.com/4114344/743740/------------何时使用
+Mock方法介绍 
 
 http://javabeat.net/spring-boot-testing/---英文示例与git code
 https://github.com/sanaulla123/springboot-rest-api-demo/tree/master/src
@@ -60,3 +64,12 @@ http://www.cnblogs.com/AloneSword/p/4109407.html
             Emma: Eclipse插件Eclemma
     各条错误处理通路测试：保证每一个异常都经过测试
 
+
+
+mock example code:
+Java Code Examples for org.springframework.test.web.servlet.MockMvc
+http://www.programcreek.com/java-api-examples/index.php?api=org.springframework.test.web.servlet.MockMvc
+http://www.programcreek.com/java-api-examples/index.php?source_dir=extdirectspring-master/src/main/java/ch/ralscha/extdirectspring/controller/ApiController.java
+
+
+https://github.com/lxchinesszz/multi-boluome/blob/master/pom.xml

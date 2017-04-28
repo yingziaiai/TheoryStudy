@@ -1,3 +1,13 @@
+redis install
+http://blog.csdn.net/joyhen/article/details/47358999
+http://docs.redisdesktop.com/en/latest/install/
+
+超详细Redis数据库入门教程
+http://www.cnblogs.com/terryguan/p/5505923.html
+
+https://redis.io/documentation
+
+http://docs.spring.io/spring-data/data-redis/docs/current/reference/html/--------------------************
 https://redis.io/documentation/
 http://www.yiibai.com/redis/redis_quick_guide.html
 http://www.tutorialspoint.com/redis/index.htm
@@ -134,3 +144,59 @@ http://blog.csdn.net/a600423444/article/details/8944601
 
 redis架构设计：
 http://blog.csdn.net/a600423444/article/details/8944601
+
+
+
+StringRedisTemplate常用操作 
+http://www.tuicool.com/articles/qyEvYnR---json
+http://www.tuicool.com/articles/eYb6JbR
+http://blog.csdn.net/u011911084/article/details/53435172
+http://blog.csdn.net/it_man/article/details/9730667
+http://www.bubuko.com/infodetail-966826.html
+http://www.tuicool.com/articles/3aAbMz--------general
+
+
+Spring Boot使用redis做数据缓存
+http://wiselyman.iteye.com/blog/2184884
+http://www.cnblogs.com/softidea/p/5801499.html
+
+http://www.jianshu.com/p/a2ab17707eff-------------good
+
+
+SpringBoot+Redis+Nginx实现负载均衡以及Session缓存共享
+https://segmentfault.com/a/1190000008484678
+
+ spring 结合 redis 正确从jedisConnectionFactory获取Jedis实例 
+http://blog.csdn.net/tiantiandjava/article/details/42913691
+http://www.jianshu.com/p/a2ab17707eff
+
+缓存的验证
+http://www.cnblogs.com/softidea/p/5801499.html
+
+
+
+spring session on redis
+http://docs.spring.io/spring-session/docs/current/reference/html5/#api-redisoperationssessionrepository-sessiondestroyedevent
+
+@Bean
+public static ConfigureRedisAction configureRedisAction() {
+    return ConfigureRedisAction.NO_OP;
+}
+XML Configuration can use the following:
+
+<util:constant
+    static-field="org.springframework.session.data.redis.config.ConfigureRedisAction.NO_OP"/>
+    
+   在keep-alive中遇到了redis 在 local可以运行，但是跑到其它服务器就不能运行的场景：
+   spring的InitializingBean的 afterPropertiesSet 方法 和 init-method配置的 区别联系
+   http://www.tuicool.com/articles/meuiu2R
+   
+   
+   使用Spring Session做分布式会话管理
+   http://www.cnblogs.com/beyang/p/6104802.html
+   
+   
+   
+   http://www.cnblogs.com/shihuc/p/5086520.html
+   Spring boot配合Spring session(redis)遇到的错误
+   从中得到一点启发，那就是spring session redis将session存入到redis后，是将数据序列化后存入的，所以，当没有序列化的数据，直接从数据库读出来，在经过spring security认证之后，会将SecurityContext写入到httpSesson中.

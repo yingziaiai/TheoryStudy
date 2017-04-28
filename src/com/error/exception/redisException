@@ -1,0 +1,3 @@
+java.lang.ClassNotFoundException: org.springframework.data.redis.serializer.
+关于Spring Data redis几种对象序列化的比较
+http://stamen.iteye.com/blog/1907984

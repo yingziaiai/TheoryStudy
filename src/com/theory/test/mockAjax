@@ -1,0 +1,84 @@
+http://www.cnblogs.com/GarfieldTom/p/4277708.html
+jQuery简单的Ajax调用示例
+
+http://blog.csdn.net/u013360850/article/details/52770038
+
+
+通过Ajax和SpringBoot交互的示例
+http://blog.csdn.net/oppo5630/article/details/52093898
+
+ajax form表单提交
+http://www.jb51.net/article/47504.htm
+http://www.cnblogs.com/nangong/archive/2013/07/23/3208302.html
+
+
+html中如何接收ajax传递过来的数据3
+html直接传值是可以，那ajax该如何接收数据？
+//获得生产图形报表数据
+$.ajax({
+type: "post",
+url: "/"+getURL()+ '/fa/flowshow/user-flownode1.html?fgroupname=' + fgroupname,
+success: function(testData){
+$(".preview").html(testData);
+}
+}); 
+
+
+http://qiaolevip.iteye.com/blog/2117326
+http://qiaolevip.iteye.com/blog/2117326
+
+
+ajax put请求的跨域问题
+https://segmentfault.com/q/1010000007442799?_ea=1346615
+
+解决ajax跨域问题的多种方法
+http://www.cnblogs.com/hgj123/p/4485784.html
+
+
+JQuery+ajax+jsonp 跨域访问
+http://www.cnblogs.com/superjt/p/3491005.html----------jsonp的使用
+
+http://www.cnblogs.com/Benjamin/archive/2013/09/11/3314576.html
+Ajax post Json类型的数据到Controller
+function postSimpleData() {
+        $.ajax({
+            type: "POST",
+            url: "/Service/SimpleData",
+            contentType: "application/json", //必须有
+            dataType: "json", //表示返回值类型，不必须
+            data: JSON.stringify({ 'foo': 'foovalue', 'bar': 'barvalue' }),  //相当于 //data: "{'str1':'foovalue', 'str2':'barvalue'}",
+            success: function (jsonResult) {
+                alert(jsonResult);
+            }
+        });
+    }
+    
+    
+    如何POST一个JSON格式的数据给Restful服务
+    http://www.cnblogs.com/xiaomifeng/p/4797881.html
+    
+    JavaScript跨域调用基于JSON的RESTful API
+    http://www.jb51.net/article/88273.htm
+    headers:{ 
+"X-Auth-Token":"open-sesame", 
+"Content-Type":"application/json"
+}, 
+contentType: 'text/html; charset=UTF-8', 
+
+Spring API REST and Cors and AngularJS------------Cors
+http://stackoverflow.com/questions/39977307/spring-api-rest-and-cors-and-angularjs
+http://www.bogotobogo.com/Java/tutorials/Spring-Boot/Spring-Boot-REST-API-CORS-Maven-Tomcat-Deploy-War.php
+
+
+JavaScript跨域请求RESTful Web Servic
+http://www.alixixi.com/web/a/2014092494021.shtml
+
+http://mzhou.iteye.com/blog/2078268
+ajax遇到redirect时
+
+
+Ajax异步请求RESTFUL API之跨域问题解决方案
+http://m.blog.csdn.net/article/details?id=52176239
+在使用ajax请求服务器时,某些情况需要经过身份验证,如果某个用户停留在页面很长时间,导致令牌过期,此时如果访问某些资源,会验证不通过,但页面却不会跳转到登录页面.
+
+

@@ -1,0 +1,28 @@
+exception:
+Failed to initialize an instance of org.apache.velocity.runtime.log.ServletLogChute with the current runtime configuration
+
+纠结的velocity log那些事(出现Permission denied)
+http://agapple.iteye.com/blog/815872
+
+if (!ri.isInitialized()) {  
+            // 设置空的log，避免使用velocity默认的veloicyt.log  
+           ri.setProperty(RuntimeConstants.RUNTIME_LOG_LOGSYSTEM, new NullLogChute());  
+           ri.init();  
+ }  
+ 
+ 
+ http://techieme.in/failed-to-initialize-an-instance-of-org-apache-velocity-runtime-log-servletlogchute-with-the-current-runtime-configuration/
+ 
+ 
+ VelocityEngine ve = new VelocityEngine();
+ve.setProperty( RuntimeConstants.RUNTIME_LOG_LOGSYSTEM_CLASS,"org.apache.velocity.runtime.log.Log4JLogChute" );
+ve.setProperty("runtime.log.logsystem.log4j.logger",LOGGER_NAME);
+ve.init();
+		
+StringWriter w = new StringWriter();
+InputStream instream = EmailClient.class.getResourceAsStream("/"+templateName);
+ 
+// Make a Context
+VelocityContext context = new VelocityContext();
+ 
+Velocity.evaluate(context, w, "Velocity", getStringFromInputStream(instream));
