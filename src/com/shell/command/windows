@@ -6,3 +6,9 @@ keytool -import -alias cacerts -keystore cacerts -file d:\software\AKAZAM-Mail.c
 
 netstat -ano
 http://yuhuiyy2011.iteye.com/blog/1526815
+
+netstat -ano|findstr "8080"
+
+windows administor notepad
+http://www.w10zj.com/Win10xy/Win10yh_585.html
+

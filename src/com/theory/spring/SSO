@@ -12,6 +12,7 @@ SSO单点登录三种情况的实现方式详解
 response.isCommitted()可检查看服务端是否已将数据输出到客户端.如果返回值是TRUE则已将数据输出到客户端,是FALSE则还没有
 http://www.xuebuyuan.com/762368.html
 
+
 跨域SSO的实现
 http://www.cnblogs.com/B-bowen/p/3939891.html
 谁都能看懂的单点登录（SSO）实现方式（附源码）
@@ -23,3 +24,4 @@ http://www.cnblogs.com/youring2/p/sso-practice.html
  
  http://blog.csdn.net/liutengteng130/article/details/46848281
  SSO（Single Sign On）系列（三）--CAS单点登录
+
