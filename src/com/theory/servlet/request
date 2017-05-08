@@ -46,3 +46,22 @@ if ( request.getMethod().equals("POST") )
 
     test = sb.toString();
 }
+
+
+
+requestHeader
+http://blog.csdn.net/javaee_sunny/article/details/53162024
+  //get request headers
+  private Map<String, String> getHeadersInfo() {
+
+    Map<String, String> map = new HashMap<String, String>();
+
+    Enumeration headerNames = request.getHeaderNames();
+    while (headerNames.hasMoreElements()) {
+        String key = (String) headerNames.nextElement();
+        String value = request.getHeader(key);
+        map.put(key, value);
+    }
+
+    return map;
+  }

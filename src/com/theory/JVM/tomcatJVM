@@ -8,5 +8,117 @@ http://blog.sina.com.cn/s/blog_44d2cdc00101j52p.html
 
  websphere项目转成Tomcat项目
  http://blog.csdn.net/java_user/article/details/2112982
+ 
+ 
+ 由       StringBuffer authURL = new StringBuffer();
+ StringBuffer, StringBuilder--controller下
+ 分析它们处理客户请求的方法有助于了解Java多线程和线程池的实现方法，为设计强大的多线程服务器打好基础。
+ 
+ http://blog.csdn.net/fredaq/article/details/9366043
+ 整个过程与传统的处理用户Socket请求是不同的，也和Tomcat老版本不同。传统的处理方法是：有一个后台运行的监听线程负责统一处理接收（注意只是“接收”）Socket请求，当有新的Socket请求时，将它赋值给一个Worker线程（通常是唤醒该线程），并有后者处理Socket请求，监听线程继续等待其他Socket请求。所以整个过程中有一个从Listener到Worker切换的过程。
+ 
+
+http://blog.csdn.net/muskter/article/details/53788885
+l  一次web请求，进入tomcat
+服务器处理请求的模式
+1.       收到一个请求就处理，这个时候就不能处理新的请求，这种为阻塞 这个是单线程模型
+2.       收到一个请求就新开一个线程去处理任务，主线程返回，继续处理下一个任务，解决了主线程阻塞的问题，有了一定程度的并发量
+3.       类似2的模型，但是不是每次收到请求就开一个新的线程，而是使用线程池。这种方式实现的服务器性能会比2高。不过，它依然是阻塞的。线
+4.       基于Java NIO实现的服务器模型，它是基于IO多路复用技术（例如Reactor模式）实现，只需要一个线程或者少量线程，就可以处理大量请求。从性能上来说NIO实现的服务器并发性一般大于BIO，所以可以实现高性能的服务器。如果感兴趣，可以学习一些基于NIO的网络编程框架，例如Netty、MINA。
+https://segmentfault.com/q/1010000002998038/a-1020000002998730
+ 
+注意：Tomcat运行可以选择BIO或者NIO模型，原理分别对应上面的3和4两种方式。Tomcat默认是BIO方式运行，如果想要换成NIO，可以配置server.xml：<Connector port="8080"protocol="org.apache.coyote.http11.Http11NioProtocol" .../>；
 
 
+
+http://www.cnblogs.com/dirichlet/archive/2008/09/12/2542413.html－－－－－比较简单清晰
+编写简单多线程web服务器
+
+
+http://m.blog.csdn.net/article/details?id=40739619
+单例，多例 
+spring MVC中的controller是单例模式，但是是多线程，各个线程之间不影响！
+
+http://blog.csdn.net/u010454030/article/details/52317438
+默认的Controller，Service，Dao组件的作用域都是单实例，无状态，然后被并发多线程调用，那么如果我想使用多线程处理任务，该如何做呢？
+
+
+Spring-Boot中如何使用多线程处理任务－－－－－－－－－－－－－单例，多例，
+http://blog.csdn.net/u010454030/article/details/52317438
+
+Spring MVC Controller单例陷阱
+http://lavasoft.blog.51cto.com/62575/1394669/
+http://blog.csdn.net/u010454030/article/details/52317438
+http://lavasoft.blog.51cto.com/62575/1394669/
+
+http://raising.iteye.com/blog/2246125
+单例模式在高并发情形下造成的访问覆盖问题
+http://bbs.csdn.net/topics/300250400
+然后这个问题引发的问题是单例模式，多例，然后是成员变量，局部变量
+http://blog.csdn.net/u010293702/article/details/44891603
+
+单例顾名思义就是只有一份数据的意思，当你同时对一份数据进行操作时，就会导致数据不一致，这就是所谓的线程不安全。
+数据库是单例的一个典型代表，在数据库中存在读脏数据、不可重复读、幻读就是因为同时操作一份数据的原因。
+比如有一个表，存储火车票信息，其中字段有火车票的总数，
+A买火车票，操作取出火车票总数（假如是100），减一，再将99存进去。
+在A买的同时，另一个窗口的B也在买车票，操作取出火车票总数，由于A还没有买到车票，所以他取出来的总数也是100，减一，再将99存进去。
+此时，火车站出售了两张票，而记录显示是出售一张，这就是因为B读取数据时，出现了读脏数据。
+详细内容  参考 数据库的教材
+
+当action中不存在成员变量时，不会出现线程不安全的问题，如果存在就需要加锁，保证线程安全。
+什么是加锁，简单的讲就是买票的时候要排队，前面的没买完，你就不能买。当然还有别的解决方案，比如通过版本号来区别，我就不多讲了。
+
+http://1li5.info.segmentfault.com/q/1010000008625670
+spring MVC框架Controller层中应该使用StringBuffer还是StringBuilder?
+
+
+误区纠正：关于单例模式的内存分析
+http://www.cnblogs.com/iyangyuan/archive/2013/04/22/3036776.html
+堆区是整个程序共享的，因此可能会出现线程安全问题。
+
+
+集合 hashMap<>与指明hashMap<string, .>---java8写法, 
+ModelAndView, redirectView, 然后又是正则，包括spring中EL， 模板引擎原理，多种同样东西的性能对比等参数如FREEMAKER， VELOCITY，　ＴＨＥＬＥＡＦ
+然后到了 浏览器渲染原理及解剖浏览器内部工作原理， 再到SpringMVC视图解析器和url跳转问题
+http://blog.csdn.net/liaozhongping/article/details/51028705
+http://blog.csdn.net/shi1122/article/details/8586463
+https://zhidao.baidu.com/question/171880363.html
+Spring Web MVC 处理Http请求的大致过程：
+一旦Http请求到来，DispatcherSevlet将负责将请求分发。DispatcherServlet可以认为是Spring提供的前端控制器，所有的请求都有经过它来统一分发。
+在DispatcherServlet将请求分发给Spring Controller之前，需要借助于Spring提供的HandlerMapping定位到具体的Controller。HandlerMapping是这样一种对象，它能够完成客户请求到Controller之间的映射。在Struts中，这种映射是通过struts-config.xml文件完成的。其中，Spring为Controller接口提供了若干实现，例如Spring默认使用的BeanNameUrlHandlerMapping。还有，SimpleUrlHandlerMapping，CommonsPathMapHandlerMapping。
+Spring Controller将处理来自DispatcherServlet的请求。Spring的Controller类似于struts的Action，能够接受HttpServletRequest和HttpServletResponse。Spring为Controller接口提供了若干实现类，位于org.springframework.web.servlet.mvc包中。由于Controller需要为并发用户处理上述请求，因此实现Controller接口时，必须保证线程安全并且可重用。Controller将处理客户请求，这和Struts Action 扮演的角色是一致的。
+一旦Controller处理完客户请求，则返回ModelAndView对象给DispatcherServlet前端控制器。ModelAndView中包含了模型（Model）和视图（View）。从宏观角度考虑，DispatcherServlet是整个Web应用的控制器；从微观角度考虑，Controller是单个Http请求处理过程中的控制器，而ModelAndView是Http请求过程中返回的模型和视图。前端控制器返回的视图可以是视图的逻辑名，或者实现了View接口的对象。View对象能够渲染客户响应结果。其中，ModelAndView中的模型能够供渲染View时使用。借助于Map对象能够存储模型。
+如果ModelAndView返回的视图只是逻辑名，则需要借助Spring提供的视图解析器（ViewResoler）在Web应用中查找View对象，从而将响应结果渲染给客户。
+DispatcherServlet将View对象渲染出的结果返回个客户。
+http://blog.csdn.net/klx502/article/details/44979601
+
+
+ 超漂亮的纯JAVA浏览器（附源码）
+ http://blog.csdn.net/lxf9601/article/details/6967167
+ 
+  Java Web自定义MVC框架详解
+  http://blog.csdn.net/jackfrued/article/details/42774459
+  
+   SpringMVC视图解析器和url跳转问题
+   http://blog.csdn.net/klx502/article/details/44979601
+   
+    浏览器渲染原理及解剖浏览器内部工作原理
+    http://blog.csdn.net/liaozhongping/article/details/51028705
+    
+    spring mvc DispatcherServlet详解之---视图渲染过程
+    http://www.2cto.com/kf/201411/354219.html
+    
+     Spring MVC源码分析（续）——视图解析过程
+    http://blog.csdn.net/shi1122/article/details/8586463
+    
+    
+浅谈模板引擎
+http://www.cnblogs.com/dojo-lzz/p/5518474.html－－－－－－－－－－－比较清晰的知识了解析
+javascript模板引擎和实现原理
+https://segmentfault.com/a/1190000000432600－－－－－－－－－非常好
+
+ 第五章 SpringMVC之ViewResolver和View解析
+http://blog.csdn.net/wangbiao007/article/details/50689021--------因为代码中的errorPageView
+
+高性能JavaScript模板引擎原理解析
+http://cdc.tencent.com/2012/06/15/%E9%AB%98%E6%80%A7%E8%83%BDjavascript%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/    

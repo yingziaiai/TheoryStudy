@@ -1,0 +1,17 @@
+https://wenku.baidu.com/view/1f0b648569eae009581beccf.html
+亚马逊AWS ELB应用场景与使用技巧
+
+使用Amazon Redshift分析弹性负载均衡器（Elastic Load Balancer）访问日志-
+http://www.csdn.net/article/2014-09-19/2821774----------类似于ＨＩＶＥ
+
+幸运的是，搭建Amazon Redshift集群来加载ELB访问日志并使用SQL查询进行分析非常简单。本文将介绍如何使用Amazon Redshift便捷地分析这些日志数据，无论是临时用来响应一个事件，或者是进行周期性的分析。不管是TB或者是PB数据，通过Amazon Redshift都可以快速的提供一个数据仓库集群，并行的存入大量数据，并通过ODBC/JDBC PostgreSQL接口访问，因此对于ELB日志分析来说，Amazon Redshift是一个相当不错的SQL-based解决方案。如果你有大量的 Amazon EMR使用经验，并且喜欢使用MapReduce风格来分析你的数据，Amazon已经提供了一个将ELB日志加载到EMR的向导
+
+
+
+http://blog.csdn.net/libing_thinking/article/details/50347661
+ ELB 使用总结
+ 
+ https://aws.amazon.com/cn/elasticloadbalancing/-------官网
+ 
+ 
+ aws elb 日志分析

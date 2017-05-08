@@ -103,3 +103,6 @@ ins.close();
     
      读取Java文件到byte数组的三种方式
      http://blog.csdn.net/z69183787/article/details/16883243
+     
+     
+     Arrays.toString(array)

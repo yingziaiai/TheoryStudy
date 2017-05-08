@@ -1,0 +1,8 @@
+@RequestHeader
+http://viralpatel.net/blogs/spring-requestheader-example/
+@RequestMapping(value = "/hello.htm")
+	public String hello(@RequestHeader(value="User-Agent") String userAgent)
+	
+	
+	HttpClient设置HTTP请求头Header
+	http://blog.csdn.net/z69183787/article/details/42965375

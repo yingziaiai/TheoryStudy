@@ -71,3 +71,14 @@ http://blog.sina.com.cn/s/blog_624a352c01018bsr.html
 http://www.cnblogs.com/xing901022/p/4143696.html
 AOP--Filter使用,过滤器和拦截器的区别
 http://blog.csdn.net/bjyfb/article/details/7347663
+
+
+http://blog.csdn.net/qq_27093465/article/details/53351403
+结合Java实例代码来理解 AOP--面向切面编程 中的各个术语
+什么是代理模式，什么又是动态代理模式。动态代理模式的2种实现方式。
+
+
+ Java实现的拦截器
+ http://blog.csdn.net/agileclipse/article/details/9057857
+ 
+ 方法级别的拦截器

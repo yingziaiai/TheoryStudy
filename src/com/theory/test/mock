@@ -73,3 +73,17 @@ http://www.programcreek.com/java-api-examples/index.php?source_dir=extdirectspri
 
 
 https://github.com/lxchinesszz/multi-boluome/blob/master/pom.xml
+
+
+http://www.2cto.com/kf/201608/537118.html
+Spring Boot实战之单元测试
+
+
+单元测试：
+单元测试用于测试各个代码组件，并确保代码按照预期的方式工作。单元测试由开发人员编写和执行。大多数情况下，使用JUnit或TestNG之类的测试框架。测试用例通常是在方法级别写入并通过自动化执行
+MockMvc对象提供一组工具函数用来执行assert判断，都是针对web请求的判断。这组工具的使用方式是函数的链式调用，允许程序员将多个测试用例链接在一起，并进行多个判断。在这个例子中我们用到下面的一些工具函数：
+
+
+在springMVC中的controller写单元测试
+http://www.xuebuyuan.com/1670119.html
+http://www.lieliao.net/cmd/15310/-----------------very good

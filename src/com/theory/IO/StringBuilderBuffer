@@ -1,0 +1,23 @@
+http://www.cnblogs.com/sevenlin/p/sevenlin_StringBuffer_StringBuilder20150806.html
+String、StringBuffer、与StringBuilder的区别
+
+http://www.cnblogs.com/zhangliang88/p/5388472.html
+涉及到controller中的单例与多例
+
+单例和多例的区别
+
+单例多例需要搞明白两个问题：
+1. 什么是单例多例；
+2. 如何产生单例多例；
+3. 为什么要用单例多例
+4. 什么时候用单例，什么时候用多例；
+1. 什么是单例、多例:
+所谓单例就是所有的请求都用一个对象来处理，比如我们常用的service和dao层的对象通常都是单例的，而多例则指每个请求用一个新的对象来处理，比如action; 
+
+一、单例模式和多例模式说明：
+
+1.         单例模式和多例模式属于对象模式。
+
+2.         单例模式的对象在整个系统中只有一份，多例模式可以有多个实例。
+
+3.         它们都不对外提供构造方法，即构造方法都为私有。

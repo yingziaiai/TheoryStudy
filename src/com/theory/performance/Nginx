@@ -1,3 +1,14 @@
 Nginx是一个高性能HTTP和反向代理服务器，单台NGINX服务器最多能支持高达50000的并发请求，所以一般情况下，会将NGINX作为静态资源的访问服务器或者作为访问流量分流的服务器
 http://nginx.org
 http:/tengine.taobao.org
+
+
+Nginx反向代理和负载均衡部署指南
+http://www.cnblogs.com/jacktang/p/3669115.html
+
+nginx 的 upstream默认是以轮询的方式实现负载均衡，这种方式中，每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。
+
+另外一种方式是ip_hash：每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。 
+
+
+aws的elb 和 nginx
