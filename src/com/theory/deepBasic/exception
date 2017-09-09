@@ -1,0 +1,67 @@
+java 异常的捕获及处理
+http://www.cnblogs.com/tigerBoy/p/6286504.html
+http://blog.csdn.net/wei_zhi/article/details/52837635
+
+java进行error捕获和处理示例(java异常捕获)
+http://www.jb51.net/article/45526.htm
+
+
+ Java 异常处理的误区和经验总结
+http://blog.csdn.net/garfielder007/article/details/52141737－－－－－－－－－－－good
+https://www.ibm.com/developerworks/cn/java/j-lo-exception-misdirection/#N100A7
+
+
+java 的各种异常到底什么时候try 什么时候throws啊 这里面有什么规律吗 多谢前辈们的指点啊
+http://bbs.csdn.net/topics/392179591?page=1
+
+一个原则，当你的层需要跟外部分割开的时候，你就该catch。
+比如，service和dao层，在大部分情况下，dao服务于service，但这都属于开发组内部，所以，dao直接throw就可以了。
+但是到了service层，调用service的是另外的开发小组（比如客户端小组），从架构上来说，就需要隐藏代码的内部细节，这个时候就必须要catch掉，然后该写日志写日志，改重新封装错误重新封装。
+
+
+http://blog.csdn.net/u013815546/article/details/53928912
+高并发下的下单功能设计
+
+https://www.zhihu.com/question/33400270
+http://blog.csdn.net/a_fengzi_code_110/article/details/52433651
+
+http://www.cnblogs.com/xlchen/p/6183253.html
+局部变量：线程安全。
+
+每个线程执行时将会把局部变量放在各自栈帧的工作内存中，线程间不共享，故不存在线程安全问题。
+
+静态变量：线程非安全。
+
+静态变量即类变量，位于方法区，为所有对象共享，共享一份内存，一旦静态变量被修改，其他对象均对修改可见，故线程非安全。
+
+成员变量：单例模式（只有一个对象实例存在）线程非安全，非单例线程安全。
+
+成员变量为对象实例私有，在虚拟机的堆中分配，若在系统中只存在一个此对象的实例，在多线程环境下，“犹如”静态变量那样，被某个线程修改后，其他线程对修改均可见，故线程非安全；如果每个线程执行都是在不同的对象中，那对象与对象之间的成员变量的修改将互不影响，故线程安全。
+
+
+共享变量的并发读写
+https://zhuanlan.zhihu.com/p/20832611?refer=likai
+
+项目问题总结一、全局变量引起的并发问题
+http://blog.csdn.net/rugaxm/article/details/8551905----------------------good, spring单例
+http://blog.csdn.net/mockingbirds/article/details/51336105----------good, synchronized
+http://m.blog.csdn.net/a_lonely_dancer/article/details/52445402
+
+单例模式与高并发
+http://www.cnblogs.com/atwanli/articles/5104898.html--------线程池概念
+
+高并发下线程安全的单例模式（最全最经典）
+http://blog.csdn.net/cselmu9/article/details/51366946
+
+
+如何设计一个支持高并发的高可用服务
+http://blog.csdn.net/a_fengzi_code_110/article/details/52433651
+如何设计高并发下的抽奖功能？
+https://www.zhihu.com/question/33400270
+
+http://blog.csdn.net/u013815546/article/details/61466117----------good
+讲到并发的字符串统计，立即让你联想到的数据结构便是：ConcurrentHashMap<String, Long> counter;
+分段锁作用；
+
+ JAVA并发编程学习笔记之CAS操作
+ http://blog.csdn.net/aesop_wubo/article/details/7537960

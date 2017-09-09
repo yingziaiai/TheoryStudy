@@ -1,0 +1,21 @@
+HttpSessionListener的用法
+
+我的web应用上想知道到底有多少用户在使用？
+http://www.cnblogs.com/wcyBlog/p/4657903.html
+http://blog.csdn.net/zhangjq520/article/details/53670966
+
+使用HttpSessionListener接口监听Session的创建和失效
+http://uule.iteye.com/blog/824115
+
+https://stackoverflow.com/questions/37303967/enableredishttpsession-spring-boot-ignoring-server-session-timeout-on-applica
+这个很好
+
+spring-session-redis HttpSessionListener失效
+https://segmentfault.com/q/1010000007374041
+Spring session 添加HttpSessionListener
+http://emacsist.github.io/2015/11/23/Spring-session-%E6%B7%BB%E5%8A%A0HttpSessionListener/
+http://www.oschina.net/translate/spring-java-configuration-session-timeout
+
+
+HttpSessionListener, HttpSessionAttributeListener的用法
+http://blog.csdn.net/bao19901210/article/details/9354213

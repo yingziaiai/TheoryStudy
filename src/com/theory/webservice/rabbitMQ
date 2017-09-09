@@ -1,0 +1,50 @@
+RabbitMQ
+http://www.cnblogs.com/ityouknow/p/6120544.html
+Springboot(八）：RabbitMQ详解
+
+RabbitMQ的高可用性、高性能、灵活性等一些特点
+
+http://www.cnblogs.com/ityouknow/p/6120544.html－－－挺好
+对象的支持
+
+springboot以及完美的支持对象的发送和接收，不需要格外的配置。
+
+http://blog.csdn.net/liaokailin/article/details/49559571
+
+
+使用消息队列实现分布式事务-公认较为理想的分布式事务解决方案
+前阵子从支付宝转账1万块钱到余额宝，这是日常生活的一件普通小事，但作为互联网研发人员的职业病，我就思考支付宝扣除1万之后，如果系统挂掉怎么办，这时余额宝账户并没有增加1万，数据就会出现不一致状况了。
+
+上述场景在各个类型的系统中都能找到相似影子，比如在电商系统中，当有用户下单后，除了在订单表插入一条记录外，对应商品表的这个商品数量必须减1吧，怎么保证？！在搜索广告系统中，当用户点击某广告后，除了在点击事件表中增加一条记录外，还得去商家账户表中找到这个商家并扣除广告费吧，怎么保证？！等等，相信大家或多或多少都能碰到相似情景。
+
+本质上问题可以抽象为：当一个表数据更新后，怎么保证另一个表的数据也必须要更新成功。
+
+
+如果系统规模较小，数据表都在一个数据库实例上，上述本地事务方式可以很好地运行，但是如果系统规模较大，比如支付宝账户表和余额宝账户表显然不会在同一个数据库实例上，他们往往分布在不同的物理节点上，这时本地事务已经失去用武之地。
+
+
+本地事务？？？？？？？？？？？？分布式事务
+http://www.cnblogs.com/taiyonghai/p/6094350.html－－－－比如很好，一是本地事务与分布事务概念，二是描述为啥分开增加并发性；
+http://blog.csdn.net/ss123465/article/details/7964184－－－－宏观方面为架构的一些专有名词与场景
+
+http://blog.csdn.net/fuck__you_/article/details/51527634－－－－redis消息队列与kalfka
+
+关于消息队列的使用[转]
+http://www.cnblogs.com/janealer/p/6437576.html
+
+ RabbitMQ消息队列（七）：适用于云计算集群的远程调用(RPC)
+ http://blog.csdn.net/anzhsoft/article/details/19633107
+ 
+ 
+ 远程调用服务(RPC)和消息队列(Message Queue)对比及其适用/不适用场合分析
+ http://blog.csdn.net/cfydaniel/article/details/44621163
+ 
+ 
+Redis作为消息队列与RabbitMQ的性能对比
+ http://blog.csdn.net/educast/article/details/34521603
+ 
+  基于Redis实现分布式消息队列（1）
+  http://blog.csdn.net/stationxp/article/details/45595733
+  
+  Redis作为消息队列服务场景应用案例
+  http://www.cnblogs.com/leo_wl/p/3831349.html-------------**********************goodgood

@@ -11,7 +11,7 @@
  
  spring boot example:
  https://github.com/leelance/spring-boot-all/blob/master/spring-boot-samples/src/main/java/com/lance/application/WebAppConfig.java
- 
+ http://git.oschina.net/liaoshixiong
  
  
  springboot注解
@@ -29,6 +29,10 @@
 https://yq.aliyun.com/articles/6056
 spring boot应用启动原理分析 
 
+
+Springboot+JPA+Thymeleaf 校园博客完整小网站
+http://www.zslin.com/web/article/detail/35
+https://github.com/kolorobot/spring-boot-thymeleaf
 
 springBoot-maven3.0.5+
 As far as I know, Spring-Boot requires Maven3 in order to work, so an upgrade should fix the problem.
@@ -628,3 +632,35 @@ http://www.cnblogs.com/badboyf/p/6145642.html
 
 玩转spring boot——结合AngularJs和JDBC
 http://www.cnblogs.com/GoodHelper/p/6224475.html
+
+http://www.h2database.com/html/tutorial.html#connecting_using_jdbc
+
+
+springboot集成H2
+spring boot 实现h2数据库本地化
+http://blog.csdn.net/sai739295732/article/details/49427189
+
+
+spring boot集成h2指南
+https://segmentfault.com/a/1190000007002140
+spring.datasource.schema=classpath:db/schema.sql，进行该配置后，每次启动程序，程序都会运行resources/db/schema.sql文件，对数据库的结构进行操作。
+spring.datasource.data=classpath:db/data.sql,进行该配置后，每次启动程序，程序都会运行resources/db/data.sql文件，对数据库的数据操作。
+
+http://www.importnew.com/17924.html
+H2数据库攻略
+Cannot create inner bean '(inner bean)' of type [org.springframework.orm.jpa.SharedEntityManagerCreator]?
+http://stackoverflow.com/questions/19653391/cannot-create-inner-bean-inner-bean-of-type-org-springframework-orm-jpa-sha
+
+http://blog.csdn.net/mn960mn/article/details/54644908
+spring.datasource.driverClassName=org.h2.Driver  
+spring.datasource.url=jdbc:h2:mem:db_users;MODE=MYSQL;INIT=RUNSCRIPT FROM './src/test/resources/init_table.sql'  
+spring.datasource.username=  
+spring.datasource.password=  
+
+http://www.54chen.com/java-ee/h2database-easymock-unit-test.html
+
+http://www.2cto.com/kf/201701/587498.html－－－－查看H2结果，并且有github地址
+
+spring h2 junit 编写单元测试
+http://kanpiaoxue.iteye.com/blog/2003472
+http://blog.csdn.net/liuchuanhong1/article/details/54629967

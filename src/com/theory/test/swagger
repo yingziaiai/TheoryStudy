@@ -35,4 +35,10 @@ SpringBoot之springfox(Swagger) (ApiDoc接口文档)
     
     
 Spring boot中使用springfox来生成Swagger Specification小结-------more
-http://www.cnblogs.com/softidea/p/6223844.html    
+http://www.cnblogs.com/softidea/p/6223844.html   
+
+
+swagger添加默认案例参数：
+http://www.cnblogs.com/yuananyun/p/4993426.html
+@ApiModel
+@ApiModelProperty(value = "群组的Id", required = true) 

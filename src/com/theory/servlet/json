@@ -2,3 +2,34 @@ jquey ajax 将变量值封装json传入JAVA action获取解析
 http://www.cnblogs.com/yangkai-cn/p/4016577.html
 
 http://blog.csdn.net/thl331860203/article/details/7288579
+
+
+ JSON入门之二：org.json的基本用法
+ http://blog.csdn.net/jediael_lu/article/details/25779087
+ JSONObject studentJSONObject = new JSONObject();  
+        try {  
+            studentJSONObject.put("name", "Jason");  
+            
+            
+ http://www.cnblogs.com/davidwang456/p/4141056.html
+ FastJson解析对象及对象数组--项目经验   
+ http://blog.csdn.net/gchb9527/article/details/8688279
+ 
+ jackson 实体转json 为NULL或者为空不参加序列化
+ http://www.cnblogs.com/yangy608/p/3936848.html
+  @JsonInclude(Include.NON_NULL) 
+
+//将该标记放在属性上，如果该属性为NULL则不参与序列化 
+//如果放在类上边,那对这个类的全部属性起作用 
+//Include.Include.ALWAYS 默认 
+//Include.NON_DEFAULT 属性为默认值不序列化 
+//Include.NON_EMPTY 属性为 空（“”） 或者为 NULL 都不序列化 
+//Include.NON_NULL 属性为NULL 不序列化         
+
+
+tree型的json数据按照json的某个字段对子节点进行排序
+http://blog.csdn.net/u010176097/article/details/47340249
+
+Jackson 解析json数据之忽略解析字段注解@JsonIgnoreProperties
+http://blog.csdn.net/ngl272/article/details/70217104
+            

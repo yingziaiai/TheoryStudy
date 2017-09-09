@@ -109,3 +109,9 @@ http://blog.csdn.net/yanghongchang_/article/details/11973557
 
 jsessionid的困扰
 http://2277259257.iteye.com/blog/2236878
+
+cookie的setHttpOnly, secure, expire, path...
+http://www.cnblogs.com/tianguook/archive/2013/11/30/3451609.html
+
+java操作Cookie,进行添加、读取、删除操作---domain, path
+http://blog.csdn.net/ge_zhiqiang/article/details/8139521

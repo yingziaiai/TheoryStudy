@@ -1,0 +1,9 @@
+request获得所有参数
+http://sjeveryday.iteye.com/blog/1630596
+request里有两个方法  
+request.getParameterMap();  
+request.getParameterNames();  
+
+
+从request中获得参数Map，并返回可读的Map
+http://kingschan.iteye.com/blog/1847359

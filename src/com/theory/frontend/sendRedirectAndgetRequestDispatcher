@@ -1,0 +1,2 @@
+response.sendRedirect()和request.getRequestDispatcher()的区别
+http://blog.csdn.net/tuke_tuke/article/details/47282125

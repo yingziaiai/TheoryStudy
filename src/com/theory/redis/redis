@@ -5,14 +5,30 @@ http://docs.redisdesktop.com/en/latest/install/
 超详细Redis数据库入门教程
 http://www.cnblogs.com/terryguan/p/5505923.html
 
+http://lib.csdn.net/base/redis------------------------test
+http://lib.csdn.net/article/34/40003?knId=994
+redis数据库之rdb持久化
+http://blog.csdn.net/opens_tym/article/details/10097805-----------good
+
 https://redis.io/documentation
 
 http://docs.spring.io/spring-data/data-redis/docs/current/reference/html/--------------------************
 https://redis.io/documentation/
 http://www.yiibai.com/redis/redis_quick_guide.html
+入门 
+  http://www.yiibai.com/redis/redis_partitioning.html 
 http://www.tutorialspoint.com/redis/index.htm
 
 http://projects.spring.io/spring-data-redis/
+
+
+redis cluster:介绍
+http://shift-alt-ctrl.iteye.com/blog/2284890
+
+master-slave案例：
+http://www.cnblogs.com/liping13599168/archive/2011/04/14/2016226.html
+
+
 
 spring+redis demo
 http://blog.csdn.net/sunny243788557/article/details/34431357
@@ -200,3 +216,249 @@ XML Configuration can use the following:
    http://www.cnblogs.com/shihuc/p/5086520.html
    Spring boot配合Spring session(redis)遇到的错误
    从中得到一点启发，那就是spring session redis将session存入到redis后，是将数据序列化后存入的，所以，当没有序列化的数据，直接从数据库读出来，在经过spring security认证之后，会将SecurityContext写入到httpSesson中.
+
+   
+ 15天玩转redis —— 第七篇 同事的一次缓存操作引起对慢查询的认识  
+   http://www.cnblogs.com/huangxincheng/p/4987962.html-----------真实案例分析
+   
+   
+   
+   jdbcTemplate, mongoTemplate,为提供了数据访问的方法；
+   为mongoclient, MongoDbFactory来配置数据库连接属性；
+   当加入依赖spring-boot-starter-redis,spring boot会自动配置RedisCacheManager以及RedisTemplate的Ｂean
+   类似于spring data JPA,也有对Repository的支持，spring data mongoDB也提供了Repository的支持，使用方式和spring data jpa一致、
+   
+   http://www.tuicool.com/articles/7Bni6f
+   Redis入门很简单之八【Spring Data Redis初探】
+   
+   
+   对redis中单元测试框架的简单修改
+   http://www.51testing.com/html/34/n-861834.html
+   
+   Springboot使用RedisTemplate基本步骤
+   http://blog.csdn.net/xuboke/article/details/53393231
+   
+   
+   Redis 存储字符串和对象
+   http://blog.csdn.net/abc19900828/article/details/40373549
+   http://blog.csdn.net/softwave/article/details/52202199
+   redis.set( "good".getBytes(), SerializeUtil. serialize(good));
+            byte[] value = redis.get( "good".getBytes());
+           Object object = SerializeUtil. unserialize(value);           
+            if(object!= null){
+                Goods goods=(Goods) object;
+                System. out.println(goods.getName());
+                System. out.println(goods.getNum());
+                System. out.println(goods.getPrice());
+           }
+           
+ 
+ 
+ redis存储Json
+ redis简单使用及用JSON字符串的方式解决对象存储问题
+ http://blog.csdn.net/u013066244/article/details/52128864
+ http://blog.csdn.net/foolishandstupid/article/details/51138228
+ 
+ Java的JSON操作存储List到Redis
+ http://blog.csdn.net/unix21/article/details/51769950
+ JSONArray  
+ 
+ 使用Java构造和解析Json数据的两种方法(详解一)
+ http://www.jb51.net/article/80551.htm
+ 
+ java解析json格式数据
+ http://blog.csdn.net/djun100/article/details/12135933----good
+ http://blog.csdn.net/gjf281/article/details/60955501----also good
+  sTotalString = {"message":"success","result":[{"surveyid":"1","surveyname":"B"}{"surveyid":"2","surveyname":"C"}]};
+        JSONObject json;
+        
+ try {
+            json = new JSONObject(sTotalString);
+            JSONArray results = json.getJSONArray("result");
+            for (int i = 0; i < results.length(); i++) {
+                SurveyVO surveyVO = new SurveyVO();
+                JSONObject result = results.getJSONObject(i);
+                System.out.println(result.getString("surveyId")+" "+result.getString("surveyName"));
+                surveyVO.setSurveyId(result.getString("surveyId"));
+                surveyVO.setSurveyName(result.getString("surveyName"));
+                surveyVOList.add(surveyVO);
+            }               
+  
+  
+  
+  redis设置密码；
+  集群搭建        
+ Redis集群方案应该怎么做？ 
+https://www.zhihu.com/question/21419897 
+
+Redis高可用演进（一）
+http://www.cnblogs.com/chenty/p/5152878.html---清晰
+
+redis shard功能
+http://blog.sina.com.cn/s/blog_630c58cb0100s325.html
+目前，redis server没有提供类似mongodb那样的shard功能，只能在client端实现
+
+下面，介绍Jedis client的一致性哈希算法实现shard功能： 
+
+redis设计思想
+http://blog.csdn.net/jiao_fuyou/article/details/32705753
+一个很棒的Redis介绍PPT
+http://blog.nosqlfan.com/html/2395.html
+
+redis集群数据同步问题：
+http://blog.csdn.net/mid120/article/details/52790799
+
+
+全面剖析Redis Cluster原理和应用
+http://blog.csdn.net/dc_726/article/details/48552531-----good--------------------------------good
+http://blog.csdn.net/dc_726/article/details/43991905
+
+
+构建高性能数据库缓存之redis主从复制
+http://cfwlxf.blog.51cto.com/3966339/1433637
+
+Redis 主从 Replication 的配置
+https://segmentfault.com/a/1190000002692598
+
+Redis主从自动failover
+http://ylw6006.blog.51cto.com/470441/1086455/--------------------------good, 案例
+
+redis sentinel 主从切换(failover)解决方案，详细配置
+http://blog.csdn.net/pi9nc/article/details/17735653－－－－－－－－－－－－－－－failover过程讲得非常清晰
+
+Redis Replica原理
+http://www.itpub.net/thread-1886239-1-1.html-----------------------------good
+原理
+第一次、Slave向Master同步的实现是：
+        Slave向Master发出同步请求（发送sync命令），Master先dump出rdb文件，然后将rdb文件全量传输给slave，然后Master把缓存的写命令转发给Slave，初次同步完成。
+
+第二次、以及以后的同步实现是：
+        Master将变量的快照直接实时依次发送给各个Slave。
+        但不管什么原因导致Slave和Master断开重连都会重复以上两个步骤的过程。
+        Redis的主从复制是建立在内存快照的持久化基础上的，只要有Slave就一定会有内存快照发生。      
+)
+
+但是，我们可以很明显的看到，RDB有他的不足，就是一旦Redis出现问题，那么我们的RDB文件中保存的数据并不是全新的，从上次RDB文件生成到 Redis停机这段时间的数据全部丢掉了。在某些业务下，这是可以忍受的，我们也推荐这些业务使用RDB的方式进行持久化，因为开启RDB的代价并不高。 但是对于另外一些对数据安全性要求极高的应用，无法容忍数据丢失的应用，RDB就无能为力了，所以Redis引入了另一个重要的持久化机制：AOF日志，稍后分析。
+
+
+深入剖析 redis replication 主从连接
+http://www.tuicool.com/articles/fAnYFb
+
+在多台服务器上简单实现Redis的数据主从复制
+http://www.cnblogs.com/liping13599168/archive/2011/04/14/2016226.html
+Redis学习手册(主从复制)
+http://www.cnblogs.com/stephen-liu74/archive/2012/02/23/2364717.html----------good
+
+
+Redis 和 Memcached 各有什么优缺点，主要的应用场景是什么样的？
+https://www.zhihu.com/topic/19557280/top-answers
+
+Redis Cluster实践
+http://shift-alt-ctrl.iteye.com/blog/2284890－－－－－－－－－－－比较好
+
+Redis Cluster实现原理
+http://shift-alt-ctrl.iteye.com/blog/2285470----------------比较好
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AWS:
+
+Redis Cache 简介
+http://www.cnblogs.com/rampb/p/5088619.html
+基本(Basic，不包含SLA)：
+
+Shards (Redis)
+http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Shards.html
+redis 只有一个shard?????
+ redis HA高可用方案Sentinel和shard
+ http://blog.csdn.net/kelong_xhu/article/details/41846355
+ 
+ Redis高可用演进（一）
+ http://www.cnblogs.com/chenty/p/5152878.html
+ 
+ 第九章 企业项目开发--分布式缓存Redis(1)
+ http://www.cnblogs.com/java-zhao/p/5166931.html---------------******************************
+  Redis学习笔记11--Redis分布式
+  http://blog.csdn.net/freebird_lb/article/details/7778999
+  
+  
+ 双机、集群的配置模式：主从、互备、多点集群 
+ http://blog.chinaunix.net/uid-8512120-id-2459806.html
+ 
+ 集群和主从复制有什么关系和区别？
+ https://www.zhihu.com/question/34366991
+ 对于mysql来说，按实例区分，1主1从（主读写从只读），或1主2从（主读写一备只读二备延时冷备），组成的整体一般视为一个节点，大于等于2个节点开始，视为一个集群。严格来说，1主2从的方式才算合理的完整节点，发生故障的时候主从可以切换，还有一个冷备是做延时同步，保证大部分数据冗余不会完全丢失。主备主要是保障单点的系统数据可靠性和提升写io性能，集群是为了应对单点无法存储的大数据量，和单点无法及时处理的高并发。所以从架构和集群的上层角度看，主备可以认为是同一个实例同一个库，集群一般就结合分库分表，数据就有可能不同（并发请求更高或者数据可靠性要求更高的，节点也可以做冗余处理）。当然这种说法并不是严格的定义，只是大家比较认可的一种最佳实践。
+
+作者：张海
+链接：https://www.zhihu.com/question/34366991/answer/147264035
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 
+
+
+
+
+
+
+
+
+
+nameSpace:
+https://github.com/TrigonicSolutions/jedis-namespace/blob/master/src/main/java/com/trigonic/jedis/NamespaceJedis.java
+spring-data-redis
+http://www.javased.com/index.php?source_dir=spring-data-redis/src/main/java/org/springframework/data/redis/config/RedisNamespaceHandler.java
+
+redis-namespace
+https://github.com/resque/redis-namespace
+
+Redis 集群教程
+http://www.redis.cn/topics/cluster-tutorial.html
+
+redis cluster 集群
+http://www.cnblogs.com/tankaixiong/articles/4022646.html
+
+Redis Support
+http://docs.spring.io/spring-integration/reference/html/redis.html
+
+redis-cluster研究和使用
+http://hot66hot.iteye.com/blog/2050676/
+
+redis key命名空间 使用redis作为缓存
+https://www.server110.com/redis/201704/70640.html
+
+自己写的一个jedis操作模板类
+http://www.iteye.com/topic/1131288----------有下载文件
+
+Jedis API操作Redis数据库入门
+http://blog.csdn.net/lcwben/article/details/54894000
+
+redis documentation:
+https://redis.io/documentation
+
+ redis3.0 cluster功能介绍
+ http://blog.csdn.net/huwei2003/article/details/50973893
+ 
+ 
+ windows下使用RedisCluster集群简单实例
+ http://blog.csdn.net/sharuiwudi/article/details/54973605----------------good, 总结
+ http://www.cnblogs.com/lflyq/p/6145826.html
+ 
+ 
+ Redis Cluster集群主从方案（附Jedis Cluster教程）
+ http://wosyingjun.iteye.com/blog/2289220
+ 
+ 
+ redis replica:
+ https://redis.io/topics/replication
+ It is possible to use replication to avoid the cost of having the master write the full dataset to disk: a typical technique involves configuring your master redis.conf to avoid persisting to disk at all, then connect a slave configured to save from time to time, or with AOF enabled. However this setup must be handled with care, since a restarting master will start with an empty dataset: if the slave tries to synchronized with it, the slave will be emptied as well.

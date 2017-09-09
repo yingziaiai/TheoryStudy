@@ -1,2 +1,13 @@
  Spring Boot之No session repository could be auto-configured, check your configuration问题解决
  http://blog.csdn.net/blueheart20/article/details/56677338
+ 
+ Connection reset原因分析和解决方案
+ https://my.oschina.net/xionghui/blog/508758?p={{page}}
+ http://www.cnblogs.com/luihengk/p/6816202.html
+ http://blog.csdn.net/fdipzone/article/details/52824243
+ 
+ “504 Gateway Time-out
+ http://jingyan.baidu.com/article/6fb756ecbf4774241858fb9a.html
+ 
+  shut connection during attempt to negotiate SSL session      [MsgId: MERR-27776]
+  http://blog.sina.com.cn/s/blog_7f7069070102wkfq.html

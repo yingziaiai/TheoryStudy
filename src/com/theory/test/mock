@@ -87,3 +87,47 @@ MockMvc对象提供一组工具函数用来执行assert判断，都是针对web�
 在springMVC中的controller写单元测试
 http://www.xuebuyuan.com/1670119.html
 http://www.lieliao.net/cmd/15310/-----------------very good
+
+SpringBoot与JUnit+Mockito 单元测试
+http://www.60kb.com/post/45.html
+
+
+Java单元测试(Junit+Mock+代码覆盖率)
+http://www.cnblogs.com/AloneSword/p/4109407.html
+
+使用 EasyMock 更轻松地进行测试
+https://www.ibm.com/developerworks/cn/java/j-easymock.html
+
+
+ 菜鸟学Java（二十一）——如何更好的进行单元测试——JUnit
+ http://blog.csdn.net/liushuijinger/article/details/32140843
+ 
+ 零成本实现接口自动化测试 – Java+TestNG 测试Restful service
+ http://www.cnblogs.com/wade-xu/p/4229805.html
+ 
+ 
+TDD_Demo
+基于Spring-WS的Restful API的集成测试
+https://github.com/xianlinbox/TDD_Demo/blob/master/spring-ws-rest/src/test/java/com/xianlinbox/api/ApiControllerIntegrationTest.java
+
+
+写测试用例时，如果只关注输入、输出或是否被调用，建议使用Mock框架
+http://jingyan.baidu.com/article/37bce2be7f16b31003f3a260.html
+
+
+Mockito：一个强大的用于Java开发的模拟测试框架
+http://blog.csdn.net/zhoudaxia/article/details/33056093
+
+使用 EasyMock 更轻松地进行测试
+https://www.ibm.com/developerworks/cn/java/j-mocktest/
+https://www.ibm.com/developerworks/cn/java/j-easymock.html
+
+基于Spring-WS的Restful API的集成测试
+http://ningandjiao.iteye.com/blog/1982635
+https://github.com/xianlinbox/TDD_Demo/blob/master/spring-ws-rest/src/test/java/com/xianlinbox/api/ApiControllerIntegrationTest.java
+
+Spring Boot实战之单元测试
+http://www.2cto.com/kf/201608/537118.html
+
+Spring Boot应用的测试——Mockito
+https://yq.aliyun.com/articles/54061

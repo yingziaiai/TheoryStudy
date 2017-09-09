@@ -1,0 +1,13 @@
+http://www.07net01.com/2016/01/1188080.html
+SpringSession的几个关键类
+
+SessionRepositoryFilter(order是Integer.MIN_VALUE + 50)
+SessionRepositoryRequestWrapper与SessionRepositoryResponseWrapper，通过SessionRepository去操纵session
+
+SessionRepository
+
+cookieHttpSessionStrategy
+
+https://stackoverflow.com/questions/37303967/enableredishttpsession-spring-boot-ignoring-server-session-timeout-on-applica
+
+very good, could solve the httpSessionListener not work's problem.

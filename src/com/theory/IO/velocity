@@ -26,3 +26,9 @@ InputStream instream = EmailClient.class.getResourceAsStream("/"+templateName);
 VelocityContext context = new VelocityContext();
  
 Velocity.evaluate(context, w, "Velocity", getStringFromInputStream(instream));
+
+
+
+http://velocity.apache.org/engine/devel/getting-started.html
+apache的开源项目-模板引擎(Velocity)_学习了两天就上手啦
+http://www.cnblogs.com/hongten/archive/2013/03/09/hongten_apache_velocity.html

@@ -1,2 +1,10 @@
  图解用intellij idea merge git conflict cherry pick 合并git冲突 
 http://blog.csdn.net/collonn/article/details/52959436
+
+http://blog.csdn.net/liukang325/article/details/54576146
+
+回滚到指定的版本
+git reset --hard 1d0031df5b06955ab4482ef9459ff390829c380c
+
+强制提交到远程
+git push -f origin develop

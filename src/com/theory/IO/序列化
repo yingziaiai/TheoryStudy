@@ -30,3 +30,15 @@ java的HashMap类实现了Serializable接口，所以在服务器上使用map.pu
 为什么实现了Serializable就可以序列化，这源于objectOutputStream类，如果写入对象是对象的类型是String，或数组，或Enum，或Serializable，那么就可以对该对象进行序列化，否则将抛出NotSerializableException。
 继承Serializable接口，使用默认的方式来进行序列化，这种序列化方式仅仅对对象的非transient的实例变量进行序列化，而不会序列化对象的transient的实例变量，也不会序列化静态变量，所以我们对不想持久化的变量可以加上transient关键字。注意使用默认机制，在序列化对象时，不仅会序列化当前对象本身，还会对该对象引用的其它对象也进行序列化，同样地，这些其它对象引用的另外对象也将被序列化，以此类推。所以，如果一个对象包含的成员变量是容器类对象，而这些容器所含有的元素也是容器类对象，那么这个序列化的过程就会较复杂，开销也较大。
 继承Externalnalizable（Externalnalizable为Serializable的子类）接口，自身控制序列化的行为。
+
+http://www.cnblogs.com/wcyBlog/p/3928662.html
+http://blog.csdn.net/wjw0130/article/details/45766709
+ JavaWeb之Session的序列化和反序列化 && Session的活化和钝化
+2、什么情况下需要序列化 
+a）当你想把的内存中的对象保存到一个文件中或者数据库中时候；
+b）当你想用套接字在网络上传送对象的时候；
+c）当你想通过RMI传输对象的时候；
+
+
+https://www.oschina.net/question/228694_2151535
+使用redis缓存对象，该选择json还是序列化呢。

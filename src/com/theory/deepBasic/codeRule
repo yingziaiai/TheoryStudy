@@ -1,0 +1,27 @@
+1. map session Serialization
+2. Define and throw a dedicated exception instead of using a generic one. 
+3. not use hard code password
+http://www.jianshu.com/p/b50f01eeba4d
+Java代码规范小结（一）
+
+http://blog.csdn.net/hguisu/article/details/6155636
+ 深入理解java异常处理机制
+ 
+ http://blog.csdn.net/hguisu/article/details/6155636
+ http://blog.csdn.net/xfworld/article/details/4331929
+ 
+ 
+ JUnit中测试异常抛出的方法
+ http://www.cnblogs.com/harolei/p/3242131.html
+ 
+ 
+ Junit4中的新断言assertThat的是用方法
+ 如果需要是用assertThat需要在项目中引入junit4的jar包,以及hamcrest-core.jar和hamcrest-library.jar
+ http://www.tuicool.com/articles/aErQjiF
+ 
+ Assert
+ http://langgufu.iteye.com/blog/1893927
+ http://www.cnblogs.com/harolei/p/3242131.html
+ 
+ Redis测试用例
+ https://www.oschina.net/code/snippet_2670155_54716

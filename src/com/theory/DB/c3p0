@@ -1,0 +1,17 @@
+http://www.cnblogs.com/barrywxx/p/6343303.html
+连接池c3p0 ,Proxool ,Druid ,Tomcat Jdbc Pool对比测试
+
+
+https://www.mkyong.com/spring-boot/spring-boot-how-to-know-which-connection-pool-is-used/
+Spring Boot – How to know which connection pool is used?
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html
+
+spring boot c3p0
+http://www.cnblogs.com/xiaosiyuan/p/6255292.html----this one ok
+http://blog.csdn.net/u012373815/article/details/53240946---this one fail....
+
+http://www.jb51.net/article/111531.htm
+详解SpringBoot配置连接池--Spring Boot与Druid的集成
+
+

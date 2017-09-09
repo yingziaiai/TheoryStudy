@@ -3,3 +3,11 @@ whoami
 
 chmod -R 777 ...
 http://blog.csdn.net/chtdsl/article/details/8646568
+
+http://www.cnblogs.com/hnrainll/archive/2011/10/10/2205868.html
+lsof -i :3315
+
+ ps -aux|grep 1388758
+ 
+ netstat -ano
+

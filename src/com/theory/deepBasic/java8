@@ -1,0 +1,75 @@
+@FunctionalInterface
+http://blog.csdn.net/aitangyong/article/details/54137067
+
+
+ jdk1.8 新特性之 forEach 循环遍历
+ http://blog.csdn.net/dounine/article/details/53357914
+ 
+ List<Integer> numbers = new ArrayList<>();
+
+//no.1
+for(Integer number : numbers){
+    System.out.println(number);
+}
+
+//no.2
+for(int index=0,len=numbers.size();index<len;index++){
+    System.out.println(numbers.get(index));
+}
+
+使用jdk1.8后，可这么写
+
+//no.1
+numbers.forEach((Integer integer) -> {
+    System.out.println(integer);
+});
+
+//no.2
+numbers.forEach(integer -> {
+    System.out.println(integer);
+});
+
+//no.3
+numbers.forEach(integer -> System.out.println(integer));
+
+//no.4
+numbers.forEach(System.out::println);
+
+//no.5
+numbers.forEach(new MyConsumer());
+
+
+java 1.8 Stream
+http://blog.csdn.net/chszs/article/details/47038607
+https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/-------------------------good
+Ranges and Looping with IntStream
+https://www.codeproject.com/Articles/792036/WebControls/
+
+Java 8：不要再用循环了
+http://www.importnew.com/14841.html------------------good
+http://blog.csdn.net/zhou85xin/article/details/52171190
+java8 stream ,filter 等功能代替for循环-----------------------------good
+ Java8新特性——StreamAPI(二)
+ http://blog.csdn.net/u010425776/article/details/52346644
+
+
+Java 8新特性终极指南
+http://www.cnblogs.com/pkufork/p/java_8.html
+http://www.importnew.com/11908.html#streams
+
+ Java 8 Stream 流已被操作或关闭
+ http://blog.csdn.net/hatsune_miku_/article/details/73433261
+ 
+ Java 8 Stream Tutorial--转(How streams work-Different kind of streams--Processing Order--Why order matters)-----一种比较好的思路
+ 
+ http://www.cnblogs.com/davidwang456/p/4760559.html
+ 
+ 
+ java 8 循环操作List/Map
+ http://blog.csdn.net/u011659172/article/details/52587064
+ https://baijiahao.baidu.com/s?id=1565072394435713&wfr=spider&for=pc
+ 
+ 
+ 
+  java8 遍历数组的几种方式
+  http://blog.csdn.net/u011277123/article/details/69220634

@@ -26,3 +26,61 @@ EL表达式会根据name去User类里寻找这个name的get方法，此时会自
 然后利用反射将对象构建出来，然后再执行getXX()方法，
 所以这中间不关私有属性的事，调用的是私有属性的get/set方法。
 如果你不写get/set方法，那EL表达式就拿不到值了。set方法是给你后台设置值用的。
+
+
+Tomcat中session的管理机制
+http://www.cnblogs.com/interdrp/p/4935614.html
+
+关于session/cookie的问题，纠结我好几天，请求帮助。
+http://www.iteye.com/problems/69967
+https://segmentfault.com/a/1190000004309751
+
+tomcat多域名共享cookie，共享session以及修改sessionCookieName的解决方案
+http://blog.csdn.net/yinyuehepijiu/article/details/50409570
+http://www.educity.cn/wenda/131818.html
+Java Session 是如何实现的
+http://gongmingwind.iteye.com/blog/587656
+
+tomcat在server.xml修改默认的session名称
+http://blog.csdn.net/u010093570/article/details/43764373
+
+Spring Session - Spring Boot
+http://blog.csdn.net/xiaoyu411502/article/details/48650731
+
+
+基于ZooKeeper的分布式Session实现
+http://blog.csdn.net/zhangyuan19880606/article/details/51508513
+
+JavaWeb: Redis存储Session方案
+http://blog.csdn.net/neosmith/article/details/50466367
+
+
+Redis缓存session的一些问题
+http://www.itnose.net/detail/6449179.html
+
+https://github.com/jcoleman/tomcat-redis-session-manager
+
+
+ 跨域请求，关于后端session会话丢失的解决办法
+ http://blog.csdn.net/u011277123/article/details/53373977
+ 
+ 
+ http://www.java2s.com/Tutorial/Java/0400__Servlet/ServletSessionMaxInactiveInterval.htm
+ Session Max Inactive 
+ 
+ 
+ 会话登录登出及结合前端：
+ http://www.zuidaima.com/question/1929949210938368.htm
+ 
+ 
+ 简述java中的session用法和细节记录
+ @SessionAttributes
+ http://www.php.cn/java-article-361802.html
+ 
+ 
+ request.getSession()方法
+ http://blog.csdn.net/leo115/article/details/8285903
+ 
+ 
+ java的会话管理：Cookie和Session
+ http://www.cnblogs.com/cenyu/p/6160470.html

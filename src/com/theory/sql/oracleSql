@@ -5,3 +5,46 @@
  
  Oracle中ROWNUM的使用技巧。      	
  http://www.blogjava.net/conans/articles/219693.html
+ 
+ 
+ oracle建表设置主键自增
+ https://www.2cto.com/database/201310/252408.html
+ http://www.jb51.net/article/53004.htm
+ 
+ 1. 首先创建一张表
+create table member(
+memberId number primary key,
+memberMail varchar2(20)not null,
+memberName varchar2(20) not null,
+memberPassword varchar2(20)
+);
+ 
+2. 然后，你需要一个自定义的sequence
+
+CREATE SEQUENCE emp_sequence
+INCREMENT BY 1 -- 每次加几个
+START WITH 1 -- 从1开始计数
+NOMAXVALUE -- 不设置最大值
+NOCYCLE -- 一直累加，不循环
+NOCACHE -- 不建缓冲区
+ 
+
+3. 只有了表和序列还不够，还需要一个触发器来执行它！代码如下：
+
+create trigger mem_trig before
+insert on member for each row when (new.memberId is null)
+begin
+
+ select emp_sequence.nextval into:new.memberId from dual;
+
+ end;
+ 
+
+4. 这样就可以就可以了，插入数据测试
+insert into member(memberMail,memberName,memberPassword) values('123@qq.com','jack','123456');
+
+
+
+
+Oracle查看表结构的几种方法
+http://blog.csdn.net/elvis_dataguru/article/details/8967351

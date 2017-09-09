@@ -1,3 +1,9 @@
+String 字符串常量
+StringBuffer 字符串变量（线程安全）
+StringBuilder 字符串变量（非线程安全）
+在大部分情况下 StringBuilder > StringBuffer > String
+http://blog.csdn.net/rmn190/article/details/1492013
+
 http://www.cnblogs.com/sevenlin/p/sevenlin_StringBuffer_StringBuilder20150806.html
 String、StringBuffer、与StringBuilder的区别
 

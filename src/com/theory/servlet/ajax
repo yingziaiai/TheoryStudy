@@ -8,6 +8,10 @@ http://www.cnblogs.com/tylerdonet/p/3520862.html
 http://www.php100.com/html/program/jquery/2013/0905/5918.html
 
 
+ajax:
+http://www.jb51.net/article/76047.htm
+http://www.w3school.com.cn/jquery/jquery_ajax_intro.asp
+
  jsp ajax实例讲解 
  http://blog.csdn.net/rushkid02/article/details/7515058
  http://www.108js.com/article/article10/a0046.html?id=2446
@@ -107,3 +111,98 @@ http://www.php100.com/html/program/jquery/2013/0905/5918.html
     关于firefox(火狐)浏览器中ajax请求返回data时出现[object XMLDocument]的情况的分析 
     http://blog.csdn.net/chinaonlyqiu/article/details/8882532?utm_source=tuicool
          
+  http://bbs.csdn.net/topics/380237868       
+  data:$('#yourformid').serialize(),    
+  
+  
+  ajax post提交的方式 注意事项
+  http://www.cnblogs.com/xuejianxiyang/p/4885304.html
+  注意post请求的Content-Type为application/x-www-form-urlencoded，参数是在请求体中，即上面请求中的Form Data(后台通过Request.Form["name"]来获取)。
+
+如果Content-Type为application/json;charset=UTF-8或text/plain;charset=UTF-8，则请求表单参数在RequestPayload中(后台用StreamReader方式来读取:
+
+
+
+jquery ajax POST 例子详解
+    function test(){
+   $.ajax({
+            //提交数据的类型 POST GET
+            type:"POST",
+            //提交的网址
+            url:"testLogin.aspx",
+            //提交的数据
+            data:{Name:"sanmao",Password:"sanmaoword"},
+            //返回数据的格式
+            datatype: "html",//"xml", "html", "script", "json", "jsonp", "text".
+            //在请求之前调用的函数
+            beforeSend:function(){$("#msg").html("logining");},
+            //成功返回之后调用的函数             
+            success:function(data){
+           $("#msg").html(decodeURI(data));            
+            }   ,
+            //调用执行后调用的函数
+            complete: function(XMLHttpRequest, textStatus){
+               alert(XMLHttpRequest.responseText);
+               alert(textStatus);
+                //HideLoading();
+            },
+            //调用出错执行的函数
+            error: function(){
+                //请求出错处理
+            }         
+         });
+
+  }
+http://www.cnblogs.com/bestsaler/archive/2010/04/08/1835508.html
+
+
+ajax与302响应
+http://www.cnblogs.com/dudu/p/ajax_302_found.html
+
+使用ajax提交form表单，包括ajax文件上传
+http://www.cnblogs.com/zhuxiaojie/p/4783939.html
+
+深入理解jQuery中$.get、$.post、$.getJSON和$.ajax的用法
+http://www.cnblogs.com/ranzige/p/jquery_get_ajax.html
+
+jQuery.ajax处理302重定向
+jQuery ajax 302跨域
+http://www.cnblogs.com/wonyun/p/5696838.html
+http://www.tuicool.com/articles/Mf2mim
+
+Nginx反向代理，负载均衡，redis session共享，keepalived高可用
+http://www.cnblogs.com/mrlinfeng/p/6146866.html
+
+KeepAlive详解
+http://www.cnblogs.com/havenshen/p/3850167.html
+Linux高可用(HA)之Nginx+Redis+Tomcat集群实现session保持和共享
+https://www.dwhd.org/20150604_095952.html
+
+
+WEB程序会话管理--HttpSession和Cookie
+http://blog.csdn.net/xiaoxiao_72699/article/details/30121225
+
+ 利用Session完成用户的登录和注销
+http://blog.csdn.net/xigedanganxi/article/details/11565419
+
+我的shiro之旅: 六 自定义shiro的sessionId
+http://blog.csdn.net/lhacker/article/details/12091463
+tomcat对sessionId的处理分析
+http://www.tuicool.com/articles/Af6VNr
+
+
+Spring boot configure custom jsessionid for embedded server
+https://stackoverflow.com/questions/25918556/spring-boot-configure-custom-jsessionid-for-embedded-server
+
+
+
+Spring RESTful服务接收和返回JSON最佳实践
+https://my.oschina.net/u/2273085/blog/481085
+以下是使用 jQuery 接收、发送 JSON 的代码：
+Js代码    收藏代码
+$(document).ready(function(){  
+    jQuery.ajax({  
+        type: 'GET',  
+        contentType: 'application/json',  
+        url: 'jsonfeed.do',  
+        dataType: 'json',  

@@ -1,0 +1,149 @@
+http://sgq0085.iteye.com/blog/2031319---好的例子
+Mockito 初探
+
+ 使用junit+mockito进行mock测试实例
+ http://blog.csdn.net/ruangong1203/article/details/50243477
+ http://blog.csdn.net/victor_cindy1/article/details/52126161－－－－最好
+
+http://stackoverflow.com/questions/32820546/mock-object-method-call-using-spring-boot-and-mockito
+http://stackoverflow.com/questions/2457239/injecting-mockito-mocks-into-a-spring-bean
+public class ProductCompositeIntegrationTest {
+    @InjectMocks
+    private ProductCompositeIntegration productIntegration;
+
+    @Mock
+    private ServiceUtils util;
+
+    private MockRestServiceServer mockServer;
+
+    private RestTemplate restTemplate = new RestTemplate();
+
+    @Before
+    public void init() {
+        MockitoAnnotations.initMocks(this);
+        mockServer = MockRestServiceServer.createServer(restTemplate);
+        productIntegration.setRestTemplate(restTemplate);
+    }
+
+    @Test
+    public void someTests() {
+        when(util.getServiceUrl("product")).thenReturn(URI.create("http://localhost:8080/test"));
+        //Test code...
+    }
+}
+
+@Mock, @InjectMocks, @MockBean
+
+   @Before
+    public void before() {
+        myDAOMock = Mockito.mock(MyDAO.class);
+        ReflectionTestUtils.setField(myService, "myDAO", myDAOMock);
+    }
+    
+ http://pwind.iteye.com/blog/1275159   
+ Mockito简单易用易上手，所以就把Spring和Mockito组合做单元测试，Mocked对象也交给Spring统一管理。好处至少有：使单元测试类的环境和应用实际的环境保持一致性。开发人员就不用另外增加额外的配置，也可以少一些代码。单元测试类通过了，相应的应用类也就ok（Spring的相关配置也ok）。
+ 
+ Cobertura
+ http://www.360doc.com/content/16/0819/12/834950_584308841.shtml
+ https://github.com/duqicauc/spring-template
+ 
+ http://blog.csdn.net/kingdz618/article/details/65626389---测试翻译
+ . For example, you can test service layer objects by stubbing or mocking DAO or Repository interfaces, without needing to access persistent data while running unit tests. 
+ 
+ 
+ 
+ mockito中实现部分mock两种方式：spy与callRealMethod()   
+ http://blog.csdn.net/aeroleo/article/details/49946999
+ 
+ 
+ http://sgq0085.iteye.com/blog/2031319
+ Stub对象和Mock对象的区别
+ 
+ http://www.cnblogs.com/ansn001/p/4939518.html
+ 为什么用mocktio
+ 接口语法简洁、自然。写起来像在说话，很舒服。
+文档更完整。让学习曲线更简单。
+可以进行参数化。在很多情况下，不想关心具体的参数是什么。
+mock的思路更舒服。废弃了陈旧的“录制——重放”的方法，使用的“期望——执行——断言”更自然的方法。
+
+    Stub对象用来提供测试时所需要的测试数据，可以对各种交互设置相应的回应。例如我们可以设置方法调用的返回值等等。Mockito中when(…).thenReturn(…)。这样的语法便是设置方法调用的返回值。另外也可以设置方法在何时调用会抛异常等。
+    Mock对象用来验证测试中所依赖对象间的交互是否能够达到预期。Mockito中用verify(…).methodXxx(…) 语法来验证 methodXxx 方法是否按照预期进行了调用。
+
+http://chenhailong.iteye.com/blog/1698631    
+Mockito怎么样Mock返回值为空的方法    
+
+一般不用对 void 方法打桩, 事后 verify 就行
+https://unmi.cc/mockito-how-to-mock-void-method/
+
+
+
+@Value("#{myProps[‘default.url']}")
+private String defaultUrl;
+In test method (qualified name just for completeness here):
+
+org.springframework.test.util.ReflectionTestUtils.setField(
+        myClassUnderTest, "defaultUrl", "url123");
+// Note: Don't use MyClassUnderTest.class
+// Note: Don't use the referenced string "#{myProps[‘default.url']}", 
+//       but simply the field name "defaultUrl"
+
+You can also mock your property configuration into your test class
+
+
+How do I mock an autowired @Value field in Spring with Mockito?
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({ "classpath:test-context.xml" })
+public class MyTest 
+{ 
+   @Configuration
+   public static class MockConfig{
+       @Bean
+       public Properties myProps(){
+             Properties properties = new Properties();
+             properties.setProperty("default.url", "myUrl");
+             properties.setProperty("property.value2", "value2");
+             return properties;
+        }
+   }
+   @Value("#{myProps['default.url']}")
+   private String defaultUrl;
+
+   @Test
+   public void testValue(){
+       Assert.assertEquals("myUrl", defaultUrl);
+   }
+}
+
+
+
+for sendRedirect:
+http://blog.sina.com.cn/s/blog_60e4b3a90101aeyk.html
+http://blog.csdn.net/chengzhezhijian/article/details/50947761
+http://www.51testing.com/html/08/134208-227141.html
+verify:
+      verify(response).sendRedirect(REDIRECT_URL);
+        verify(response, never()).sendError(401);
+        
+        
+        
+ JUnit + Mockito 单元测试（三）
+ http://blog.csdn.net/zhangxin09/article/details/42487319
+ http://blog.csdn.net/ruangong1203/article/details/50243477
+ http://blog.csdn.net/ruangong1203/article/details/50243477
+ 
+ java assert responseEntity
+ Assert.assertEquals(responseEntity.getStatusCode().toString(), "200");
+ 
+ http://www.programcreek.com/java-api-examples/index.php?api=org.springframework.http.ResponseEntity
+ ResponseEntity<Object> responseEntityDeletion = digestRestTemplate
+            .exchange(URL + "idm/servicecomposition/" + SERVICECOMPID,
+                    HttpMethod.DELETE, deletionEntity, Object.class);
+                    
+ http://jinnianshilongnian.iteye.com/blog/2007180
+ RestTemplate客户端测试
+ proxy webservice                   
+ 
+ 
+ mockito参数 HttpSevletRequest
+ Mockito.mock(HttpServletRequest.class);       

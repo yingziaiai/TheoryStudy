@@ -1,0 +1,3 @@
+SQL Developer更改日期显示格式
+http://blog.csdn.net/jiangmeiling9921/article/details/8243702
+工具->首选项->数据库->NLS->日期格式: DD-MON-RR 修改为: YYYY-MM-DD HH24:MI:SS

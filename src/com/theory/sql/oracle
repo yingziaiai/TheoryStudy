@@ -52,3 +52,11 @@ http://stackoverflow.com/questions/11837609/java-sql-sqlexception-ora-01501-crea
   
   SID, service name:
   http://blog.csdn.net/z69183787/article/details/25706269
+  
+  
+   Oracle 用户（user)和模式(schema)的区别
+   http://blog.csdn.net/h254931252/article/details/52774276
+   http://www.2cto.com/database/201211/172077.html
+   
+    Oracle（4）创建用户，分配权限及角色，Schema概念
+    http://blog.csdn.net/u013943420/article/details/68943828

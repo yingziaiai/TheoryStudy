@@ -106,3 +106,79 @@ ins.close();
      
      
      Arrays.toString(array)
+     
+     
+     Boolean.valueOf(string)
+     
+     
+     
+Java 字符串拼接效率比较   
+http://blog.csdn.net/Zen99T/article/details/51255418  
+append方法最快、concat次之、加号最慢
+
+Java类型转换以及Object转成其他类型
+http://hovertree.com/h/bjaf/cep2mcba.htm   
+
+http://blog.sina.com.cn/s/blog_6245f7670100os9b.html
+java字符串大小写转换   
+.toLowerCase();//转成小写
+.toUpperCase();//转成大写
+例：
+String str = "aaaaaBBcccc";
+String Upstr = str.toUpperCase();
+String Lowstr = str.toLowerCase();
+
+
+字符串转整数：
+http://www.cnblogs.com/Berryxiong/p/6439278.html
+具体方法有两种：
+String s="123";
+int i;
+第一种方法：i=Integer.parseInt(s);
+第二种方法：i=Integer.valueOf(s).intValue();
+
+
+String数组转List，List转String数组
+http://blog.csdn.net/aaronuu/article/details/7055650
+List 转换为 String数组
+List<String> list = new ArrayList<String>();    
+list.add("a1");    
+list.add("a2");    
+String[] toBeStored = list.toArray(new String[list.size()]);    
+for(String s : toBeStored) {    
+     System.out.println(s);    
+}
+
+String 数组转换为 List
+String[] arr = new String[] {"1", "2"};  
+List list = Arrays.asList(arr); 
+
+
+
+List<String> strList = new ArrayList<String>();
+strList.add("aa");
+strList.add("bb");
+Object[] objs = strList.toArray();
+--------------
+如果要变成String数组，需要强转类型。
+String[] strs = (String[]) strList.toArray(new String[0]);
+-----------------
+也可以指定大小：
+String[] strs = strList.toArray(new String[strList.size()]);
+
+笨方法：
+List<String> strList = new ArrayList<String>();
+strList.add("aa");
+strList.add("bb");
+String[] strs = new String[strList.size()];
+
+http://www.jb51.net/article/101713.htm
+Java List转换成String数组
+List<String> list = new ArrayList<String>(); 
+list.add("a1"); 
+list.add("a2"); 
+String[] toBeStored = list.toArray(new String[list.size()]); 
+
+http://www.cnblogs.com/jenniferhuang/p/3549845.html
+String[] b = list.toArray(new String[list.size()]);
+     

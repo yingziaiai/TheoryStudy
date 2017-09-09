@@ -1,0 +1,42 @@
+httpclient4.x 使用连接池发送https请求使用总结
+http://bsr1983.iteye.com/blog/2211102
+
+http://www.yeetrack.com/?p=782-------------------good
+
+http://bsr1983.iteye.com/blog/2211102----httpclient4.x 使用连接池发送https请求使用总结
+
+http://hc.apache.org/httpcomponents-client-ga/tutorial/html/connmgmt.html
+Pooling connection manager
+
+
+http://geniuszhe.blog.163.com/blog/static/11934682014102521241984/
+PoolingClientConnectionManager conMgr = new PoolingClientConnectionManager();
+
+conMgr.setMaxTotal(200); //设置整个连接池最大连接数 根据自己的场景决定
+
+//是路由的默认最大连接（该值默认为2），限制数量实际使用DefaultMaxPerRoute并非MaxTotal。
+
+//设置过小无法支持大并发(ConnectionPoolTimeoutException: Timeout waiting for connection from pool)，路由是对maxTotal的细分。
+
+conMgr.setDefaultMaxPerRoute(conMgr.getMaxTotal());//（目前只有一个路由，因此让他等于最大值）
+
+//另外设置http client的重试次数，默认是3次；当前是禁用掉（如果项目量不到，这个默认即可）
+
+httpClient.setHttpRequestRetryHandler(new DefaultHttpRequestRetryHandler(0, false));
+
+此处解释下MaxtTotal和DefaultMaxPerRoute的区别：
+
+1、MaxtTotal是整个池子的大小；
+
+2、DefaultMaxPerRoute是根据连接到的主机对MaxTotal的一个细分；比如：
+
+MaxtTotal=400 DefaultMaxPerRoute=200
+
+而我只连接到http://sishuok.com时，到这个主机的并发最多只有200；而不是400；
+
+而我连接到http://sishuok.com 和 http://qq.com时，到每个主机的并发最多只有200；即加起来是400（但不能超过400）；所以起作用的设置是DefaultMaxPerRoute。
+
+
+
+http://www.cnblogs.com/h--d/p/5976665.html---------------------good
+【JAVA】通过HttpClient发送HTTP请求的方法

@@ -1,0 +1,7 @@
+RestTemplate整合HttpClient
+
+http://blog.csdn.net/qq_18838763/article/details/52903746
+
+https://stackoverflow.com/questions/31597696/resttemplate-connectionpooltimeoutexception-timeout-waiting-for-connection-fr
+
+https://coderwall.com/p/dcohra/connection-pooling-with-spring-resttemplate

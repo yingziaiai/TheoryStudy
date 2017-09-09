@@ -1,0 +1,11 @@
+https://github.com/elastic/logstash
+
+https://kibana.logstash.es/content/kibana/index.html---good
+
+https://www.gitbook.com/book/chenryn/elk-stack-guide-cn/details
+
+知乎为什么要自己开发日志聚合系统「kids」而不用更简洁方便的「ELK」？
+https://www.zhihu.com/question/27214433/answer/35813798
+
+
+到底应该如何打印日志才能有错误时很快定位到？需要哪些关键信息？

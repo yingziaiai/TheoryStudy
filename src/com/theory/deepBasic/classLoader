@@ -8,3 +8,9 @@ http://blog.csdn.net/javaloveiphone/article/details/51994268
 
 web.xml 配置中classpath: 与classpath*:的区别
 http://perfy315.iteye.com/blog/2009258
+
+
+根据指定类名创建实例（Java的反射机制）
+http://blog.csdn.net/u010729348/article/details/16819693
+http://www.iteye.com/problems/79714
+http://blog.csdn.net/u010729348/article/details/16819693

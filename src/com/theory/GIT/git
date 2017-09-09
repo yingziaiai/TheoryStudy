@@ -1,5 +1,5 @@
 http://blog.csdn.net/liuchunming033/article/details/43274733
-
+http://www.yiibai.com/git/git_push.html
 冲突解决
 http://backlogtool.com/git-guide/cn/stepup/stepup2_7.html
 
@@ -45,3 +45,12 @@ git log >>显示每条分支的合并历史
 git冲突：
 Git错误non-fast-forward后的冲突解决 
 http://blog.csdn.net/chain2012/article/details/7476493
+
+
+git push origin HEAD:master
+http://www.yiibai.com/git/git_push.html
+
+http://blog.csdn.net/pipisorry/article/details/47867097
+查看某一历史版本的提交内容git show 4ebd4bbc3ed321d01484a4ed206f18ce2ebde5ca，这里能看到版本的详细修改代码。
+
+对比不同版本git diff c0f28a2ec490236caa13dec0e8ea826583b49b7a 2e476412c34a63b213b735e5a6d90cd05b014c33

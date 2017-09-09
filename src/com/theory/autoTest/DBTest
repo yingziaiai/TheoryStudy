@@ -1,0 +1,48 @@
+http://www.36dsj.com/archives/3898
+永远不要忘记数据库测试 数据库测试的重要性和测试要点说明
+
+TDD 数据库DAO测试
+H2, 
+redis
+
+单元测试系列之4：使用Unitils测试DAO层
+http://stamen.iteye.com/blog/1484589
+
+
+2.善用setupTest和teardownTest方法初始化和清理测试数据环境。比如insert一类用例分为空数据条件下插入和有数据下插入。空数据条件下setupTest方法就是要清空数据。有数据条件下的setupTest方法就是要把数据还原。可以共用的初始化动作放testSuit级别setupTest/teardownTest方法去做。这里有个花时间的地方。有时候前一个用例/测试集的清理动作跟下一个用例/测试集的初始化动作是相同的。严格地执行每个用例/测试集都有独立的初始化和清理动作会造成重复劳动。做成用例/测试集顺序依赖的话，当有变更时容易引起数据环境出错。这是需要平衡和按具体项目情况来衡量。
+
+作者：知乎用户
+链接：https://www.zhihu.com/question/33308332/answer/56930838
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+其实如果每个功能模块写的好的话，去用mock也挺好的，但是@Resource如何去设置呢
+
+如何在使用了 Spring Boot 和 MyBatis 的应用中使用 Mockito 测试 DAO 层
+https://segmentfault.com/q/1010000007107590/a-1020000007107843
+
+
+如何用mockito+spring进行单元测试(2)
+http://www.cnblogs.com/alphablox/archive/2013/04/06/3002152.html
+
+
+Mock object method call using Spring Boot and Mockito
+http://stackoverflow.com/questions/32820546/mock-object-method-call-using-spring-boot-and-mockito
+
+
+测试过程中遇到的问题 ，要真正的连接数据库，每一个测试用例都需要重新启动，耗费资源；所以应与环境分开；
+另外，测试中就算用到了MOCK， 但由于代码编写时模块功能不独立而依赖性强，也不便于mock
+所以真正的框架应该解决这些个问题 ，可以有更方便灵活的判断语言，更方便的隔离依赖性的宏观的对象。
+
+
+Spring中DAO层接口的单元测试
+http://xsylang.iteye.com/blog/2296730
+
+还可以用@Transactional    
+@Rollback(true) 
+
+Spring Boot微服务集成测试的策略 
+https://coyee.com/article/11949-integration-testing-strategies-for-spring-boot-microservices
+
+https://www.infoq.com/articles/stubbing-mocking-service-virtualization-differences?utm_source=infoq&utm_medium=popular_widget&utm_campaign=popular_content_list&utm_content=homepage

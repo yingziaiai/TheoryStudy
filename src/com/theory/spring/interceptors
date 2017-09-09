@@ -36,3 +36,50 @@ http://www.tuicool.com/articles/ZvABBzj
 在afterCompletion中，可以根据ex是否为null判断是否发生了异常，进行日志记录。
 
 参数中的Object handler是下一个拦截器。
+
+
+login interceptors:
+登陆拦截器LoginInterceptor
+http://yuncode.net/code/c_58bf992282ba866
+springMVC 登录验证 使用interceptor
+http://blog.sina.com.cn/s/blog_4c2991790102w058.html
+
+《JS基础——实现登陆验证》
+http://blog.csdn.net/sdliujiangbo/article/details/16820889
+
+SpringBoot之Interceptor拦截器
+https://my.oschina.net/wangnian/blog/758711
+
+spring boot如何使用spring AOP实现拦截器
+http://www.jb51.net/article/110676.htm
+
+springboot实现拦截器之验证登录示例
+http://www.jb51.net/article/106551.htm------------很好
+
+Spring filter和拦截器(Interceptor)的区别和执行顺序
+http://www.cnblogs.com/ycpanda/p/3637312.html
+
+http://dorole.com/1422/
+使用Spring Session做分布式会话管理
+
+
+https://stackoverflow.com/questions/11335328/exception-thrown-by-an-interceptor-doesnt-go-to-the-exception-handler
+http://www.cnblogs.com/AloneSword/p/3420286.html
+Spring3 MVC Login Interceptor（Spring 拦截器）
+public class SecurityInterceptor implements HandlerInterceptor {
+
+    @Override
+    public boolean preHandle(HttpServletRequest request,
+            HttpServletResponse response, Object handler) throws Exception {
+    // intercept
+    HttpSession session = request.getSession();
+    if (session.getAttribute("user") == null) {
+        throw new AuthorizationException();
+    } else {
+        return true;
+    }
+}
+
+
+spring-boot 加入拦截器Interceptor
+http://blog.csdn.net/li6151770/article/details/52782133?locationNum=1&fps=1

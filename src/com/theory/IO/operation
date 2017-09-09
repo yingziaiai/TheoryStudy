@@ -1,0 +1,18 @@
+java    &&的优先级
+
+	if (value == null || (value != null && !Pattern.matches(regex, value))) {
+	    return false;
+	}
+	
+	
+	 Java中，&&与&，||与|的区别
+	 http://blog.csdn.net/lishiyuzuji/article/details/8116516
+	 http://blog.csdn.net/hemeinvyiqiluoben/article/details/53819117
+	 http://blog.csdn.net/lishiyuzuji/article/details/8116516
+	 
+	 
+	 Java中，&&与&，||与|的区别
+	 在Java的逻辑运算符中，有这么四类：&&（短路与），&，|，||（短路或）。
+http://blog.csdn.net/lishiyuzuji/article/details/8116516
+&&和&都是表示与，区别是&&只要第一个条件不满足，后面条件就不再判断。而&要对所有的条件都进行判断。
+||和|都是表示“或”，区别是||只要满足第一个条件，后面的条件就不再判断，而|要对所有的条件进行判断。

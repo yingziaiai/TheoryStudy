@@ -3,3 +3,11 @@ http://lavasoft.blog.51cto.com/62575/265073/
 
 写个后台线程监控连接池的Connection超时、被强制关闭、池的尺寸、当前大小等等。
 再完善下数据源的log相关方法的实现。
+
+
+spring配置datasource三种方式
+http://blog.csdn.net/yangyz_love/article/details/8199207
+
+
+SpringBoot配置属性之DataSource
+https://segmentfault.com/a/1190000004316491

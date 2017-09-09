@@ -1,2 +1,82 @@
 http://www.bysocket.com/?p=282
 JavaEE 要懂的小事：一、图解Http协议
+
+java发送http的get、post请求
+http://www.cnblogs.com/zhuawang/archive/2012/12/08/2809380.html
+
+http://blog.csdn.net/zcf520android/article/details/51314959
+HttpURLConnection 发送PUT请求,设置请求头参数 json请求体
+
+http://lpyyn.iteye.com/blog/2074170
+RestTemplate 异常Could not write request: no suitable HttpMessageConverter fo
+https://stackoverflow.com/questions/38894650/could-not-write-request-no-suitable-httpmessageconverter-found-for-request-type
+http://www.open-open.com/lib/view/open1436018677419.html
+Spring RestTemplate介绍
+https://my.oschina.net/heweipo/blog/801653
+http://blog.csdn.net/wwwihpccn/article/details/30496089
+http://www.cnblogs.com/softidea/p/5977375.html
+http://www.ithao123.cn/content-8319122.html　
+主方法：ResponseEntity<Student> responseEntity = restTemplate.exchange(url, HttpMethod.POST, entity, Student.class, aa);
+说明：
+
+0. url 请求路径；
+
+1. exchange可以发送HttpMethod.POST,DELE,GET,PUT请求；
+
+2. entity包含请求的对象和消息头；
+
+3. Student.class返回的信息的对象；
+
+4. aa是url中出现的路径变量。
+
+
+
+示例：
+
+HttpHeaders headers = new HttpHeaders();
+
+headers.setContentType(MediaType.APPLICATION_JSON);
+String url = "http://localhost:8080/test/testadd/{id}";
+Map<String, String> aa = new HashMap<String, String>();
+aa.put("id", "123");
+Student student = new Student();
+student.setAa("大智慧aa");
+student.setBb("bb");
+student.setCc("cc");
+RestTemplate restTemplate = new RestTemplate();
+HttpEntity<Student> entity = new HttpEntity<Student>(student, headers);
+// ResponseEntity<Student> responseEntity = restTemplate.exchange(url, HttpMethod.POST, entity, Student.class, aa);
+ResponseEntity<Student> responseEntity = restTemplate.postForEntity(url, entity, Student.class, aa);
+Student studentResult = responseEntity.getBody();
+System.out.println(studentResult.getAa());
+System.out.println(studentResult.getBb());
+System.out.println(studentResult.getCc()); 
+
+
+springboot RestTemplate 注入
+http://blog.csdn.net/lfy1114/article/details/52870746
+springboot是无法自动注入RestTemplate ，但是springCloud可以自动注入，这样子我们要 在初始化springboot配置类中注入RestTemplate ，这样子在其他class中 @Autowired RestTemplate restUtil就不会有问题了，代码示例如下所示
+@EnableAutoConfiguration
+@ComponentScan(basePackages = {"cn.creditease"})
+@EntityScan(basePackages="cn.creditease.entity")
+@EnableJpaRepositories(basePackages="cn.creditease.reposirory")
+public class ServletInitializer extends SpringBootServletInitializer {
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
+    }
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(ServletInitializer.class);
+    }
+}
+
+http://www.cnblogs.com/wenbronk/p/6900002.html
+springboot-24-restTemplate的使用
+
+Spring RestTemplate: 比httpClient更优雅的Restful URL访问, java HttpPost with header
+http://www.cnblogs.com/tomcatandjerry/p/5899722.html
+http://blog.csdn.net/kao123yaojinqian/article/details/72680035
+
+http://www.cnblogs.com/rollenholt/p/3934649.html
+no suitable HttpMessageConverter found for request type [java.lang.Integer]

@@ -1,0 +1,19 @@
+SpringMVC注解@RequestParam全面解析
+http://825635381.iteye.com/blog/2196911
+<form action="/gadget/testRequestParam" method="post">    
+     参数inputStr:<input type="text" name="inputStr">    
+     参数intputInt:<input type="text" name="inputInt">    
+</form>  
+
+@RequestMapping("testRequestParam")    
+   public String filesUpload(@RequestParam String inputStr, HttpServletRequest request) {    
+    System.out.println(inputStr);  
+      
+    int inputInt = Integer.valueOf(request.getParameter("inputInt"));  
+    System.out.println(inputInt);  
+      
+    // ......省略  
+    return "index";  
+   }  
+   
+   

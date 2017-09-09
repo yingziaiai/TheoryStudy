@@ -1,0 +1,24 @@
+http://www.tuicool.com/articles/IBNrErq
+Spring MVC ： Java模板引擎 Thymeleaf (三）
+<a th:href="@{/login}">
+解析后就是，
+
+<a href="/myapp/login">
+
+
+http://www.thymeleaf.org/documentation.html----官网
+
+
+https://github.com/kolorobot/spring-boot-thymeleaf
+
+thymeleaf 学习笔记-基础篇(中文教程)
+http://www.cnblogs.com/vinphy/p/4674247.html
+
+thymeleaf 学习笔记
+http://www.blogjava.net/bjwulin/articles/395185.html
+http://jishiweili.iteye.com/blog/2095536
+http://blog.csdn.net/asd_op/article/details/53232039
+http://www.cnblogs.com/nuoyiamy/p/5591559.html
+
+http://www.cnblogs.com/nuoyiamy/p/5591559.html－－－－good
+结合：http://itutorial.thymeleaf.org/exercise/3－－－good exercise

@@ -24,4 +24,41 @@ http://www.cnblogs.com/youring2/p/sso-practice.html
  
  http://blog.csdn.net/liutengteng130/article/details/46848281
  SSO（Single Sign On）系列（三）--CAS单点登录
+ 
+ 
+ 构建安全的网站用户登录认证体系
+ https://www.douban.com/note/481562831/
+ 
+ 3种 web 会话管理的方式
+ http://web.jobbole.com/89072/
+ http://www.cnblogs.com/dassmeta/p/6483345.html
+ 
+ java登录会话控制
+ http://www.xuebuyuan.com/1705052.html
+ 
+  session、cookie与“记住我的登录状态”的功能的实现
+  http://blog.csdn.net/u010235716/article/details/51553481
+  
+  Spring mvc Interceptor 解决Session超时配置流程
+  http://www.cnblogs.com/exmyth/p/4102861.html
+  
+  
+  http://blog.csdn.net/gaodebao1/article/details/51789188
+  SpringBoot中Session超时原理说明
+  
+   延长或控制Session的有效期的方法总结--------JS的方法
+   http://blog.csdn.net/zlwzlwzlw/article/details/8568833
+   
+   
+   单点登录实现（spring session+redis完成session共享）
+   http://www.cnblogs.com/hujunzheng/p/6395966.html?from=singlemessage
+   
+   
+   
+   利用redis同步登陆实现session共享
+   http://520shuijing.iteye.com/blog/2273862
+   
+   
+   http://blog.csdn.net/kenhins/article/details/19122407
+   JavaWeb登录、注销、退出、记住用户名和密码
 

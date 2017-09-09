@@ -6,3 +6,35 @@ http://blog.csdn.net/lylwo317/article/details/52163304
 
  Java注解（Annotation）原理详解
  http://blog.csdn.net/lylwo317/article/details/52163304
+ 
+ @RequestParam @RequestBody @PathVariable 等参数绑定注解详解 -- @RequestHeader、@CookieValue
+ http://blog.csdn.net/walkerjong/article/details/7946109
+ @RequestMapping("/displayHeaderInfo.do")  
+public void displayHeaderInfo(@RequestHeader("Accept-Encoding") String encoding,  
+                              @RequestHeader("Keep-Alive") long keepAlive)  {
+                              
+ @Value注入static属性
+ http://www.cnblogs.com/zhouj-happy/p/6248798.html－－－－ok
+ http://blog.csdn.net/qq_28885149/article/details/52771110
+ 通过中间变量赋值：
+ public static String zhifuUrl;   
+@Value("${zhifu.url}")  
+private String zhifuUrlTmp;  
+  
+@PostConstruct  
+public void init() {  
+zhifuUrl = zhifuUrlTmp;  
+}       
+
+
+http://www.cnblogs.com/qq78292959/p/3760702.html
+@RequestParam @RequestBody @PathVariable 等参数绑定注解详解(转)
+@SessionAttributes("pet")
+
+
+@SessionAttributes原理
+http://www.cnblogs.com/caoyc/p/5635914.html
+http://www.xuebuyuan.com/2174879.html
+
+@ModelAttribute
+http://www.xuebuyuan.com/2174879.html                      

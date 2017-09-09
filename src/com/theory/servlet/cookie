@@ -5,3 +5,46 @@ http://duqiangcise.iteye.com/blog/1855325
 
  Cookie && Session && Token 
  http://blog.csdn.net/gg_gogoing/article/details/47446441------good
+ 
+ 
+ cookie的secure属性详解
+ http://www.jb51.net/article/63697.htm
+ Set-Cookie 的 secure 属性就是处理这方面的情况用的，它表示创建的 cookie 只能在 HTTPS 连接中被浏览器传递到服务器端进行会话验证，如果是 HTTP 连接则不会传递该信息，所以绝对不会被窃听到。
+ 
+ 
+ 
+ http://blog.csdn.net/qq_34944851/article/details/53300699
+ Session案例之用户登录、会话管理总结
+ http://www.xuebuyuan.com/1705052.html
+ java登录会话控制
+ 
+ http://aperise.iteye.com/blog/2223470
+ httpclient妙用二 httpclient保持会话登录
+ 
+ http://virtualadc.blog.51cto.com/3027116/592454
+ 
+ http://www.cnblogs.com/wlitsoft/archive/2012/05/07/2488818.html
+ http://blog.csdn.net/jiangwei0910410003/article/details/23337043----------------good
+ http://blog.csdn.net/sunny2come/article/details/7545420
+ http://blog.csdn.net/fangaoxin/article/details/6952954/－－－ok
+ 
+ 我们知道web网站在客户端存储数据有三种形式：1. Cookie   2. hidden（隐藏域） 3.QueryString 其中viewstate什么的都是通过第二种方式隐藏域存储滴。
+
+      客户端存储数据有三种形式，那服务器端有几种呢？ 嘿嘿 服务器端有：1. Session 2. Application 3. database 4. caching（缓存） 其中session用的较多，当然数据库是必须的。
+      
+      Cookie cookies[] = request.getCookies();  
+        for(int i=0;cookies != null && i<cookies.length;i++){  
+            if(cookies[i].getName().equals("lastAccessTime")){  
+                long cookieValue = Long.parseLong(cookies[i].getValue());  
+                Date date = new Date(cookieValue);  
+                out.print(date.toLocaleString());  
+            }  
+        } 
+        
+通过Spring Session实现新一代的Session管理
+http://www.infoq.com/cn/articles/Next-Generation-Session-Management-with-Spring-Session-----------里面的引申资料与git很不错       
+
+
+cookie的expires属性和max-age属性
+expires属性
+指定了coolie的生存期，默认情况下coolie是暂时存在的，他们存储的值只在浏览器会话期间存在，当用户推出浏览器后这些值也会丢失，如果想让cookie存在一段时间，就要为expires属性设置为未来的一个过期日期。现在已经被max-age属性所取代，max-age用秒来设置cookie的生存期。  

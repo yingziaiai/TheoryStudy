@@ -1,0 +1,40 @@
+https://stackoverflow.com/questions/33369878/spring-boot-read-list-from-yaml-using-value-or-configurationproperties
+
+spring boot set the list properties:
+cors.hosts.allow[0]=host-0
+cors.hosts.allow[1]=host-1
+
+@ConfigurationProperties("cors.hosts")
+public class ReadProperties {
+    private List<String> allow;
+
+    public List<String> getAllow() {
+       return allow;
+    }
+    public void setAllow(List<String> allow) {
+        this.allow = allow;
+    }
+}
+
+
+http://www.cnblogs.com/softidea/p/5644755.html
+Spring Boot 属性配置和使用（转）
+http://www.tuicool.com/articles/qymEJnA
+Spring boot将配置属性注入到bean 专题
+http://www.cnblogs.com/softidea/p/5863330.html
+
+spring-boot @ConfigurationProperties脑洞真大
+http://blog.csdn.net/guduyishuai/article/details/70879952
+
+https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files
+YAML lists are represented as property keys with [index] dereferencers, for example this YAML:
+
+my:
+   servers:
+       - dev.bar.com
+       - foo.bar.com
+Would be transformed into these properties:
+
+my.servers[0]=dev.bar.com
+my.servers[1]=foo.bar.com
+

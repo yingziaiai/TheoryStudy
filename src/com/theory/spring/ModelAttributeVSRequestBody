@@ -1,0 +1,16 @@
+http://www.cnblogs.com/HD/p/4127915.html
+[Spring MVC] - @ModelAttribute使用
+http://blog.csdn.net/lzdujing1/article/details/52325143
+@Controller  
+public class Hello2ModelController extends BaseController {  
+      
+    @RequestMapping(value = "/helloWorld2")    
+    public String helloWorld(@ModelAttribute("myUser") User user) {  
+        user.setName("老王");  
+       return "helloWorld";    
+    }    
+} 
+model中key为myUser ,前台可以直接通过${myUser.xx}获取user相应属性
+
+http://www.tuicool.com/articles/eu6Bby3
+Spring Boot构建RESTful API与单元测试

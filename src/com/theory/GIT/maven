@@ -94,7 +94,8 @@ http://jinnianshilongnian.iteye.com/blog/1997192
     </repository>  
 </repositories>  
 
-
+intellij解决依赖冲突：
+http://www.cnblogs.com/godtrue/p/6220512.html
 
 
 maven scope 标签用法
