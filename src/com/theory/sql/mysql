@@ -1,3 +1,35 @@
+mysql自定义安装：
+http://www.jb51.net/article/92158.htm
+
+mysql常用操作：
+1.登录数据库
+>mysql -u root -p 数据库名称
+2.查询所有数据表
+>show tables;
+3.查询表的字段信息
+>desc 表名称;
+4.1添加表字段
+alter table table1 add transactor varchar(10) not Null;
+alter table   table1 add id int unsigned not Null auto_increment primary key
+4.2.修改某个表的字段类型及指定为空或非空
+>alter table 表名称 change 字段名称 字段名称 字段类型 [是否允许非空];
+>alter table 表名称 modify 字段名称 字段类型 [是否允许非空];
+>alter table 表名称 modify 字段名称 字段类型 [是否允许非空];
+4.3.修改某个表的字段名称及指定为空或非空
+>alter table 表名称 change 字段原名称 字段新名称 字段类型 [是否允许非空
+4.4如果要删除某一字段，可用命令：ALTER TABLE mytable DROP 字段 名;
+
+
+详解mysql 获取当前日期及格式化
+http://www.jb51.net/article/100897.htm
+
+MySQL创建一张日期表
+http://blog.csdn.net/guge907/article/details/27170953
+
+
+MySQL执行外部sql脚本文件的命令
+http://blog.csdn.net/vebasan/article/details/7619911/
+
 <<深入浅出MySQL数据库开发、优化与管理维护>>
 https://book.douban.com/subject/3012338/
 基础篇主要适合于MySQL的初学者，内容包括MySQL的安装与配置、SQL基础、MySQL支持的数据类型、MySQL中的运算符、常用函数、图形化工具的使用等。开发篇主要适合于MySQL的设计和开发人员，内容包括表类型(存储引擎)的选择、选择合适的数据类型、字符集、索引的设计和使用、视图、存储过程和函数、触发器、事务控制和锁定语句、SQL中的安全问题、SQL Mode及相关问题等。优化篇主要适合于开发人员和数据库管理员，内容包括常用SQL技巧和常见问题、SQL优化、优化数据库对象、锁问题、优化 MySQL Server、磁盘I/O问题、应用优化等。管理维护篇主要适合于数据库管理员，内容包括MySQL高级安装和升级、MySQL中的常用工具、MySQL 日志、备份与恢复、MySQL权限与安全、MySQL复制、MySQL Cluster、MySQL常见问题和应用技巧等。

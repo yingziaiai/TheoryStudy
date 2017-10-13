@@ -40,3 +40,24 @@ MaxtTotal=400 DefaultMaxPerRoute=200
 
 http://www.cnblogs.com/h--d/p/5976665.html---------------------good
 【JAVA】通过HttpClient发送HTTP请求的方法
+
+
+使用Apache中的HttpClient的实例CloseableHttpClient的一个例子
+http://blog.csdn.net/liujiakunit/article/details/51754441--------------------good
+http://ouqi.iteye.com/blog/1844284-----------------------------------------------very good
+HttpClient连接池的连接保持、超时和失效机制
+
+httpclient　连接池资源监控
+http://www.cnblogs.com/softidea/p/5683083.html
+
+
+使用 httpclient 连接池及注意事项
+http://hrps.me/2017/08/14/java-httpclient/
+http://www.cnblogs.com/likaitai/p/5431246.html
+http://xiaoa7.iteye.com/blog/1262034
+
+使用httpclient实现http链接池与使用HttpURLConnection发送http请求的方法与性能对比
+http://blog.csdn.net/u011479540/article/details/51918474
+
+ 项目体验：高并发httpclient和线程池的正确使用
+ http://blog.csdn.net/yicong406880638/article/details/50128679

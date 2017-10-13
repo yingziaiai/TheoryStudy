@@ -1,3 +1,16 @@
 【Spring】关于Boot应用中集成Spring Security你必须了解的那些事
 
 http://www.cnblogs.com/softidea/p/5991897.html---good, 整体结构层次
+
+集成Spring Security
+http://blog.didispace.com/spring-session-xjf-3/
+
+
+Spring Boot中使用Spring Security进行安全控制
+http://blog.didispace.com/springbootsecurity/
+
+Spring Boot中集成Spring Security 专题
+http://www.cnblogs.com/softidea/p/5991897.html
+
+记SpringBoot里的CORS
+https://www.douban.com/note/554454802/

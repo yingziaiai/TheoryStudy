@@ -1,0 +1,5 @@
+http://blog.csdn.net/qiustion/article/details/47910239
+org.hibernate.hql.internal.ast.QuerySyntaxException: XXXX is not mapped [from XXXX]
+
+hibernate.hql是对类进行查询的，EMPLOYEES是表名，Employee是类名，所以要改成
+session.createQuery("from Employee").list().iterator();

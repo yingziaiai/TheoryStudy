@@ -1,6 +1,11 @@
  Spring Boot项目部署到 IBM WebSphere 8.5.5需要注意的地方 
  http://blog.csdn.net/xwm111/article/details/51330051
  
+ 
+ Spring Boot基础教程
+ http://blog.didispace.com/Spring-Boot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/
+ https://github.com/dyc87112
+ 
  spring boot应用启动原理分析
  www.importnew.com/19149.html
  http://itindex.net/detail/55462-spring-boot-%E5%BA%94%E7%94%A8
@@ -664,3 +669,21 @@ http://www.2cto.com/kf/201701/587498.html－－－－查看H2结果，并且有g
 spring h2 junit 编写单元测试
 http://kanpiaoxue.iteye.com/blog/2003472
 http://blog.csdn.net/liuchuanhong1/article/details/54629967
+
+
+
+Spring boot with Oracle
+https://my.oschina.net/neochen/blog/730943
+
+ 亚马逊AWS学习——为oracle类型的RDS数据库部署数据
+ http://blog.csdn.net/dongdong9223/article/details/47426575
+ 
+ 通过Spring Boot三分钟创建Spring Web项目
+ https://zhuanlan.zhihu.com/p/20643322
+ 
+ spring boot 全局错误处理
+ https://segmentfault.com/a/1190000008443705
+ 
+ 视图配置
+ Configure ViewResolver with Spring Boot and annotations gives No mapping found for HTTP request with URI error
+ https://stackoverflow.com/questions/29953245/configure-viewresolver-with-spring-boot-and-annotations-gives-no-mapping-found-f

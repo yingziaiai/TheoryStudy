@@ -3,3 +3,45 @@ http://blog.csdn.net/isea533/article/details/50449907
 http://www.cnblogs.com/yudar/p/4828987.html
 
 https://spring.io/guides/gs/rest-service-cors/
+
+
+http://blog.sina.com.cn/s/blog_62d3ddc00101al1b.html
+浏览器跨域问题的总结
+
+ 服务器端解决跨域问题的三种方法
+ http://blog.csdn.net/james_wade63/article/details/50772041
+ 
+ CORS（跨域）请求总结和测试
+ http://www.php.cn/js-tutorial-370087.html
+ 
+ 
+ Cors实现java后端完全跨域实例
+ http://www.jb51.net/article/114840.htm
+ 
+  Java之旅--跨域（CORS）
+  什么是跨域
+ http://blog.csdn.net/puma_dong/article/details/51395976
+ 
+ 
+ http://yanue.net/post-130.html---------------------good
+ 解决Ajax跨域问题：Origin xx is not allowed by Access-Control-Allow-Origin.
+ 
+ 
+ 什么是Access-Control-Allow-Origin
+Access-Control-Allow-Origin是HTML5中定义的一种服务器端返回Response header，用来解决资源（比如字体）的跨域权限问题。
+它定义了该资源允许被哪个域引用，或者被所有域引用（google字体使用*表示字体资源允许被所有域引用）。
+
+http://www.cnblogs.com/juandx/p/5261667.html
+什么是资源跨域权限
+先来看看同域和不同域的长相
+相同域
+http://www.ttlsa.com/
+http://www.ttlsa.com/nginx
+
+不同域
+http://www.ttlsa.com
+http://bbs.ttlsa.com
+https://www.ttlsa.com
+http://www.ttlsa.com:8080
+
+由此可见，相同域必须忙住协议相同、端口相同、域名相同. 只要其中一点不满足那就是跨域

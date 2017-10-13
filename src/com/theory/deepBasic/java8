@@ -73,3 +73,26 @@ http://www.importnew.com/11908.html#streams
  
   java8 遍历数组的几种方式
   http://blog.csdn.net/u011277123/article/details/69220634
+  
+  
+  http://www.importnew.com/14841.html---------------good, could compare
+  Java 8：不要再用循环了
+  
+  java8 list match
+  http://blog.csdn.net/sunhuwh/article/details/50610792----------------very good
+  List<Person> persons = new ArrayList();
+persons.add(new Person(1, "name" + 1, 10));
+persons.add(new Person(2, "name" + 2, 21));
+persons.add(new Person(3, "name" + 3, 34));
+persons.add(new Person(4, "name" + 4, 6));
+persons.add(new Person(5, "name" + 5, 55));
+boolean isAllAdult = persons.stream().
+ allMatch(p -> p.getAge() > 18);
+System.out.println("All are adult? " + isAllAdult);
+boolean isThereAnyChild = persons.stream().
+ anyMatch(p -> p.getAge() < 12);
+System.out.println("Any child? " + isThereAnyChild);
+
+
+在Java中如何高效的判断数组中是否包含某个元素
+http://www.importnew.com/18700.html-----------------高效？

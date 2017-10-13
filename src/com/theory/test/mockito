@@ -1,6 +1,46 @@
 http://sgq0085.iteye.com/blog/2031319---好的例子
 Mockito 初探
 
+Mockito使用指南
+http://blog.csdn.net/shensky711/article/details/52771493---------------very good, dao
+
+org.mockito
+Interface ArgumentMatcher<T>
+
+Mockito 中文文档 ( 2.0.26 beta )
+http://blog.csdn.net/bboyfeiyu/article/details/52127551-----------good
+http://site.mockito.org/
+
+intellij code coverage （转）
+http://www.cnblogs.com/xbyl/p/6035713.html-------------------good
+使用intellij已经有一段时间了，苦于没有一个覆盖率查看工具。我们知道在eclipse下面有eclemma这一测试覆盖率查看工具，可以查看到你所写的测试用例覆盖到代码中的哪些行，非常的方便。
+
+
+@Spy,@Mock, @InjectMocks
+学习Mockito - Mockito对Annotation的支持
+http://hotdog.iteye.com/blog/937862
+http://www.baeldung.com/mockito-annotations
+
+
+[译] 使用强大的 Mockito 来测试你的代码
+http://www.jianshu.com/p/f6e3ab9719b9-----------------------very good
+// 其他用来验证函数是否被调用的方法
+        verify(mock, never()).someMethod("never called");
+        verify(mock, atLeastOnce()).someMethod("called at least once");
+        verify(mock, atLeast(2)).someMethod("called at least twice");
+        verify(mock, times(5)).someMethod("called five times");
+        verify(mock, atMost(3)).someMethod("called at most 3 times");
+
+作者：EdvardHua
+链接：http://www.jianshu.com/p/f6e3ab9719b9
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+Mockito使用指南
+http://blog.csdn.net/shensky711/article/details/52771493------------very good
+
+
  使用junit+mockito进行mock测试实例
  http://blog.csdn.net/ruangong1203/article/details/50243477
  http://blog.csdn.net/victor_cindy1/article/details/52126161－－－－最好
@@ -146,4 +186,13 @@ verify:
  
  
  mockito参数 HttpSevletRequest
- Mockito.mock(HttpServletRequest.class);       
+ Mockito.mock(HttpServletRequest.class);    
+ 
+ 
+ http://code.google.com/p/mockito/
+ 5分钟了解Mockito
+ http://liuzhijun.iteye.com/blog/1512780－－－－－－－－－－－－－－－－－ok完整   
+ 
+ 5分钟了解Mockito
+ http://liuzhijun.iteye.com/blog/1512780-----------good
+ https://martinfowler.com/articles/mocksArentStubs.html

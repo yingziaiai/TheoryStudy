@@ -200,4 +200,8 @@ Unused declared dependencies found
 	
 
 Executable WAR layout. provided dependencies are placed in WEB-INF/lib-provided to avoid any clash when the war is deployed in a servlet container.
-      
+  
+  
+  Maven 读取环境变量
+  maven设置环境变量－－－－－－应用场景，现在用pipeline后，代码是一套的，但有的包的key文件不一样，所以在引用这个包时可以指定环境变量，即可以在不同环境下编译时使用不同的包。
+ http://blog.csdn.net/hongweigg/article/details/54091148     

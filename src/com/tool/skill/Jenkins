@@ -1,2 +1,6 @@
 http://215687833.blog.51cto.com/6724358/1915360
 Jenkins安装部署篇
+
+
+@Value -> Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'
+https://stackoverflow.com/questions/27106055/value-failed-to-convert-value-of-type-java-lang-string-to-required-type-j

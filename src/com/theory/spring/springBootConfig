@@ -3,3 +3,9 @@ SpringBoot配置属性之Server
 
 SpringBoot配置属性之MVC
 https://segmentfault.com/a/1190000004315890
+
+spring boot application properties配置详解
+http://blog.csdn.net/xiaoyu411502/article/details/48049099
+spring.datasource.validation-query=  
+spring.datasource.test-on-borrow=false 
+https://docs.spring.io/spring-boot/docs/1.5.6.RELEASE/reference/html/boot-features-sql.html

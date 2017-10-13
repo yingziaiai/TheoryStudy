@@ -11,3 +11,91 @@ cookieHttpSessionStrategy
 https://stackoverflow.com/questions/37303967/enableredishttpsession-spring-boot-ignoring-server-session-timeout-on-applica
 
 very good, could solve the httpSessionListener not work's problem.
+
+
+spring boot学习5之session+redis解决session共享问题
+http://blog.csdn.net/dream_broken/article/details/72676679－－－－－－－－－－－－－－－ok, 结构
+
+
+从零开始的Spring Session(一)
+http://blog.didispace.com/spring-session-xjf-1/-------very good
+
+
+Spring Session原理及源码分析------------ok
+http://blog.csdn.net/zheng_sida/article/details/51539663
+
+https://segmentfault.com/a/1190000008484678
+SpringBoot+Redis+Nginx实现负载均衡以及Session缓存共享
+
+Spring Data Redis 让 NoSQL 快如闪电
+
+
+Spring Session实现Session共享下的坑与建议-------------了解源码看法
+http://blog.csdn.net/tmyth/article/details/52900743
+ Spring Session Data Redis 配置中遇到的坑
+ http://blog.csdn.net/ankeway/article/details/72961346
+ 
+  Spring Boot + Spring Session + Redis
+  http://blog.csdn.net/qq_17616169/article/details/53150893---------------两个项目间共享
+
+@EnableRedisHttpSession + Spring Boot ignoring server.session.timeout on application.yml------------解决timeout问题
+https://stackoverflow.com/questions/37303967/enableredishttpsession-spring-boot-ignoring-server-session-timeout-on-applica
+
+
+http://www.cnblogs.com/andyfengzp/p/6434287.html
+学习Spring-Session+Redis实现session共享
+    @Bean
+    public JedisConnectionFactory connectionFactory() {
+        JedisConnectionFactory connection = new JedisConnectionFactory();
+        connection.setPort(port);
+        connection.setHostName(host);
+        connection.setUsePool(true);
+        connection.setTimeout(timeout);
+        connection.setPoolConfig(jedisPoolConfig());
+        return connection;
+    }
+
+    @Bean
+    public JedisPoolConfig jedisPoolConfig(){
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+        jedisPoolConfig.setMaxTotal(100);
+        jedisPoolConfig.setMaxIdle(10);
+        return jedisPoolConfig;
+    }
+    
+    
+    http://blog.csdn.net/zhang527294844/article/details/56484362－－－－－good
+    通过Spring Session实现新一代的Session管理
+    
+    【Spring】Spring Session的简单搭建与源码阅读
+    http://www.cnblogs.com/nick-huang/p/6986824.html
+    
+    Spring Session解决分布式Session问题的实现原理
+    http://blog.csdn.net/xlgen157387/article/details/60321984
+    
+    spring-session简介、使用及实现原理
+    http://blog.csdn.net/wojiaolinaaa/article/details/62424642
+    
+    
+ [Spring] spring-session + JedisPool 实现 session 共享
+ http://www.cnblogs.com/avivaye/p/4935137.html
+ 
+ 
+ spring session是怎么把session存入redis的
+ https://zhidao.baidu.com/question/1771096799466322620.html
+ 
+ 
+ Spring Boot with Redis
+ http://www.jianshu.com/p/a2ab17707eff
+ http://www.cnblogs.com/cl2Blogs/p/5679657.html--------------good, jedisPoolconfig
+ 
+ 
+ spring boot redis缓存JedisPool使用
+ http://www.cnblogs.com/rwxwsblog/p/5846752.html
+ spring boot 自学笔记(四) Redis集成—Jedis
+ http://blog.csdn.net/i_vic/article/details/53096356
+ 
+ http://blog.csdn.net/a67474506/article/details/52595053----------------very good, 源码重复轮子
+ 
+ SpringBoot + Redis +SpringSession 缓存之实战
+ http://blog.csdn.net/u011244202/article/details/60154444   －－－－－－－－－－－－－－－－good

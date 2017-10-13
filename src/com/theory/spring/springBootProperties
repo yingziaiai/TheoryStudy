@@ -38,3 +38,111 @@ Would be transformed into these properties:
 my.servers[0]=dev.bar.com
 my.servers[1]=foo.bar.com
 
+定义与使用数组属性：
+@configurationproperties注解的使用－－－－－－－－－－－－－－－good
+@Autowired ConnectionSettings conn;
+http://blog.csdn.net/yingxiake/article/details/51263071
+
+
+
+Spring Boot使用自定义的properties
+http://wiselyman.iteye.com/blog/2184586
+
+springboot @import @importResource 注解使用方式　@ContextConfiguration(classes = CDConfig.class),@PropertySource
+http://blog.csdn.net/xiaoliuliu2050/article/details/54693154
+
+Spring Boot 所提供的配置优先级顺序比较复杂。按照优先级从高到低的顺序，具体的列表如下所示。
+https://zhidao.baidu.com/question/140343679944566925.html
+命令行参数。
+通过 System.getProperties() 获取的 Java 系统参数。
+操作系统环境变量。
+从 java:comp/env 得到的 JNDI 属性。
+通过 RandomValuePropertySource 生成的“random.*”属性。
+应用 Jar 文件之外的属性文件。(通过spring.config.location参数)
+应用 Jar 文件内部的属性文件。
+在应用配置 Java 类（包含“@Configuration”注解的 Java 类）中通过“@PropertySource”注解声明的属性文件。
+spring-boot配置外部静态资源的方法
+http://www.bubuko.com/infodetail-841424.html
+@Order(Ordered.HIGHEST_PRECEDENCE )
+通过“SpringApplication.setDefaultProperties”声明的默认属性。
+SpringApplication app = new SpringApplication(Application.Class);
+app.setDefaultProperties(properties);
+app.run(args);
+
+
+
+springboot 修改启动时默认加载application.properties文件以及加载指定配置文件
+http://blog.csdn.net/pml18710973036/article/details/60743450
+
+http://blog.csdn.net/linxingliang/article/details/52263727
+Spring Boot导入XML配置【从零开始学Spring Boot】
+  ImportResouce有两种常用的引入方式：classpath和file，具体查看如下的例子：
+
+ 
+
+ classpath路径：locations={"classpath:application-bean1.xml",
+
+"classpath:application-bean2.xml"
+
+}
+
+ file路径：
+
+locations= {"file:d:/test/application-bean1.xml"};
+
+
+
+spring-boot配置外部静态资源的方法
+http://www.bubuko.com/infodetail-841424.html
+@Configuration
+@ConditionalOnWebApplication
+@ConditionalOnClass({Servlet.class, DispatcherServlet.class, WebMvcConfigurerAdapter.class})
+@ConditionalOnMissingBean(WebMvcConfigurationSupport.class)
+@Order(Ordered.HIGHEST_PRECEDENCE )
+@AutoConfigureAfter(DispatcherServletAutoConfiguration.class)
+
+    @Scheduled(
+        cron = "${spring.session.cleanup.cron.expression:0 * * * * *}"
+    )
+@Slf4j
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+            @JsonProperty("currency_currency")
+            @JsonInclude(JsonInclude.Include.NON_NULL)
+            
+            
+ MLC           
+spring.profiles.active=local
+server.port=8080
+spring.application.name=MLC
+## ===============================
+## = JSP
+## ===============================
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+#spring.resources.add-mappings=true
+
+## ===============================
+## = JPA
+## ===============================
+spring.jpa.database=oracle
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate4.SpringSessionContext
+## ===============================
+## =  REDIS
+## ===============================
+spring.session.store-type=redis     
+
+
+配合spring 使用 tomcat连接池
+http://blog.csdn.net/hjx601496320/article/details/54630286
+spring.datasource.tomcat.test-on-borrow=true
+https://docs.spring.io/spring-boot/docs/1.5.6.RELEASE/reference/html/boot-features-sql.html
+# Validate the connection before borrowing it from the pool.
+spring.datasource.tomcat.test-on-borrow=true
+
+http://www.jb51.net/article/116484.htm---------------good      
+

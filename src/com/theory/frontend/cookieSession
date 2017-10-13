@@ -115,3 +115,8 @@ http://www.cnblogs.com/tianguook/archive/2013/11/30/3451609.html
 
 java操作Cookie,进行添加、读取、删除操作---domain, path
 http://blog.csdn.net/ge_zhiqiang/article/details/8139521
+
+cookie的secure属性详解, httponly
+http://www.jb51.net/article/63697.htm
+https://stackoverflow.com/questions/39252924/add-secure-flag-to-jsessionid-cookie-in-spring-automatically
+http://blog.csdn.net/zzzmmmkkk/article/details/10862949

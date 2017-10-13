@@ -5,6 +5,86 @@ http://docs.redisdesktop.com/en/latest/install/
 超详细Redis数据库入门教程
 http://www.cnblogs.com/terryguan/p/5505923.html
 
+spring data redis:
+https://docs.spring.io/spring-data/data-redis/docs/current/api/
+
+redis命令：：
+https://redis.io/commands/scan
+https://redis.io/documentation
+
+redis pipeline:
+http://www.cnblogs.com/huangxincheng/p/6212406.html---------very good example
+雾丶
+Java使用Pipeline对Redis批量读写（hmset&hgetall）
+http://www.cnblogs.com/an7ing/p/5082243.html
+Java实现Redis pipeline比较
+http://www.cnblogs.com/charlesblc/p/5965957.html
+
+
+Redis的AOF功能
+http://blog.csdn.net/blueheart20/article/details/26520823
+
+利用sentinel和cluster创建Redis集群的区别
+https://segmentfault.com/q/1010000003941096/
+https://zhidao.baidu.com/question/1835901920412600220.html
+
+http://www.cnblogs.com/xiaoblog/p/5776892.html
+Redis Sentinel的Redis集群(主从&Sharding)高可用方案
+
+redis sentinel & cluster 原理分析
+http://blog.csdn.net/bubayimao/article/details/48804407-------good
+
+
+自己搭建sentinel
+redis sentinel怎么跑守护进程以及日志记录位置的
+http://blog.csdn.net/liuchuanhong1/article/details/53206028
+http://blog.csdn.net/slvher/article/details/17682475
+http://www.cnblogs.com/xiaoblog/p/5776892.html
+1.如上所说，daemonize yes
+2.在命令后面加上&
+3.nohup
+
+
+自己搭建cluster
+http://blog.csdn.net/zsg88/article/details/73715947
+http://blog.csdn.net/wiercn/article/details/42269485-----------good
+windows下使用RedisCluster集群简单实例
+http://www.jianshu.com/p/22af55518f6d---------very good, git example
+
+
+http://www.jianshu.com/p/cba3fa12f0a3－－－－－－－－－比较清晰讲了项目的结构
+
+
+Redis JAVA API的用法例子
+http://blog.csdn.net/bigtree_3721/article/details/50988923－－－－－－－－very good
+http://www.cnblogs.com/libaoting/p/4418007.html
+http://www.360doc.com/content/15/0328/12/5054188_458684113.shtml
+
+深入浅出 Redis client/server交互流程
+http://www.infoq.com/cn/articles/communication-redis-clientserver---------------有一张图
+
+http://www.blogchong.com/post/109.html---------------------------------very very good
+Redis客户端API操作 Jedis的八种调用方式详解
+
+spring data redis:
+ Redis 集成Spring（spring-data-redis）
+http://blog.csdn.net/zhu_tianwei/article/details/44923001--------结合源码更清晰RedisTemplate.class
+http://blog.csdn.net/zhang_red/article/details/51954728----------有测试案例
+
+redis　pub/sub
+Spring Data Redis—Pub/Sub（附Web项目源码），springredis
+http://www.bkjia.com/Javabc/831644.html---------------very good, example
+Redis的pub/Sub(订阅与发布)在java中的实践
+http://blog.csdn.net/canot/article/details/51938955
+
+
+
+http://www.cnblogs.com/huangxincheng/p/4987962.html
+15天玩转redis —— 第七篇 同事的一次缓存操作引起对慢查询的认识
+
+http://www.hishenyi.com/archives/248-----------------------very good
+学习Redis必须了解的N个常识
+
 http://lib.csdn.net/base/redis------------------------test
 http://lib.csdn.net/article/34/40003?knId=994
 redis数据库之rdb持久化
@@ -219,7 +299,7 @@ XML Configuration can use the following:
 
    
  15天玩转redis —— 第七篇 同事的一次缓存操作引起对慢查询的认识  
-   http://www.cnblogs.com/huangxincheng/p/4987962.html-----------真实案例分析
+   http://www.cnblogs.com/huangxincheng/p/4987962.html-----------真实案例分析－－－－－－－－－good
    
    
    
@@ -366,6 +446,47 @@ http://shift-alt-ctrl.iteye.com/blog/2285470----------------比较好
 
 
 
+redis scanoptions:
+http://grepcode.com/file/repo1.maven.org/maven2/org.springframework.data/spring-data-redis/1.4.2.RELEASE/org/springframework/data/redis/core/ScanOptions.java
+
+		RedisConnection redisConnection = redisUtil.getRedisTemplate().getConnectionFactory().getConnection();
+    	ScanOptions options = ScanOptions.scanOptions().count(scanCount).build();
+    	Cursor c = redisConnection.scan(options);
+        while(c.hasNext()){
+        	c.next();
+        }
+        redisConnection.close();
+        
+ @Component
+public class RedisUtil {
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    public RedisUtil() {
+    }
+
+    public RedisTemplate getRedisTemplate() {
+        return this.redisTemplate;
+    }
+
+    public <K, V> void set(K key, V value) {
+        ValueOperations<K, V> operations = this.redisTemplate.opsForValue();
+        operations.set(key, value);
+    }
+
+    public Object get(Object key) {
+        ValueOperations operations = this.redisTemplate.opsForValue();
+        return operations.get(key);
+    }
+}       
+
+
+
+
+
+
+
+
 
 
 
@@ -422,6 +543,14 @@ http://www.javased.com/index.php?source_dir=spring-data-redis/src/main/java/org/
 redis-namespace
 https://github.com/resque/redis-namespace
 
+
+http://www.runoob.com/redis/redis-tutorial.html
+
+ Redis 集成Spring（spring-data-redis）
+ https://docs.spring.io/spring-data/redis/docs/1.8.7.RELEASE/reference/html/-------------------官网
+ http://blog.csdn.net/zhu_tianwei/article/details/44923001-----------理论不错
+ Spring-data-redis是spring大家族的一部分，提供了在srping应用中通过简单的配置访问redis服务，对reids底层开发包(Jedis,  JRedis, and RJC)进行了高度封装，RedisTemplate提供了redis各种操作、异常处理及序列化，支持发布订阅，并对spring 3.1 cache进行了实现。
+ 
 Redis 集群教程
 http://www.redis.cn/topics/cluster-tutorial.html
 
@@ -462,3 +591,65 @@ https://redis.io/documentation
  redis replica:
  https://redis.io/topics/replication
  It is possible to use replication to avoid the cost of having the master write the full dataset to disk: a typical technique involves configuring your master redis.conf to avoid persisting to disk at all, then connect a slave configured to save from time to time, or with AOF enabled. However this setup must be handled with care, since a restarting master will start with an empty dataset: if the slave tries to synchronized with it, the slave will be emptied as well.
+ 
+ 
+ 
+ JedisPool
+     @Bean
+    public JedisPool redisPoolFactory() {
+        System.out.println("JedisPool注入成功！！");
+        System.out.println("redis地址：" + host + ":" + port);
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+        jedisPoolConfig.setMaxIdle(maxIdle);
+        jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);
+        JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port);
+        return jedisPool;
+    }
+    
+    
+    
+    
+    
+    http://www.iteye.com/topic/1125854--------------很好
+    spring-data-redis 的序列化问题
+    
+    官方例子中的设计 
+    https://wenku.baidu.com/view/e643a347ba1aa8114431d9e7.html
+    spring-data-keyvalue-examples
+    https://github.com/spring-projects/spring-data-keyvalue-examples/tree/master/retwisj
+    
+    
+    
+    redis集群javaApi
+    http://blog.csdn.net/baidu_19473529/article/details/54341712
+    jedisCluster = new JedisCluster(nodes);  
+    windows下使用RedisCluster集群简单实例
+    http://www.jianshu.com/p/22af55518f6d
+    
+     java操作redis。jedis使用api
+     http://blog.csdn.net/edagarli/article/details/21887111
+     
+     Redis常用API-使用文档
+     http://www.cnblogs.com/libaoting/p/4418007.html-----------Sentinel连接池连接
+     
+     
+     Redis scan命令的一次坑
+     http://www.jianshu.com/p/d9f0a547bd0e
+     scanOptions
+     		RedisConnection redisConnection = redisUtil.getRedisTemplate().getConnectionFactory().getConnection();
+    	ScanOptions options = ScanOptions.scanOptions().count(scanCount).build();
+    	Cursor c = redisConnection.scan(options);
+        while(c.hasNext()){
+        	c.next();
+        }
+        redisConnection.close();
+        
+        
+Spring Boot 学习笔记--整合Redis
+http://www.cnblogs.com/floay/p/6485742.html----------不错
+http://blog.csdn.net/a67474506/article/details/52595053
+http://blog.csdn.net/a67474506/article/details/52595053
+
+
+http://www.cnblogs.com/mrlinfeng/p/5857775.html－－－－－－－－－－－－－－－very good
+SpringAOP与Redis搭建缓存        

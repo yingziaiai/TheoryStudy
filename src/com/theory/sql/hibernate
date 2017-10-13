@@ -38,3 +38,133 @@ void markEntryAsRead(@Param("entryId") Long rssFeedEntryId, @Param("isRead") boo
   Hibernate整合C3P0实现连接池
   http://blog.csdn.net/mercenarylin/article/details/21605223
  http://blog.csdn.net/taiyangdao/article/details/51733868
+ 
+ Hibernate与Jpa的关系，终于弄懂
+ http://blog.csdn.net/caiyanzhi123/article/details/50827819
+ 1. http://stackoverflow.com/questions/8306742/if-i-want-to-use-hibernate-with-annotation-do-i-have-to-use-javax-persistence
+2. http://stackoverflow.com/questions/8306793/why-jpa-and-hibernate-both-have-entity-and-table-annotations
+第一个是问如果想用hibernate注解，是不是一定会用到jpa的。网友的回答：“是。如果hibernate认为jpa的注解够用，就直接用。否则会弄一个自己的出来作为补充”
+第二个是问，jpa和hibernate都提供了Entity，我们应该用哪个，还是说可以两个一起用？网友回答说“Hibernate的Entity是继承了jpa的，所以如果觉得jpa的不够用，直接使用hibernate的即可”。
+
+http://www.cnblogs.com/hongten/archive/2011/07/20/2111973.html
+Java Persistence API（JPA）是EJB3.0规范之一，定义了对数据库数据进行持久化操作的接口。HIbernate使用HIbernate Annotation和Hibernate EntityManager实现JPA。
+
+
+hibernate　
+jpa
+hibernate+jpa + version
+entitymanager+ sessionfactory
+
+Hibernate EntityManager是围绕提供JPA编程接口的Hibernate Core的一个包装，支持JPA实体实例的生命周期，并允许你用标准的Java Persistence查询语言编写查询
+
+SessionFactory 是hibernate core的
+
+http://blog.csdn.net/crazy_pan/article/details/5939342------------------------good
+说明：
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import org.hibernate.SessionFactory;
+
+javax.persistence.Persistence   给EntityManagerFactory的创建提供一种静态方法的启动类
+
+javax.persistence.EntityManagerFactory 相当于hibernate的SessionFactory
+
+javax.persistence.EntityManager 相当与hibernate的Session
+
+javax.persistence.Query 相当与hibernate的Query,跟hibernate使用hql一样，同样可以使用对象化的查询语言
+
+javax.persistence.EntityTransaction 相当于hibernate的Transaction
+
+Hibernate Session和Jpa EntityManager
+http://blog.csdn.net/54powerman/article/details/61196215
+
+
+核心API编辑(https://baike.baidu.com/item/Hibernate/206989?fr=aladdin)
+Hibernate的API一共有6个，分别为:Session、SessionFactory、Transaction、Query、Criteria和Configuration。通过这些接口，可以对持久化对象进行存取、事务控制。
+
+Query
+Query接口让你方便地对数据库及持久对象进行查询，它可以有两种表达方式：HQL语言或本地数据库的SQL语句。Query经常被用来绑定查询参数、限制查询记录数量，并最终执行查询操作。
+Criteria
+Criteria接口与Query接口非常类似，允许创建并执行面向对象的标准化查询。值得注意的是Criteria接口也是轻量级的，它不能在Session之外使用。
+
+Hibernate教程 使用Hibernate的7个步骤
+https://jingyan.baidu.com/article/ab69b270c0b34d2ca7189f25.html
+Hibernate基本执行流程
+http://blog.csdn.net/baple/article/details/39230605
+
+第一步读取配置Configuration
+Configuration cfg=new Configuration().configure();
+
+第二步创建sessionFactory
+SessionFactory factory = cfg.buildSessionFactory();
+第三步打开session
+Session session = factory.openSession();
+
+第四步开启事务Transaction
+Transaction tran = session.beginTransaction();
+
+第五步进行持久化操作，就是增删改查等操作
+session.save(user)
+
+第六步提交事务
+tran.commit();
+
+第七步 关闭资源，也就是关闭session
+session.close();
+
+
+http://blog.163.com/kivvf@126/blog/static/10251632007112043532485/
+艰难搞定Hibernate EntityManager的HelloWorld  
+ 新手上路之Hibernate：第一个Hibernate例子
+ http://blog.csdn.net/aboy123/article/details/10085635
+ 
+ 深入浅出JPA--实例
+ http://blog.csdn.net/tang_huan_11/article/details/39525441-----------------------good
+  深入浅出JPA--概述
+  http://blog.csdn.net/tang_huan_11/article/details/39324495
+  
+  
+  spring data jpa
+  http://sishuok.com/forum/blogPost/list/7000.html
+  spring data jpa简化jpa开发
+  https://www.ibm.com/developerworks/cn/opensource/os-cn-spring-jpa/index.html－－－－－－－－－－－－－－very good
+  spring data jpa @Query注解中delete语句报错
+  http://www.cnblogs.com/purplelightning/p/4670941.html----------------good
+  
+  
+  
+  
+  Spring Boot + Jpa(Hibernate) 架构基本配置-------------very good + 监控－－－－－－非常完整，从swagger-单元测试
+  http://blog.csdn.net/javahighness/article/details/53055149
+  
+  
+  JPA EntityManager详解(一)
+  http://www.blogjava.net/jesson2005/articles/380880.html
+  
+  Spring Data JPA的deleteByXXXX，delete语句执行的疑问
+  http://www.oschina.net/question/1177405_2154881?sort=time
+  @Transactional
+    @Modifying
+    @Query("delete from Coupon where code = :code")
+    List<Coupon> deleteByCode(@Param("code") String code);
+    
+    SpringDataJPA学习记录(三)–复杂查询的封装
+    http://blog.csdn.net/u012706811/article/details/53218102
+    
+    
+    Spring Data JPA: 为所有Repository添加自定义方法----------------------------ok
+    https://www.tianmaying.com/tutorial/spring-jpa-custom-all
+    
+    
+    Spring Boot 揭秘与实战（二） 数据存储篇 - JPA整合-------------------------------good
+    http://www.cnblogs.com/cnblog-long/p/7238338.html
+    
+    
+     EntityManager使用方法
+     http://blog.csdn.net/fobdddf/article/details/19479073=============================good,清晰完善
+     
+     jpql, hql,sql
+     JPA JPQL
+     http://flowercat.iteye.com/blog/667773===================================good
+

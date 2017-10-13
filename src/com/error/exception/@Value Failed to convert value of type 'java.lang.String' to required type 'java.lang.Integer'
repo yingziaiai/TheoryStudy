@@ -1,0 +1,18 @@
+@Value -> Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'
+
+https://stackoverflow.com/questions/27106055/value-failed-to-convert-value-of-type-java-lang-string-to-required-type-j
+
+
+@Bean
+public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+    return new PropertySourcesPlaceholderConfigurer();
+}
+
+@Autowired
+private Environment environment;
+
+public void readValues() {
+    System.out.println("Some Message:"
+            + environment.getProperty("<Property Name>")); 
+
+}

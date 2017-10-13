@@ -84,3 +84,14 @@ https://github.com/jcoleman/tomcat-redis-session-manager
  
  java的会话管理：Cookie和Session
  http://www.cnblogs.com/cenyu/p/6160470.html
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ redis session
+   Spring Boot + Spring Session + Redis  
+   http://blog.csdn.net/qq_17616169/article/details/53150893－－－－－－－－－－－－－very good

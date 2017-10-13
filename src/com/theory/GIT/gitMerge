@@ -8,3 +8,11 @@ git reset --hard 1d0031df5b06955ab4482ef9459ff390829c380c
 
 强制提交到远程
 git push -f origin develop
+
+intellij merge解决冲突
+http://blog.csdn.net/javaee_ssh/article/details/75207960
+
+
+创建与合并分支
+http://www.cnblogs.com/wangmingshun/p/5425150.html
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840038939c291467cc7c747b1810aab2fb8863508000

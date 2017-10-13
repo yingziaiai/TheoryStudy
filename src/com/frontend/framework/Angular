@@ -1,0 +1,54 @@
+AngularJS与Angular的区别
+http://blog.csdn.net/zengmingen/article/details/72851636
+
+Angular2.0之前的版本（1.x）叫做AngularJS
+1.x的使用是引入AngularJS的js文件到网页。
+2.0之后，就是完全不同了。
+Angular2.x与Angular1.x 的区别类似 Java 和 JavaScript 
+
+
+安装angular-cli
+http://www.cnblogs.com/JennyLin77/p/6249270.html
+http://blog.csdn.net/zhy13087344578/article/details/60745667
+npm config set registry https://registry.npm.taobao.org
+
+Angular CLI 安装和使用
+http://www.jianshu.com/p/327d88284abb
+安装方法：
+npm uninstall -g angular-cli
+npm cache clean 
+npm install -g @angular/cli
+
+http://www.cnblogs.com/JennyLin77/p/6249270.html----能用ng new一个项目，并能运行起来；并在留言中推荐了niceFish项目
+
+
+http://blog.csdn.net/lougnib/article/details/69948358
+
+
+安装完成后ng无法识别解决方法：
+I am using WIN 10, just figure it out for this problem. Type the code below in cmd:
+
+npm config get prefix
+
+and copy&paste the path that you get it from the top into your computer environment variables-->user variables box --> path --> edit -- C:\Program Files\nodejs\node_global, your path may different.
+
+Click Ok and reopen your cmd window, type in ng version, then it works! Cheers!
+
+Angular2-使用Angular CLI快速搭建工程（一）
+http://www.jianshu.com/p/cba3fa12f0a3
+
+Intellij IDEA 中安装Angular 插件方法
+1、先下载angular插件 AngularJS-135.831.zip
+2、打开Intellij IDEA ，File—〉Settings---〉Plugins
+ 
+点击“”
+ 
+点击“”确定。
+重新启动Intellij IDEA，在Html文件中输入ng，出现提示，则说明插件安装成功：
+
+
+
+项目案例：
+案例一：niceFish
+
+https://gitee.com/mumu-osc/NiceFish

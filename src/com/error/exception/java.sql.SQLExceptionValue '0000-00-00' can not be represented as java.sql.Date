@@ -1,0 +1,4 @@
+问题解决：java.sql.SQLException:Value '0000-00-00' can not be represented as java.sql.Date
+http://blog.csdn.net/ja_II_ck/article/details/3905120
+
+datasource.url=jdbc:mysql://localhost:3306/pe?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull 

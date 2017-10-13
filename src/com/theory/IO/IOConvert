@@ -181,4 +181,51 @@ String[] toBeStored = list.toArray(new String[list.size()]);
 
 http://www.cnblogs.com/jenniferhuang/p/3549845.html
 String[] b = list.toArray(new String[list.size()]);
+
+
+JAVA IO 处理流，BUFFERDINPUTSTREAM、BUFFEREDWRITER、BUFFEREDREADER
+http://www.cnblogs.com/lihaoyang/p/6918418.html
+
+ByteBuffer常用方法详解
+http://1028826685.iteye.com/blog/2330760
+
+
+Java NIO系列教程（三） Buffer
+http://ifeve.com/buffers/
+
+
+https://zhidao.baidu.com/question/542408593.html
+String.indexOf函数用法小结
+1. indexOf的参数是String, startIndex: Number;
+    indexOf的返回值为int, 
+2. Function indexOf 包含如下几个格式：
+1). Strng.indexOf(substring) //搜索String中的substring,默认从0位开始；
+2). String.indexOf(substring, int m) //搜索String中的substring, 默认从第m位开始；
+
+Java常用的几个正则方法(查找索引,匹配,替换)
+http://blog.csdn.net/stzy00/article/details/44962851
+
+
+String转换为boolean的三种方法
+http://blog.csdn.net/u014784376/article/details/50430367
+
+
+java String[] 数组 赋值问题，不初始化数组能不对其赋值
+不恩那个  数组你可以这么用  因为String是个对象所以必须初始化  要事基本类型就不用了比如int    int数组不初始化值的话默认值是0
+String[] str = new String[]{"aaaa","bbbb","cccc"};//直接初始化
+String[] str = new String[]();//这样需要定义数组的空间
+或者直接定义
+String[] str = null;  等你使用的时候在new String[num]();
+数组定义完了如果空间不够的话还可以扩充空间的，函数我忘了你可以在api文档查一下
+
+
+Java中String字符串初始化细节
+http://blog.csdn.net/u012768347/article/details/60164137
+
+java 怎么把字符串数组完全输出出来？
+https://zhidao.baidu.com/question/60956578.html
+StringBuffer buff = new StringBuffer();
+for( int i = 0; i < a.length; i++ ){
+buff.append(a[i]);
+}
      

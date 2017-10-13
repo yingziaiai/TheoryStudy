@@ -1,0 +1,16 @@
+https://coolshell.cn/articles/7270.html
+NOSQL 数据建模技术
+Spring-data-redis使用手册
+https://wenku.baidu.com/view/e643a347ba1aa8114431d9e7.html--------------very very good
+
+征服 Redis + Jedis + Spring （二）—— 哈希表操作（HMGET HMSET）
+http://snowolf.iteye.com/blog/1667104
+
+
+Spring-Data之StringRedisTemplate-boundValueOps方法描述
+BoundValueOperations<String, String> stringTemplate = redisTemplate.boundValueOps(key);
+
+
+者也联合创始人李华顺：利用Redis构建高效的实时搜索
+http://www.csdn.net/article/a/2011-11-11/307327?bsh_bid=36806832
+http://blog.nosqlfan.com/html/3448.html?ref=rediszt
