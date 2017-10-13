@@ -1,0 +1,24 @@
+http://blog.csdn.net/u011659172/article/details/52587252
+java 8 Lambda排序
+ List<String> names = Arrays.asList("peter", "anna", "mike", "wbw");  
+ 
+ java8 lambda实现排序初探
+ https://segmentfault.com/a/1190000009486585
+     // 方法三  默认升序 再反转操作 降序
+        Collections.sort(humans, Comparator.comparing(Human::getAge).reversed());
+        // 方式四  多条件组合排序
+        humans.sort(Comparator.comparing(Human::getName).thenComparing(Human::getAge));
+        System.out.println(humans);
+        humans.sort((Human h1, Human h2) -> h2.getAge() - h1.getAge());
+ 
+ Java8的Lambda和排序       
+ http://www.jdon.com/idea/java/java-8-lambdas-sorting.html 
+ JAVA8-让代码更优雅之List排序
+ http://www.cnblogs.com/tomyLi/p/JAVA8rang-dai-ma-geng-you-ya-zhiList-pai-xu.html
+ http://blog.csdn.net/zc474235918/article/details/69484107
+ http://www.cnblogs.com/tomyLi/p/JAVA8rang-dai-ma-geng-you-ya-zhiList-pai-xu.html
+ http://www.cnblogs.com/tomyLi/p/JAVA8rang-dai-ma-geng-you-ya-zhiList-pai-xu.html
+ http://www.importnew.com/15259.html
+ 
+ Java（List）中的自定义对象按属性（字段）排序（正序、倒序）的方法
+ http://blog.csdn.net/superdog007/article/details/54133698      
