@@ -8,6 +8,9 @@ https://logicalread.com/response-time-analysis/#.Wb8oMsgjFPZ--------------------
 https://coolshell.cn/articles/7490.html
 性能调优攻略
 
+如何做性能测试
+http://www.importnew.com/26897.html
+
 一句话：分布式是并联工作的，集群是串联工作的。
 1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。
 分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。

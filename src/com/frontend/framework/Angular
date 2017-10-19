@@ -1,6 +1,54 @@
 AngularJS与Angular的区别
 http://blog.csdn.net/zengmingen/article/details/72851636
 
+How to integrate Angular 4 with SpringBoot RestApi using SpringToolSuite
+http://javasampleapproach.com/java-integration/integrate-angular-4-springboot-web-app-springtoolsuite---------非常好实例，网址好
+
+学习angular基础语法后，再搭建案例：
+http://javasampleapproach.com/spring-framework/spring-boot/use-angular-http-client-fetch-data-springboot-restapi
+
+ angular+bootstrap+spring boot实现分页
+ http://blog.csdn.net/dalangzhonghangxing/article/details/51982878
+ 
+ 从零开始构建一个spring boot + angular web应用(2)
+ http://www.jianshu.com/p/46def544bd40
+
+ Angular 4 学习笔记 从入门到实战 打造在线竞拍网站 基础知识 快速入门 个人感悟
+ http://blog.csdn.net/poptxz/article/details/74926103
+ 
+ SpringMVC Angular2 Intellij Idea 开发环境搭建
+ https://www.pocketdigi.com/20170215/1567.html－－－－有git案例，不过编译不通过
+ 
+ 我的web开发最强组合：Play1+angularjs+bootstrap ++ (idea + l
+ http://ju.outofmemory.cn/entry/86937
+ 
+ 
+Angular4 后台管理系统搭建（1） - 建立一个通用的Wijmo5 flexgrid分页器组件
+http://www.cnblogs.com/Vetkdf/p/7080893.html
+
+Angular入门笔记
+http://www.cnblogs.com/haitao-fan/p/3773948.html
+
+
+Angular 4.x 修仙之路
+https://segmentfault.com/a/1190000008754631
+
+使用Angular-cli搭建Angular Material 2应用示例
+http://blog.csdn.net/u014291497/article/details/60468967
+
+Angular脚手架：
+http://adminlte.la998.com/documentation/index.html#layout
+https://adminlte.io/themes/AdminLTE/index2.html
+
+http://npm.taobao.org/
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+ng build -prod
+
+Angular2新的体验
+http://blog.fens.me/tag/npm/－－－－－－－－比较基础入门与项目结构说明
+第一个Angular2Application
+https://www.2cto.com/kf/201701/593327.html
+
 Angular2.0之前的版本（1.x）叫做AngularJS
 1.x的使用是引入AngularJS的js文件到网页。
 2.0之后，就是完全不同了。

@@ -42,6 +42,14 @@ numbers.forEach(new MyConsumer());
 java 1.8 Stream
 http://blog.csdn.net/chszs/article/details/47038607
 https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/-------------------------good
+persons.stream().
+map(Person::getName).limit(10).skip(3).collect(Collectors.toList());
+
+抽取对象中所有的id的集合
+
+1
+List<Long> idList = AList.stream.map(A::getId).collect(Collectors.toList());
+
 Ranges and Looping with IntStream
 https://www.codeproject.com/Articles/792036/WebControls/
 
@@ -96,3 +104,17 @@ System.out.println("Any child? " + isThereAnyChild);
 
 在Java中如何高效的判断数组中是否包含某个元素
 http://www.importnew.com/18700.html-----------------高效？
+
+去重
+根据对象的属性去重
+
+http://blog.csdn.net/jiaobuchong/article/details/54412094
+Java 8 stream()分组，过滤筛选 List<Object> 根据Object 中的某几个属性作为条件进行分组 去重过滤
+http://blog.csdn.net/java_huilong/article/details/59056611
+https://www.2cto.com/kf/201612/573707.html
+完美解决Java中List集合去除重复的JavaBean对象某些属性值方案
+http://blog.csdn.net/jiaobuchong/article/details/54412094
+List<Person> unique = persons.stream().collect(
+                collectingAndThen(
+                        toCollection(() -> new TreeSet<>(comparingLong(Person::getId))), ArrayList::new)
+        );
