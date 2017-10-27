@@ -1,0 +1,123 @@
+这个项目本身也越滚越大，从最早的UI引擎变成了一整套前后端通吃的 Web App 解决方案。衍生的 React Native 项目，目标更是宏伟，希望用写 Web App 的方式去写 Native App。如果能够实现，整个互联网行业都会被颠覆，因为同一组人只需要写一次 UI ，就能同时运行在服务器、浏览器和手机（参见《也许，DOM 不是答案》）。
+http://www.ruanyifeng.com/blog/2015/03/react.html
+
+也许，DOM 不是答案
+http://www.ruanyifeng.com/blog/2015/02/future-of-dom.html－－－－－－－－－手机app,web app
+
+React 入门教程
+http://www.runoob.com/w3cnote/getting-started-with-react.html-----------非常基础的概况
+
+React基础，帮你快速学习React
+http://www.jianshu.com/p/f35ab72875de
+
+一看就懂的ReactJs入门教程（精华版）
+http://www.cocoachina.com/webapp/20150721/12692.html
+
+
+https://doc.react-china.org/docs/components-and-props.html----看回这个文章很好
+组件名称必须以大写字母开头。
+例如，<div />表示一个DOM标签，但<Welcome />表示一个组件并限定了它的可用范围。
+
+组件的返回值只能有一个根元素。这也是我们要用一个<div>来包裹所有<Welcome />元素的原因。
+
+https://doc.react-china.org/tutorial/tutorial.html#keys----官方案例搭建五字棋案例
+
+http://www.tutorialspoint.com/reactjs/index.htm－－－－－－ReactJS tutorial
+
+前端框架分析
+http://blog.csdn.net/ricohzhanglong/article/details/52065734
+
+es6语法快速上手
+babel 一个es6的解析器
+https://segmentfault.com/a/1190000005742091----------比较快速可以了解ＥＳ６
+
+React环境搭建
+http://www.jianshu.com/p/a62da41dacce
+
+React 如何修改端口号
+http://blog.csdn.net/framic/article/details/69221077
+打开react项目的 package.json文件
+
+将 scripts中的start键值对
+  "start": "roadhog server"
+  修改为
+
+  "start": "set PORT=3000&&roadhog server",
+  
+  React学习笔记---项目构建
+  http://www.cnblogs.com/cuiyansong/p/4943540.html
+  React入门之HelloWorld及环境搭建
+  http://blog.csdn.net/liuhe688/article/details/51212585－－－－－－gulp,Browserify 
+
+React有没有从项目环境搭建到项目开发完成的详细实例教程？
+http://react-china.org/t/react/8696
+
+React 入门实例教程
+http://www.ruanyifeng.com/blog/2015/03/react.html－－－－－－－demo13
+https://github.com/ruanyf/react-demos
+
+
+开发：
+edit src/App.js
+
+React 最佳实践——那些 React 没告诉你但很重要的事
+https://www.v2ex.com/t/274697
+
+一看就懂的ReactJs入门教程（精华版）
+http://www.cocoachina.com/webapp/20150721/12692.html
+
+
+react入门实例:
+https://doc.react-china.org/tutorial/tutorial.html
+https://reactjs.org/tutorial/tutorial.html
+
+语法基础
+http://www.tutorialspoint.com/reactjs/index.htm
+
+React.createClass和extends Component的区别
+https://segmentfault.com/a/1190000005863630
+http://imweb.io/topic/56da7609ca5e865230c1d50e
+http://www.cnblogs.com/wonyun/p/5930333.html-----------------good
+
+
+create-react-app与bundle.js
+使用 create-react-app 构建 react应用程序 （react-scripts）             
+http://blog.csdn.net/github_squad/article/details/57452333
+http://blog.csdn.net/weiyongliang_813/article/details/74889850----react-script 实现原理
+
+
+http://blog.csdn.net/weiyongliang_813/article/list/3-----------very good,整个案例流程　
+
+react知识（一）React.createClass Vs React.Component
+http://blog.csdn.net/weiyongliang_813/article/details/74956993
+
+十分详细的React入门实例
+http://blog.csdn.net/a153375250/article/details/52667739--------人员管理系统
+https://github.com/easysir/StaffManage
+
+redux react
+
+对于react-redux的理解梳理
+http://www.jianshu.com/p/1a2f3db4af61
+
+在React中使用Redux
+http://www.jianshu.com/p/06f5285e2620
+分享一个 react + redux 完整的项目，同时写一下个人感悟
+http://react-china.org/t/react-redux/9072---------很好
+
+
+
+实例讲解基于 React+Redux 的前端开发流程
+https://segmentfault.com/a/1190000005356568
+
+
+
+React 最佳实践——那些 React 没告诉你但很重要的事
+https://www.v2ex.com/t/274697
+
+React入门简单进阶难:React+Redux+webpack+ES6+react-router 
+react进阶漫谈
+https://segmentfault.com/a/1190000008356407
+
+ React组件属性类型（propTypes）
+ http://blog.csdn.net/u013224660/article/details/51163067

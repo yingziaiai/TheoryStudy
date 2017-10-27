@@ -61,3 +61,9 @@ http://blog.csdn.net/u011479540/article/details/51918474
 
  项目体验：高并发httpclient和线程池的正确使用
  http://blog.csdn.net/yicong406880638/article/details/50128679
+ 
+ 
+ setConnectionManagerShared()
+ clientBuilder = HttpClients.custom().setConnectionManagerShared(true);  
+ http://blog.csdn.net/stevesun13/article/details/51491484
+ http://www.javaroots.com/2017/02/how-to-use-apache-httpclient-45-https.html

@@ -29,3 +29,22 @@ http://blog.csdn.net/anda0109/article/details/73302865
 
 微信小程序+java后端整合笔记
 http://blog.csdn.net/manyouzhijian/article/details/54425456
+
+http://blog.csdn.net/qq_20288133/article/details/54561530
+微信小程序和WebApp有什么区别？　　Ｈ５？
+本人大四入门菜鸟这个不好说，毕竟h5跨平台也有很多坑。webapp如ionic通过cordova可以操作手机硬件，小程序通过自己引擎可以操作手机硬件。但是多多少少打击到了原生移动端开发者
+
+深入分析：微信小程序与H5的区别
+https://segmentfault.com/a/1190000007388966
+
+给Web套个壳让它变成Android APP，有哪些现有的工具？
+https://segmentfault.com/q/1010000003807969
+
+微信小程序和网页版程序的区别在哪里？
+https://www.zhihu.com/question/54148303
+
+如何区别一个 App 是 Native App， Web App 还是 Hybrid app？
+https://www.zhihu.com/question/23622875
+
+PCweb开发与移动web开发区别在于什么？
+http://blog.csdn.net/qq_20913021/article/details/51442149
