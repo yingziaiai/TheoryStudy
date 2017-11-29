@@ -6,3 +6,55 @@ http://blog.csdn.net/ct29102656/article/details/51882946
 
 一次服务大量超时的java排查过程经验
 http://blog.csdn.net/zxh87/article/details/52137335
+
+对于jstack日志，我们要着重关注如下关键信息
+Deadlock：表示有死锁
+Waiting on condition：等待某个资源或条件发生来唤醒自己。具体需要结合jstacktrace来分析，比如线程正在sleep，网络读写繁忙而等待
+Blocked：阻塞
+Waiting on monitor entry：在等待获取锁
+
+各状态说明：
+New: 当线程对象创建时存在的状态，此时线程不可能执行；
+Runnable：当调用thread.start()后，线程变成为Runnable状态。只要得到CPU，就可以执行；
+Running：线程正在执行；
+Waiting：执行thread.join()或在锁对象调用obj.wait()等情况就会进该状态，表明线程正处于等待某个资源或条件发生来唤醒自己；
+Timed_Waiting：执行Thread.sleep(long)、thread.join(long)或obj.wait(long)等就会进该状态，与Waiting的区别在于Timed_Waiting的等待有时间限制；
+Blocked：如果进入同步方法或同步代码块，没有获取到锁，则会进入该状态；
+Dead：线程执行完毕，或者抛出了未捕获的异常之后，会进入dead状态，表示该线程结束
+其次，对于jstack日志，我们要着重关注如下关键信息
+Deadlock：表示有死锁
+Waiting on condition：等待某个资源或条件发生来唤醒自己。具体需要结合jstacktrace来分析，比如线程正在sleep，网络读写繁忙而等待
+Blocked：阻塞
+Waiting on monitor entry：在等待获取锁
+in Object.wait()：获取锁后又执行obj.wait()放弃锁
+对于Waiting on monitor entry 和 in
+ Object.wait()的详细描述：Monitor是 Java中用以实现线程之间的互斥与协作的主要手段，它可以看成是对象或者 Class的锁。每一个对象都有，也仅有一个 monitor。从下图中可以看出，每个 Monitor在某个时刻，只能被一个线程拥有，该线程就是 "Active Thread"，而其它线程都是 "Waiting Thread"，分别在两个队列 " Entry
+ Set"和 "Wait Set"里面等候。在 "Entry Set"中等待的线程状态是 "Waiting for monitor entry"，而在 "Wait Set"中等待的线程状态是 "in Object.wait()"
+ 
+ 
+ 高手是怎么使用jstack精确找到异常代码的
+ https://jingyan.baidu.com/album/4f34706e3ec075e387b56df2.html?picindex=3
+ 
+ top:找到CPU利用率持续比较高的进程，获取进程号。pid
+ 
+ps p 3036 -L -o pcpu,pid,tid,time,tname,cmd ---找到上述进程中，CPU利用率比较高的线程号TID（十进制数）,此处为3046
+命令：
+
+将获取的线程号（十进制数）转换成十六进制,此处为0xb46
+命令：
+printf "%x\n"  3046
+
+查看进程PID为3036中
+nid为0xb46的线程信息。
+命令：
+jstack -l 3036
+
+
+java.io.IOException 断开的管道 解决方法 ClientAbortException: java.io.IOException: Broken pipe
+http://blog.csdn.net/zqz_zqz/article/details/52235479----------very good
+
+
+JVM崩溃日志分析 ?
+https://segmentfault.com/q/1010000010508356
+且不论jvm配置是什么，线程状态大量处于time_wait,wait 结合下面的信息，很有可能错误的配置使用了线程池
+有大量处于wait状态的线程，是不是线程池大小开的小了

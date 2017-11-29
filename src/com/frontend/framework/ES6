@@ -23,3 +23,40 @@ React调试方法
 http://blog.csdn.net/u014695532/article/details/52843440
 
 https://github.com/facebook/react-devtools
+
+
+ES6：export default 和 export  区别
+http://www.jianshu.com/p/edaf43e9384f
+
+
+React创建组件的三种方式及其区别
+http://www.cnblogs.com/wonyun/p/5930333.html
+函数式定义的无状态组件
+es5原生方式React.createClass定义的组件
+es6形式的extends React.Component定义的组件
+
+
+React组件属性类型（propTypes）
+http://blog.csdn.net/u013224660/article/details/51163067
+
+es6编写reactjs事件处理函数绑定this三种方式
+http://www.cnblogs.com/feiying100/p/6649611.html
+class LoginControl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    this.state = {isLoggedIn: false};
+  }
+ 
+ 
+  es6 扩展运算符 三个点（...）
+  http://blog.csdn.net/qq_30100043/article/details/53391308 
+  
+  
+  ES6: let和const和var
+  
+  
+  React.js中常用的ES6写法总结－－－－－－－－－－－－－－－－－很好，很简单清晰
+  {...this.props}
+  http://blog.csdn.net/haoshidai/article/details/52244620

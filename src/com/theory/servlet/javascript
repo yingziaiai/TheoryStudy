@@ -1,0 +1,13 @@
+http://www.codeceo.com/article/tag/javascript/page/6
+
+WX
+常见javaScript调试命令：
+console.log
+console.group()-console.groupEnd();
+console.dir()可以显示一个对象所有的属性和方法；
+
+console.dirxml()用来显示网页某个节点所包含的html/xml代码；
+console.assert()
+console.trace()
+console.time()--console.timeEnd();
+console.profile();

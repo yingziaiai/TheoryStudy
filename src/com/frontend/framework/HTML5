@@ -1,0 +1,76 @@
+浅谈：html5和html的区别
+http://www.duanliang920.com/learn/web/html5/230.html
+
+HTML 5 教程
+http://www.w3school.com.cn/html5/index.asp
+
+
+ＨＴＭＬ４与ＨＴＭＬ５事件：
+ HTML5中的各种事件
+ http://blog.csdn.net/mimikuer/article/details/41481445
+HTML 4 增加了通过事件触发浏览器中行为的能力，比如当用户点击某个元素时启动一段 JavaScript，
+HTML 5继承了HTML 4的一些元素事件，然而也新增和摒弃了一些事件，
+HTML 5事件可以分为以下几种类型
+Window 事件
+表单事件
+键盘事件
+鼠标事件
+媒介事件
+on....
+
+
+HTML5plus Runtime，简称5+ Runtime，
+http://www.hcoder.net/tutorials/info_99.html
+document.addEventListener
+
+http://blog.csdn.net/qq_17335153/article/details/49866895
+关于DOM级别的一些问题，DOM0，DOM1，DOM2
+DOM2级引入了下列新模块，也给出了众多新类型和新接口的定义。
+
+DOM视图（DOM Views）：定义了跟踪不同文档（例如，应用CSS之前和之后的文档）视图的接口；
+
+DOM事件（DOM Events）：定义了事件和事件处理的接口；
+
+DOM样式（DOM Style）：定义了基于CSS为元素应用样式的接口；
+
+DOM遍历和范围（DOM Traversal and Range）：定义了遍历和操作文档树的接口。
+
+DOM3级则进一步扩展了DOM，引入了以统一方式加载和保存文档的方法–在DOM加载和保存（DOM Load and Save）模块中定义；新增了验证文档的方法–在DOM验证（DOM Validation）模块中定义。DOM3级也对DOM核心进行了扩展，开始支持XML 1.0规范，涉及XML Infoset、XPath和XML Base。
+
+
+
+https://developer.mozilla.org/zh-CN/docs/Web/Events/abort
+DOMContentLoaded
+
+
+js中DOMContentLoaded和load的区别
+http://www.cnblogs.com/leungUwah/p/6480868.html
+如题；DOMContentLoaded和load都是页面加载的时候触发的事件。区别在于触发的时机不一样。
+
+浏览器渲染页面DOM文档加载的步骤：
+1.解析HTML结构。
+
+2.加载外部脚本和css文件。
+
+3.解析并执行脚本代码。
+
+4.DOM树构建完成。(此时会触发DOMContentLoaded事件)
+
+5.加载外部图片等文件。
+
+6.页面加载完毕。(此时会触发load事件)
+
+ 
+
+从以上DOM文档加载步骤上可以看出；当浏览器把DOM树构建完成后就开始触发了DOMContentLoaded事件，而load事件则要等包括图片这些加载完毕才会触发。
+
+我们监听事件的时候把优先级高的可以先监听DOMContentLoaded再监听load。
+
+
+DOMContentLoaded与load的区别
+http://www.cnblogs.com/caizhenbo/p/6679478.html-----------very good
+在这里我们可以明确DOMContentLoaded所计算的时间，当文档中没有脚本时，浏览器解析完文档便能触发 DOMContentLoaded 事件；如果文档中包含脚本，则脚本会阻塞文档的解析，而脚本需要等位于脚本前面的css加载完才能执行。在任何情况下，DOMContentLoaded 的触发不需要等待图片等其他资源加载完成。
+
+接下来，我们来说说load，页面上所有的资源（图片，音频，视频等）被加载以后才会触发load事件，简单来说，页面的load事件会在DOMContentLoaded被触发之后才触发。
+
+我们在 jQuery 中经常使用的 $(document).ready(function() { // ...代码... }); 其实监听的就是 DOMContentLoaded 事件，而 $(document).load(function() { // ...代码... }); 监听的是 load 事件。在用jquery的时候，我们一般都会将函数调用写在ready方法内，就是页面被解析后，我们就可以访问整个页面的所有dom元素，可以缩短页面的可交互时间，提高整个页面的体验。

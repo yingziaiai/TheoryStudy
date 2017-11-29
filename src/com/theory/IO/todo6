@@ -1,0 +1,50 @@
+
+@InitBinder
+https://docs.spring.io/spring-session/docs/1.1.0.M1/api/org/springframework/session/web/http/DefaultCookieSerializer.html
+https://docs.spring.io/spring-session/docs/current/reference/html5/guides/custom-cookie.html
+
+
+
+
+How to define which CookieSerializer is injected into SpringHttpSessionConfiguration?
+
+https://stackoverflow.com/questions/44533386/how-to-define-which-cookieserializer-is-injected-into-springhttpsessionconfigura
+
+
+Redux-form中为field设置默认值initialvalue
+http://blog.csdn.net/M_Eve/article/details/77896254
+
+reactjs　change事件
+
+一看就懂的ReactJs入门教程（精华版）
+http://www.cocoachina.com/webapp/20150721/12692.html
+
+react怎么触发checkbox的change事件？
+https://segmentfault.com/q/1010000006903340
+
+
+React事件处理函数参数
+https://segmentfault.com/q/1010000007337701?_ea=1313531
+
+ReactJS 生命周期、数据流与事件
+http://www.cnblogs.com/zzcit/p/6053180.html
+
+React 属性和状态的一些总结
+https://www.cnblogs.com/daomul/p/4853637.html
+
+react redux 某个state变化之后 如何触发一些操作?
+https://www.zhihu.com/question/54702620
+
+
+25节课学透比特币与区块链
+https://www.zhihu.com/remix/albums/908274938669043712
+
+
+react 调用父组件方法
+
+前端学习总结（十九）Redux——管理state数据最优雅的解决方案
+http://blog.csdn.net/haoshidai/article/details/52225054
+
+
+Redux 入门教程（一）：基本用法
+http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html

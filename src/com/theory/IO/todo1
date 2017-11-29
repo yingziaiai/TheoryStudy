@@ -1,0 +1,177 @@
+
+ Jedis API操作Redis数据库入门
+ http://blog.csdn.net/lcwben/article/details/54894000
+ https://redis.io/documentation
+ 
+ redis3.0 cluster功能介绍
+ http://blog.csdn.net/huwei2003/article/details/50973893
+ 
+ windows下使用RedisCluster集群简单实例
+ http://blog.csdn.net/sharuiwudi/article/details/54973605
+ 
+ Redis Cluster集群主从方案（附Jedis Cluster教程）
+ http://wosyingjun.iteye.com/blog/2289220
+ 
+ Secondary indexing with Redis
+ https://redis.io/topics/indexes
+ 
+ Redis实战（四） 集群机制
+ http://blog.720ui.com/2016/redis_action_04_cluster/
+ 
+ 
+ Redis RDB Dump File Format
+ https://github.com/sripathikrishnan/redis-rdb-tools/wiki/Redis-RDB-Dump-File-Format
+ 
+ request 请求的参数封装为model
+ https://my.oschina.net/u/1398304/blog/298528
+ 
+ 
+ Spring Security 3多用户登录实现之八 基于Cookie的自动登录
+ http://dreamzhong.iteye.com/blog/1727524
+ http://www.jianshu.com/p/1361d578035d
+ 
+ 
+ @conditionalonproperty注解
+ https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=0&rsv_idx=1&tn=baidu&wd=%40conditionalonproperty%E6%B3%A8%E8%A7%A3&rsv_pq=90047c6e00274d61&rsv_t=7180qL3Y0g956NWrPq7CnBLeObuLiW09OpVO%2BGgKgBZ680XJA%2B%2BCJPU10wY&rqlang=cn&rsv_enter=1&rsv_sug3=1&rsv_sug1=1&rsv_sug7=100&rsv_sug2=1&prefixsug=%2540%2526lt%253BonditionalOnProperty&rsp=0&inputT=2056&rsv_sug4=2056
+ 
+ 
+ https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&ch=&tn=baidu&bar=&wd=spring+session+%E5%92%8C+spring+security%E6%95%B4%E5%90%88&rn=&oq=&rsv_pq=e21f16b8001a1f5f&rsv_t=8aad4lUS38bItH9rQgUatrJIjGiQOOwsryYczfHYDyV2kzXKS5mXbhtza3o&rqlang=cn
+ 
+ spring session 和 spring security整合
+ 
+ 
+ Spring Boot中使用Spring Security进行安全控制
+ http://blog.didispace.com/springbootsecurity/
+ 
+ spring-security+spring-session配置
+ http://blog.csdn.net/saizzzzzz/article/details/52243305
+ 
+ 【福利】成为专业程序员路上用到的各种优秀资料、神器及框架
+ http://www.cnblogs.com/jasondan/p/6380597.html
+ 
+ 
+ https://github.com/yingziaiai/designPattern
+ designPattern
+ 
+ 
+ http://blog.csdn.net/l153097889/article/details/66475367
+ kibana学习和坑
+ 
+ @AutoConfigureMockMvc
+ 
+ 完成了单元测试，你的测试之旅才刚上路
+ http://www.infoq.com/cn/articles/Unit-Testing-Complete-Integration-Testing-Begins
+ 
+ Spring Boot integration tests: @AutoConfigureMockMvc and context caching
+ 
+ https://stackoverflow.com/questions/42693789/spring-boot-integration-tests-autoconfiguremockmvc-and-context-caching
+ 
+ 
+ java总结（基础知识-面试）
+ http://www.92to.com/bangong/2016/07-20/8619474.html
+ 
+ 
+ 
+ cronjob quarz
+ CronJob简介
+ http://blog.csdn.net/hj402555749/article/details/7754402
+ 
+ 
+spring batch的自动运行
+ http://weiqingfei.iteye.com/blog/2307165
+ 
+ tch在大型企业中的最佳实践
+ http://www.cnblogs.com/Leo_wl/p/6139576.html
+ 
+ 
+ Spring Boot 集成 批处理框架Spring batch
+ http://blog.csdn.net/u011659172/article/details/50573125
+ 
+ SpringBoot Batch
+ http://blog.csdn.net/w_x_z_/article/details/54971149
+ http://blog.csdn.net/w_x_z_/article/details/55050033
+ 
+ spring batch + spring boot 配置
+ http://blog.csdn.net/zhengyong15984285623/article/details/49684219
+ 
+ Spring batch的学习
+ http://www.cnblogs.com/kevin443/p/6753703.html
+ 
+ 
+ Spring Batch示例: 读取CSV文件并写入MySQL数据库
+ http://blog.csdn.net/renfufei/article/details/45894875
+ 
+ Spring Batch 之 Sample（Hello World）(三)
+ http://www.cnblogs.com/gulvzhe/archive/2011/10/31/2230655.html
+ 
+ 使用JSR-303进行校验 @Valid
+ http://www.cnblogs.com/yangzhilong/p/3724967.html
+ 
+ batch job step tasklet关系
+ spring batch学习笔记之领域模型
+ http://lib.csdn.net/article/javaee/3489
+ 
+ Batch job in Spring 
+ http://blog.sina.com.cn/s/blog_78dacbcd0101hkbo.html
+ 
+ springboot quartz 删除过期数据
+ 
+ Quartz任务调度[Spring+Quartz结合]_实现任务的动态添加、修改和删除
+ https://www.2cto.com/kf/201605/511319.html
+ 
+ spring中使用quartz框架（持久化到数据库+springboot）
+ http://blog.csdn.net/growing_duck/article/details/75115913
+ 
+ Springboot集成quartz配置多个job任务
+ http://www.jianshu.com/p/2f45eadca7f9
+ 
+ 【spring-boot】 springboot整合quartz实现定时任务
+ http://www.cnblogs.com/lic309/p/4089633.html
+ 
+ spring batch(一)：基础部分
+ http://kanpiaoxue.iteye.com/blog/1768887
+ http://www.zuidaima.com/share/3209112470965248.htm
+ http://blog.csdn.net/error/404.html?from=http%3a%2f%2fblog.csdn.net%2fabauch_d%2farticle%2fdetails%2f9185091
+ http://blog.csdn.net/error/404.html?from=http%3a%2f%2fblog.csdn.net%2fzdsdiablo%2farticle%2fdetails%2f14521661
+ 
+ 
+ 
+ spring batch+quartz模拟定时将数据库表中的数据过滤备份(入门篇)
+ http://www.zuidaima.com/share/3209112470965248.htm
+ 
+ spring batch 以游标的方式 数据库读取数据 然后写入目标数据库
+ http://www.cnblogs.com/zhangzhen894095789/p/6479457.html
+ 
+ spring batch批处理分区读取数据库的例子
+ http://lib.csdn.net/article/javaee/2845
+ 
+ Spring batch 之操作数据库
+ http://blog.csdn.net/josef_yu/article/details/17362601
+ 
+ https://docs.spring.io/spring-batch/4.0.x/reference/html/readersAndWriters.html#readersAndWriters
+ https://docs.spring.io/spring-batch/trunk/apidocs/org/springframework/batch/core/scope/JobScope.html
+ https://docs.spring.io/spring-batch/4.0.x/reference/html/index.html
+ https://docs.spring.io/spring-batch/4.0.x/reference/html/step.html#configureStep
+ https://docs.spring.io/spring-batch/4.0.x/reference/html/job.html#configureJob
+ 
+ jobBuilderFactory
+ 
+ Spring batch的自动运行
+ http://weiqingfei.iteye.com/blog/2307165
+ 
+ Spring Batch
+ http://blog.csdn.net/ashinli/article/details/54906679
+ 
+ spring batch job 详细配置以及多个job时如何根据参数执行指定job
+ http://blog.csdn.net/u013174217/article/details/64906572
+ 采用spring batch 处理大数据量，瓶颈在数据库吞吐量时，该如何优化？ 
+ https://zhidao.baidu.com/question/493141614245896052.html
+ 
+ 
+ Spring Batch在大型企业中的最佳实践
+ http://www.cnblogs.com/Leo_wl/p/6139576.html
+ 
+ batch多个不同的job
+ 
+ 定时任务Job和SpringBatch批处理结合
+ https://my.oschina.net/wliming/blog/688240

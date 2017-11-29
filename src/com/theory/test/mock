@@ -131,3 +131,12 @@ http://www.2cto.com/kf/201608/537118.html
 
 Spring Boot应用的测试——Mockito
 https://yq.aliyun.com/articles/54061
+
+
+
+@Mock 和 @InjectMocks
+http://blog.csdn.net/kurt17/article/details/52670482
+
+ @SpyBean @Spy
+  @SpyBean @MockBean
+ https://stackoverflow.com/questions/43999517/what-is-difference-between-spybean-mockbean-in-mockito

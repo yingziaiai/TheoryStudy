@@ -1,0 +1,63 @@
+性能优化之使用线程池处理异步任务
+http://blog.csdn.net/luotuomianyang/article/details/51933940－－－－－－－－－－very good, 并且有一种学习方法的思路
+
+线程实现：Thread , Runnable:
+多线程访问同一资源的情况下，用Runnable接口创建的线程可以处理同一资源，而用Thread类创建的线程则各自独立处理，各自拥有自己的资源，所以，在Java中大多数多线程程序都是通过实现Runnable来完成的。所有当涉及到线程时通常这么写
+[java] view plain copy print?
+new Thread(new Runnable() {  
+      @Override  
+      public void run() {  
+          //do sth .  
+      }  
+  }).start();  
+  
+  这段代码创建了一个线程并执行，它在任务结束后GC会自动回收该线程，一切看起来如此美妙，是的，它在线程并发不多的程序中确实不错，而假如这个程序有很多地方需要开启大量线程来处理任务，那么如果还是用上述的方式去创建线程处理的话，那么将导致系统的性能表现的非常糟糕，主要的影响如下：
+  1、线程的创建和销毁都需要时间，当有大量的线程创建和销毁时，那么这些时间的消耗则比较明显，将导致性能上的缺失
+2、大量的线程创建、执行和销毁是非常耗cpu和内存的，这样将直接影响系统的吞吐量，导致性能急剧下降，如果内存资源占用的比较多，还很可能造成OOM
+3、大量的线程的创建和销毁很容易导致GC频繁的执行，从而发生内存抖动现象，而发生了内存抖动，对于移动端来说，最大的影响就是造成界面卡顿
+而针对上述所描述的问题，解决的办法归根到底就是：重用已有的线程，从而减少线程的创建。
+所以这就涉及到线程池（ExecutorService）的概念了，线程池的基本作用就是进行线程的复用，下面将具体介绍线程池的使用。
+
+创建线程池的方法：
+Executors类是官方提供的一个工厂类，它里面封装好了众多功能不一样的线程池，从而使得我们创建线程池非常的简便，主要提供了如下五种功能不一样的线程池：
+ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);  
+ExecutorService singleThreadPool = Executors.newSingleThreadExecutor();  
+ExecutorService cachedThreadPool = Executors.newCachedThreadPool();  
+ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(5);  
+ScheduledExecutorService singleThreadScheduledPool = Executors.newSingleThreadScheduledExecutor();  
+
+因上述本质都是ThreadPoolExecutor，　所以要了解ThreadPoolExecutor，从构造方法开始：
+public ThreadPoolExecutor(int corePoolSize,  
+                          int maximumPoolSize,  
+                          long keepAliveTime,  
+                          TimeUnit unit,  
+                          BlockingQueue workQueue,  
+                          ThreadFactory threadFactory,  
+                          RejectedExecutionHandler handler) {//...}  
+                          
+ 各个参数的含义：
+ 
+ 线程池ThreadPoolExecutor用法：
+ execute(Runnable command)   
+ 
+ http://blog.csdn.net/z69183787/article/details/53055372
+  线程池ThreadPoolExecutor使用简介 
+ 
+ 
+ 
+ 并发 并行 同步 异步 多线程 阻塞 非阻塞
+ http://www.jianshu.com/p/77332a3b07b5
+ https://www.zhihu.com/question/21896633
+ 
+ 
+ 从Nginx的Web请求处理机制中剖析多进程、多线程、异步IO
+ https://www.cnblogs.com/lianzhilei/p/6029100.html
+ 
+ tomcat以及常用web容器线程池的实现原理
+ http://blog.csdn.net/fredaq/article/details/9366043
+ 
+  JAVA并行异步编程,线程池+FutureTask+callable+ExecutorService
+  http://blog.csdn.net/mack415858775/article/details/51507660------------案例很不错，但似乎标题有点不对“并行？？？？”
+  
+  TCP同步与异步及阻塞模式，多线程+阻塞模式，非阻塞模式简单介绍
+  http://blog.csdn.net/formiss/article/details/8269949                       

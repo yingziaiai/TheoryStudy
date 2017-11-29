@@ -1,0 +1,24 @@
+https://github.com/zhangwang1990/blogs/blob/master/sources/MultiPageWebpackDemos/webpack.dev.js
+
+使用webpack配置多页应用的demo
+
+
+webpack.config.js配置文件
+http://www.cnblogs.com/zuozuo-blog/p/6560485.html
+
+
+Use the Production Build
+https://reactjs.org/docs/optimizing-performance.html#use-the-production-build
+
+一小时包教会 —— webpack 入门指南
+http://www.cnblogs.com/vajoy/p/4650467.html
+
+入门Webpack，看这篇就够了
+http://www.jianshu.com/p/42e11515c10f
+
+
+Create-react-app如何实现多个入口文件？
+http://react-china.org/t/create-react-app/12195
+
+webpack及react的搭配使用(一)
+http://blog.csdn.net/syyling/article/details/52015909

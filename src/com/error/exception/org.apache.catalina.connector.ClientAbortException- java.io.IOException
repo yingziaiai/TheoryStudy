@@ -1,0 +1,5 @@
+http://www.oschina.net/question/2546873_2210868
+tomcat服务端程序报错org.apache.catalina.connector.ClientAbortException: java.io.IOException: 您的主机中的软件中止了一个已建立的连接。是怎么回事？可以怎么解决？
+
+错误号org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+http://blog.csdn.net/dandanzmc/article/details/51816805

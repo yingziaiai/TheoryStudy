@@ -1,0 +1,40 @@
+java gc的log分析
+
+gc日志分析工具
+http://blog.csdn.net/gzh0222/article/details/8223277
+
+java中的gc log解读
+https://my.oschina.net/hadooper/blog/418918-----------good
+http://swcdxd.iteye.com/blog/1859858
+http://wentao365.iteye.com/blog/1142837
+
+
+Java GC - 监控回收行为与日志分析
+http://www.cnblogs.com/mikevictor07/p/5024645.html?utm_source=tuicool&utm_medium=referral
+
+http://blog.csdn.net/lan861698789/article/details/51985188----------------------very good
+
+分析gc日志后，经常需要调整jvm内存相关参数，常用参数如下:
+-Xms：初始堆大小，默认为物理内存的1/64(<1GB)；默认(MinHeapFreeRatio参数可以调整)空余堆内存小于40%时，JVM就会增大堆直到-Xmx的最大限制
+
+-Xmx：最大堆大小，默认(MaxHeapFreeRatio参数可以调整)空余堆内存大于70%时，JVM会减少堆直到 -Xms的最小限制
+
+-Xmn：新生代的内存空间大小，注意：此处的大小是（eden+ 2 survivor space)。与jmap -heap中显示的New gen是不同的。整个堆大小=新生代大小 + 老生代大小 + 永久代大小。 
+在保证堆大小不变的情况下，增大新生代后,将会减小老生代大小。此值对系统性能影响较大,Sun官方推荐配置为整个堆的3/8。
+
+-XX:SurvivorRatio：新生代中Eden区域与Survivor区域的容量比值，默认值为8。两个Survivor区与一个Eden区的比值为2:8,一个Survivor区占整个年轻代的1/10。
+
+
+成为JavaGC专家（1）—深入浅出Java垃圾回收机制
+http://www.importnew.com/1993.html
+
+
+垃圾回收机制GC知识再总结兼谈如何用好GC
+http://www.cnblogs.com/jeffwongishandsome/p/talk-about-GC-and-how-to-use-GC-better.html-------------very good
+由于GC的代价很大，平时开发中注意一些良好的编程习惯有可能对GC有积极正面的影响，否则有可能产生不良效果。
+
+1、尽量不要new很大的object，大对象（>=85000Byte）直接归为G2代，GC回收算法从来不对大对象堆（LOH）进行内存压缩整理，因为在堆中下移85000字节或更大的内存块会浪费太多CPU时间
+
+2、不要频繁的new生命周期很短object，这样频繁垃圾回收频繁压缩有可能会导致很多内存碎片，可以使用设计良好稳定运行的对象池（ObjectPool）技术来规避这种问题
+
+3、使用更好的编程技巧，比如更好的算法、更优的数据结构、更佳的解决策略等等

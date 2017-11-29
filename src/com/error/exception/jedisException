@@ -1,0 +1,2 @@
+nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool\r\n\tat org.springframework.data.redis.connection.jedis.JedisConnectionFactory
+http://blog.csdn.net/moxiaomomo/article/details/17588483

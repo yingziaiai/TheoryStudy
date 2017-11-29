@@ -1,0 +1,8 @@
+React调试工具：React Devtools
+http://blog.csdn.net/u014695532/article/details/52735189
+
+这个插件工具可以做哪些工作呢：
+
+Tree view，树形结构，可以看到和编辑所有的props， state。
+Search component 通过name.
+控制面板，可以调试store数据。

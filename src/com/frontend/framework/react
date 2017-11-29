@@ -57,11 +57,23 @@ http://www.ruanyifeng.com/blog/2015/03/react.html－－－－－－－demo13
 https://github.com/ruanyf/react-demos
 
 
+react调试工具下载－－－react-devtools
+http://blog.csdn.net/jiangbo_phd/article/details/51759084
+https://github.com/facebook/react-devtools/releases
+这个插件工具可以做哪些工作呢：
+
+Tree view，树形结构，可以看到和编辑所有的props， state。
+Search component 通过name.
+控制面板，可以调试store数据。
+
+Reactjs component 中 prop 和 state 的区别
+https://segmentfault.com/q/1010000002958539
+
 开发：
 edit src/App.js
 
 React 最佳实践——那些 React 没告诉你但很重要的事
-https://www.v2ex.com/t/274697
+https://www.v2ex.com/t/274697------------------------good, 相当于一些语法与格式规范
 
 一看就懂的ReactJs入门教程（精华版）
 http://www.cocoachina.com/webapp/20150721/12692.html
@@ -70,6 +82,9 @@ http://www.cocoachina.com/webapp/20150721/12692.html
 react入门实例:
 https://doc.react-china.org/tutorial/tutorial.html
 https://reactjs.org/tutorial/tutorial.html
+
+http://blog.csdn.net/weiyongliang_813/article/list/2
+react项目实战（权限模块开发八）js文件分开打包
 
 语法基础
 http://www.tutorialspoint.com/reactjs/index.htm
@@ -83,10 +98,14 @@ http://www.cnblogs.com/wonyun/p/5930333.html-----------------good
 create-react-app与bundle.js
 使用 create-react-app 构建 react应用程序 （react-scripts）             
 http://blog.csdn.net/github_squad/article/details/57452333
-http://blog.csdn.net/weiyongliang_813/article/details/74889850----react-script 实现原理
+http://blog.csdn.net/weiyongliang_813/article/details/74889850----react-script 实现原理－－－－－－－－－－－－－－－very good
 
 
 http://blog.csdn.net/weiyongliang_813/article/list/3-----------very good,整个案例流程　
+
+
+reactjs 事件的用法
+http://blog.csdn.net/minihoop/article/details/49430875
 
 react知识（一）React.createClass Vs React.Component
 http://blog.csdn.net/weiyongliang_813/article/details/74956993
@@ -121,3 +140,50 @@ https://segmentfault.com/a/1190000008356407
 
  React组件属性类型（propTypes）
  http://blog.csdn.net/u013224660/article/details/51163067
+ 
+ 
+ React中元素与组件的区别
+ https://segmentfault.com/a/1190000008587988
+ 
+ 如何编写一个react组件并使用
+ http://www.jianshu.com/p/2e8424c08973
+ 
+ React前端技术与工程实践
+ http://geek.csdn.net/news/detail/192579
+ 
+ React.js入门实践：一个酷酷的日历选择器组件
+ http://www.jianshu.com/p/23c02d464326
+ 
+ 分享一个 react + redux 完整的项目，同时写一下个人感悟
+  http://react-china.org/t/react-redux/9072/25
+  
+  React 最佳实践——那些 React 没告诉你但很重要的事
+  https://segmentfault.com/a/1190000005013207
+  
+  axios react
+  
+  
+  
+  ReactJS分析之入口函数render
+  http://www.cnblogs.com/accordion/p/4501118.html--------------源码分析
+  
+  
+  
+  React 里直接修改 this.state 和调用 setState() 修改 state 的值有什么区别？
+  https://segmentfault.com/q/1010000002958584
+  使用对this.state赋值并没有什么作用，官方提醒，应该把this.state当成不可变变量。
+  
+  
+  深入理解React 组件状态（State）
+  http://www.jianshu.com/p/c6257cbef1b1
+  
+  React组件refs详解
+  http://blog.csdn.net/lu1024188315/article/details/73733420
+  
+  react入门----(this.state/表单/Ajax)
+  https://www.cnblogs.com/songdongdong/p/7306689.html
+而使用this.setState方法，会触发异步修改状态，状态改变的同时，会重新执行一次willUpdate，render等流程。需要注意的是，避免在执行完this.setState后马上读取this.state，此操作并不会获得最新修改的状态。
+
+
+如何管理 React 中的状态（state）
+http://www.sohu.com/a/112625451_464084

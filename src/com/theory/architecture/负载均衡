@@ -1,0 +1,6 @@
+关于一个简单的负载均衡实现的问题（多线程相关）
+http://www.iteye.com/problems/100934
+
+
+ 基于AsyncRestTemplate异步HTTP请求的一种轻量级技术实现
+ http://blog.csdn.net/pistolove/article/details/51428562

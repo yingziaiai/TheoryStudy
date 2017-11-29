@@ -1,0 +1,20 @@
+https://segmentfault.com/a/1190000009464850
+axios-mock-adapter：axios的模拟调试器
+
+react with JSX for {if…else…}
+http://lib.csdn.net/article/react/22655
+      <div>
+        <h1>My Super React App</h1>
+        { this.props.loggedIn ?
+            <span>
+              <h2>{ `Welcome Back ${ this.props.name }` }</h2>
+              <p>You can visit settings to reset your password</p>
+            </span>
+            :
+            <h2>Hey man! Log in to see this section</h2>
+        }
+      </div>
+      
+      
+http://wiki.jikexueyuan.com/project/react/else-jsx.html
+JSX 中的 If-Else      

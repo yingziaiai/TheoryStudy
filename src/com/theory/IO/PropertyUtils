@@ -1,0 +1,4 @@
+PropertyUtils.copyProperties和BeanUtils.copyProperties使用区别
+http://blog.csdn.net/freemanzhao/article/details/53944030
+
+位于org.apache.commons.beanutils包里面的这两个参数拷贝方法可以复制一个对象中相同名字的参数值到另一个对象，能简化很多代码，但是这两个copy方法使用起来有很大区别。

@@ -1,3 +1,21 @@
+JavaScript 事件参考手册
+http://www.w3school.com.cn/jsref/jsref_events.asp
+
+JavaScript HTML DOM 事件
+http://www.w3school.com.cn/js/js_htmldom_events.asp
+http://www.runoob.com/jsref/dom-obj-event.html
+
+http://www.w3school.com.cn/jsref/dom_obj_document.asp
+HTML DOM Document 对象
+
+DOMContentLoaded事件是document对象上的事件。指的是DOM已经加载完毕。IE中有个私有的事件onreadystatechange事件跟这个标准事件类似。
+
+原生JavaScript事件详解
+http://www.cnblogs.com/iyangyuan/p/4190773.html
+
+HTML中的window对象和document对象详解
+
+
 https://doc.react-china.org/docs/hello-world.html
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript--------------very good
 

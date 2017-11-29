@@ -26,5 +26,53 @@ http://blog.csdn.net/u010180738/article/details/61439630
 SpringMVC RestTemplate的几种请求调用
 http://www.cnblogs.com/UniqueColor/p/7123347.html--------------good 
 
+
+当RestTemplate遇到encode的问题：
+https://stackoverflow.com/questions/20885521/spring-resttemplate-url-encoding－－－－－－－－－－－－－－－－－－good
+URI uri = URI.create(builder.toString());
+restTemplate.getForObject(uri, Object.class);
+
+ 基于AsyncRestTemplate异步HTTP请求的一种轻量级技术实现
+ http://blog.csdn.net/pistolove/article/details/51428562
+ RestTemplate实践
+ http://blog.csdn.net/u010476464/article/details/50067079
+ RestTemplate对象在底层通过使用java.net包下的实现创建HTTP 请求，可以通过使用ClientHttpRequestFactory指定不同的HTTP请求方式。ClientHttpRequestFactory接口主要提供了两种实现方式
+
+一种是SimpleClientHttpRequestFactory，使用J2SE提供的方式（既java.net包提供的方式）创建底层的Http请求连接。 
+一种方式是使用HttpComponentsClientHttpRequestFactory方式，底层使用HttpClient访问远程的Http服务，使用HttpClient可以配置连接池和证书等信息。
+
 fastJson
 http://blog.csdn.net/gaojinshan/article/details/30260707
+
+Troubleshooting Spring's RestTemplate Requests Timeout
+http://tech.asimio.net/2016/12/27/Troubleshooting-Spring-RestTemplate-Requests-Timeout.html-------------restTemplate connection pooling
+
+http://todayleave.blogspot.hk/2017/03/resttemplate-connection-pool-setting.html
+https://stackoverflow.com/questions/44188847/springs-resttemplate-default-connection-pool
+
+cors.maxAge=3600
+cors.allowedOrigins=https://cms-author-t1.ncs1.ct1.asiamiles.com:4502,https://www-t1.ete.asiamiles.com,https://www.bpt.ete.asiamiles.com
+#cors.allowedOrigins=https://cms-author-t1.ncs1.ct1.asiamiles.com:4502,https://www-t1.ete.asiamiles.com,https://www.bpt.ete.asiamiles.com
+cors.allowedOrigins=regex:((http|https)://(.+\\.)*asiamiles\\.com)(:\\d+)?
+cors.allowedMethods=GET,POST,PUT,OPTIONS
+
+src/main/java/org/springframework/web/cors/CorsConfiguration.java 
+
+
+
+
+
+
+
+
+
+restTemplate connection pool:----------------看原理与一种编程的变法
+spring-boot-rest-template-demo
+https://github.com/clj198606061111/spring-boot-rest-template-demo/blob/master/src/main/java/com/itclj/config/RestTemplateConfiguration.java
+
+http://blog.csdn.net/clj198606061111/article/details/70227571
+
+http://blog.csdn.net/catoop/article/details/50920842－－－－－－－－－－－very good
+
+http://www.baeldung.com/rest-template
+The Guide to RestTemplate

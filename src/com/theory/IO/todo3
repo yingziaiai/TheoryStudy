@@ -1,0 +1,45 @@
+resttemplate businessException
+
+RestTemplate实践
+http://blog.csdn.net/u010476464/article/details/50067079
+
+RestTemplate实践
+http://blog.csdn.net/u010476464/article/details/50067079
+
+resttemple ResponseEntity<Object> exchange key=value
+
+
+RestTemplate发送请求并携带header信息
+https://www.cnblogs.com/hujunzheng/p/6018505.html
+
+
+解决 ie 返回json提示下载 ResponseEntity方法
+http://www.bubuko.com/infodetail-374296.html
+
+
+springmvc 通过异常增强返回给客户端统一格式
+https://www.cnblogs.com/nosqlcoco/p/5562107.html
+
+RestTemplate配置
+https://www.cnblogs.com/winner-0715/p/6258139.html
+
+
+java.io.IOException: Broken pipe
+https://stackoverflow.com/questions/15785175/java-io-ioexception-broken-pipe
+
+记录一次线上，ss服务出现大面积不能响应请求：java.io.IOException: Broken pipe
+http://blog.csdn.net/taotoxht/article/details/51698969
+
+Troubleshooting Spring's RestTemplate Requests Timeout
+http://tech.asimio.net/2016/12/27/Troubleshooting-Spring-RestTemplate-Requests-Timeout.html
+
+jstack日志深入理解
+http://blog.csdn.net/zxh87/article/details/52137335
+
+
+CORS Filter
+http://software.dzhuvinov.com/cors-filter-configuration.html
+
+window.store.dispatch
+React服务器渲染
+http://blog.csdn.net/limm33/article/details/50942875

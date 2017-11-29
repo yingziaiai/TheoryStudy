@@ -45,3 +45,7 @@ https://www.ttlsa.com
 http://www.ttlsa.com:8080
 
 由此可见，相同域必须忙住协议相同、端口相同、域名相同. 只要其中一点不满足那就是跨域
+
+Cors Filter - Allow all sub domains
+
+https://stackoverflow.com/questions/27147737/cors-filter-allow-all-sub-domains

@@ -3,3 +3,12 @@ Spring 7大功能模块的作用[转]
 
 使用框架的意义与spring的主要内容
 http://blog.csdn.net/zhejingyuan/article/details/51305892－－－－－－－－－－－－very good, 还有ＵＭＬ图
+
+
+源码分析入口，xml文件内容解析，实例化，依赖注入（ＩＯＣ），springMVC的请求响应（请求参数，返回值，拦截器，页面渲染等源码分析）；
+
+AOP入口类（涉及到的ＪＤＫ动态代理和ＣＧＬＩＢ动态代理），　事务等。
+
+
+http://www.codeceo.com/article/how-spring-mvc-work.html
+Spring MVC 到底是如何工作的？
