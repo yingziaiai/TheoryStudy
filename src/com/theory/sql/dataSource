@@ -11,3 +11,5 @@ http://blog.csdn.net/yangyz_love/article/details/8199207
 
 SpringBoot配置属性之DataSource
 https://segmentfault.com/a/1190000004316491
+
+dbc:mysql://p0-amms-db.cmgxqtsm4mco.ap-southeast-1.rds.amazonaws.com:3306/amms?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF8

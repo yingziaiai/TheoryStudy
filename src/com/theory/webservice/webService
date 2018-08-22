@@ -185,3 +185,13 @@ http://blog.csdn.net/z69183787/article/details/39228005?locationNum=3
 http://www.cnblogs.com/Gyoung/p/6132710.html
 axis2 调用webservice
 
+
+许多新的注解：
+以及调试接口的方法：
+postman调试webservice:
+http://blog.getpostman.com/2014/08/22/making-soap-requests-using-postman/
+
+https://www.dexcoder.com/selfly/article/4595
+Spring Boot整合spring-ws调用web service服务
+http://blog.getpostman.com/wp-content/uploads/2014/08/SOAP-requests-using-Postman.png?x38712
+

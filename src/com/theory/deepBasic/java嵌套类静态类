@@ -1,0 +1,10 @@
+JAVA嵌套类：静态嵌套类和非静态嵌套类
+http://www.cnblogs.com/ChinaHook/p/4949805.html
+http://blog.csdn.net/revivedsun/article/details/51298869－－－－－－－－－good
+非内部类的嵌套类
+
+在Java中你可以创建几种不同类型的嵌套类。它们是：
+静态嵌套类
+非静态嵌套类
+局部类
+匿名类

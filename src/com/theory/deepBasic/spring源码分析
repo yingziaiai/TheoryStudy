@@ -12,3 +12,5 @@ AOP入口类（涉及到的ＪＤＫ动态代理和ＣＧＬＩＢ动态代理�
 
 http://www.codeceo.com/article/how-spring-mvc-work.html
 Spring MVC 到底是如何工作的？
+Model——渲染页面数据的键值映射
+View——填充模型数据的页面模板

@@ -12,3 +12,52 @@ http://www.bubuko.com/infodetail-2146781.html
 
 Spring Batch入门教程及其框架搭建  
   http://www.zuidaima.com/share/1732772811131904.htm
+  
+  
+  Spring Batch 之 Spring Batch 简介(一)
+https://www.cnblogs.com/gulvzhe/archive/2011/10/21/2220260.html
+
+Spring Batch 中 Scheduler 定时任务
+http://www.jianshu.com/p/4f0b59924733
+
+https://stackoverflow.com/questions/26220914/spring-boot-batch-schedule
+想起当时ＨＳＢＣ是ＥＴＬ在数据库的，每天的点去开始启动定时任务；
+
+http://websystique.com/springbatch/spring-batch-quartz-scheduler-example/
+Spring Batch & Quartz Scheduler Example (Tasklet usage)
+
+
+使用springboot构造quartz的rest api
+https://segmentfault.com/a/1190000010178364
+
+Quartz Scheduler with Spring Boot
+http://www.opencodez.com/java/quartz-scheduler-with-spring-boot.htm
+
+
+    @Scheduled(cron = "0 */${test1} *  * * * ")
+//    @Scheduled(cron = "0/1 * * * * ?")
+//    @Scheduled(cron = "0 */1 *  * * * ")
+    public void reportCurrentByCron() throws MLCException {
+    
+    test1=${random.int[1,2]}
+
+test=0 */${test1} *  * * * 
+https://www.cnblogs.com/wlsblog/p/7487325.html
+spring Boot☞ 配置文件详解：自定义属性、随机数、多环境配置等
+
+Spring Boot 属性配置和使用
+http://blog.csdn.net/isea533/article/details/50281151
+
+https://stackoverflow.com/questions/2065937/how-to-supply-value-to-an-annotation-from-a-constant-java?rq=1
+How to supply value to an annotation from a Constant java
+
+
+使用Spring Quartz做自动任务 启动和关闭
+jobSwitch
+http://blog.csdn.net/yangxujia/article/details/49818775
+
+quartz动态添加删改任务和同步任务与异步任务
+http://blog.csdn.net/zhongbaolin/article/details/45313191
+
+Quartz之手动启动和关闭定时器简单示例
+http://blog.csdn.net/huangwenyi1010/article/details/51338272

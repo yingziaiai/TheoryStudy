@@ -206,3 +206,57 @@ $(document).ready(function(){
         contentType: 'application/json',  
         url: 'jsonfeed.do',  
         dataType: 'json',  
+
+  http://bbs.csdn.net/topics/370259330      
+ transport.responseText       
+ function toEdit(input) {
+    var td = input.parentNode;//debugger;
+    var tr = td.parentNode;
+    if (checkSubmit(quoteSheet)) {
+        var trIds = tr.value;
+        var params = Form.serialize('quoteSheet')+"&xxnr.id="+trIds;
+        new Ajax.Request("edit.action", {
+            method : 'post',
+            parameters : params,
+            onSuccess : function(transport) {
+                if (transport.responseText == "1") {
+                    editData(input);
+                    alert("更新成功");
+                } else if (transport.responseText == "0") {
+                    alert("更新失败");
+                }
+            }
+        });
+    }
+}
+
+Ajax中responseText解析json格式数据
+解决ajax处理服务器端返回结果responseText中是JSON的数据。
+http://blog.csdn.net/sober_123/article/details/51322060
+
+Ajax的响应信息ResponseText和ResponseXML
+https://www.cnblogs.com/kathy-qiqi/archive/2012/09/12/2681907.html－－－－分析工具
+
+Ajax请求Servlet返回文本 json html和XML数据并解析xml及responseText和responseXML的区别
+http://blog.csdn.net/liangwenmail/article/details/51987006－－－－－－－－－very good,前后端都有
+
+Ajax学习---responseText，innerHTML属性
+
+
+jQuery AJAX 方法 success()后台传来的4种数据
+http://blog.csdn.net/dreamstar613/article/details/61913970
+
+http://blog.csdn.net/Sunflowerfiona/article/details/52563875
+Ajax的原理
+
+AJAX = 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。简短地说，在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示 
+Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。这其中最关键的一步就是从服务器获得请求数据。
+
+
+浅析Ajax跨域原理及JQuery中的实现分析－－－－－－－不错，对比与分析了底层原理（ajax, jsonp）
+jQuery源码分析系列(35) : Ajax - jsonp的实现与原理
+jQuery-AJAX模块解析-response部分
+http://blog.csdn.net/z905951024/article/details/45970539
+https://www.cnblogs.com/yunfeifei/p/4138632.html
+https://www.cnblogs.com/aaronjs/p/3785646.html
+        
